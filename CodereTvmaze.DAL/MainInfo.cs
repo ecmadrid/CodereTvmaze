@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,13 +9,13 @@ namespace CodereTvmaze.DAL
 {
     public class MainInfo
     {
-        public static Connection AddToDatabase(int id, string url, string name, string type, string language,
-            string status, int? runtime, int? averageRuntime, string premiered, string ended,
-            string officialSite, int? weight, string summary, int? updated,
+        public static Connection AddToDatabase(long id, string url, string name, string type, string language,
+            string status, long? runtime, long? averageRuntime, string premiered, string ended,
+            string officialSite, long? weight, string summary, long? updated,
             string previousEpisodeHref, string previousEpisodeName,
                 string nextEpisodeHref, string nextEpisodeName, string imageMedium, string imageOriginal,
                 double? average, int? tvrage, int? thetvdb, string imdb,
-                string dvdCountryCode, int? networkId, int?webChannelId)
+                string dvdCountryCode, int? networkId, int? webChannelId, string href)
         {
             Connection connection = new DAL.Connection();
             connection.Open();
@@ -27,11 +28,11 @@ namespace CodereTvmaze.DAL
             sql = @"INSERT INTO MainInfo (Id, Url, Name, Type, Language, Status, Runtime, AverageRuntime, Premiered, Ended,
                 OfficialSite, Weight, Summary, Updated, PreviousEpisodeHref, PreviousEpisodeName,
                 NextEpisodeHref, NextEpisodeName, ImageMedium, ImageOriginal, Average,
-                TvRage, TheTvDb, Imdb, DvdCountryCode, NetworkId, WebChannelId)
+                TvRage, TheTvDb, Imdb, DvdCountryCode, NetworkId, WebChannelId, Href)
                 VALUES (@Id, @Url, @Name, @Type, @Language, @Status, @Runtime, @AverageRuntime, @Premiered, @Ended,
                 @OfficialSite, @Weight, @Summary, @Updated, @PreviousEpisodeHref, @PreviousEpisodeName,
                 @NextEpisodeHref, @NextEpisodeName, @ImageMedium, @ImageOriginal, @Average,
-                @TvRage, @TheTvDb, @Imdb, @DvdCountryCode, @NetworkId, @WebChannelId)";
+                @TvRage, @TheTvDb, @Imdb, @DvdCountryCode, @NetworkId, @WebChannelId, @Href)";
             sql = sql.Replace("@Id", id.ToString());
             sql = sql.Replace("@Url", url == null ? "NULL" : "'" + url + "'");
             sql = sql.Replace("@Name", name == null ? "NULL" : "'" + name.Replace("'", "''") + "'");
@@ -59,10 +60,26 @@ namespace CodereTvmaze.DAL
             sql = sql.Replace("@DvdCountryCode", dvdCountryCode == null ? "NULL" : "'" + dvdCountryCode + "'");
             sql = sql.Replace("@NetworkId", networkId == null ? "NULL" : networkId.ToString());
             sql = sql.Replace("@WebChannelId", webChannelId == null ? "NULL" : webChannelId.ToString());
+            sql = sql.Replace("@Href", href == null ? "NULL" : "'" + href + "'");
+
 
             connection.ExecuteNonQuery(sql);
 
             return connection;
+        }
+
+        public static DataTable GetById(int id)
+        {
+            Connection connection = new DAL.Connection();
+            connection.Open();
+
+            string sql = "SELECT * FROM MainInfo WHERE Id = " + id.ToString();
+
+            DataTable dt = connection.Execute(sql);
+
+            connection.Close();
+
+            return dt;
         }
     }
 }

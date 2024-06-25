@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,7 @@ namespace CodereTvmaze.DAL
 {
     public class Genre
     {
-        public static void AddGenre(Connection connection, int mainInfoId, string genre, int pos)
+        public static void AddGenre(Connection connection, long mainInfoId, string genre, int pos)
         {
             bool needCloseConnection = false;
             if (connection == null)
@@ -31,11 +32,38 @@ namespace CodereTvmaze.DAL
                 connection.Close();            }
         }
 
-        public static void DeleteMainInfoGenres(Connection connection, int mainInfoId)
+        public static void DeleteMainInfoGenres(Connection connection, long mainInfoId)
         {
             string sql = @"DELETE FROM Genres Where MainInfoId = @MainInfoId";
             sql = sql.Replace("@MainInfoId", mainInfoId.ToString());
             connection.ExecuteNonQuery(sql);
         }
+
+        public static DataTable GetGenreByMainInfoId(long mainInfoId)
+        {
+
+            Connection connection = connection = new DAL.Connection();
+            connection.Open();
+            string sql = @"SELECT * FROM Genres WHERE MainInfoId =" + mainInfoId.ToString() + " ORDER BY Pos";
+            DataTable dt = connection.Execute(sql);
+
+            connection.Close();
+
+            return dt;
+        }
+
+        public static DataTable GetAllGenres()
+        {
+
+            Connection connection = connection = new DAL.Connection();
+            connection.Open();
+            string sql = @"SELECT * FROM Genres ORDER BY MainInfoId, Pos";
+            DataTable dt = connection.Execute(sql);
+
+            connection.Close();
+
+            return dt;
+        }
     }
+
 }

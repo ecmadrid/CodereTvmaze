@@ -12,7 +12,7 @@ namespace CodereTvmaze.BLL
         public string time { get; set; }
         public List<string> days { get; set; }
 
-        public void AddSchedule(Connection connection, int MainInfoId)
+        public void AddSchedule(Connection connection, long MainInfoId)
         {
             int pos = 1;
             foreach(string day in days)

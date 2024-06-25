@@ -8,7 +8,7 @@ namespace CodereTvmaze.DAL
 {
     public class Schedule
     {
-        public static void AddSchedule(Connection connection, int mainInfoId, string time, string day, int pos)
+        public static void AddSchedule(Connection connection, long mainInfoId, string time, string day, int pos)
         {
             bool needCloseConnection = false;
             if (connection == null)
@@ -33,7 +33,7 @@ namespace CodereTvmaze.DAL
             }
         }
 
-        public static void DeleteMainInfoSchedule(Connection connection, int mainInfoId)
+        public static void DeleteMainInfoSchedule(Connection connection, long mainInfoId)
         {
             string sql = @"DELETE FROM Schedules Where MainInfoId = @MainInfoId";
             sql = sql.Replace("@MainInfoId", mainInfoId.ToString());

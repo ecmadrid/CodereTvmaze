@@ -1,5 +1,7 @@
-﻿using System;
+﻿using CodereTvmaze.DAL;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Net;
 using System.Net.Http.Headers;
@@ -12,28 +14,28 @@ namespace CodereTvmaze.BLL
 {
     public class MainInfo
     {
-        public int id { get; set; }
+        public long id { get; set; }
         public string url { get; set; }
         public string name { get; set; }
         public string type { get; set; }
         public string language { get; set; }
         public List<string> genres { get; set; }
         public string status { get; set; }
-        public int? runtime { get; set; }
-        public int averageRuntime { get; set; }
+        public long? runtime { get; set; }
+        public long? averageRuntime { get; set; }
         public string premiered { get; set; }
         public string ended { get; set; }
         public string officialSite { get; set; }
         public Schedule schedule { get; set; }
         public Rating rating { get; set; }
-        public int weight { get; set; }
+        public long? weight { get; set; }
         public Network network { get; set; }
         public WebChannel webChannel { get; set; }
         public Country dvdCountry { get; set; }
         public Externals externals { get; set; }
         public Image image { get; set; }
         public string summary { get; set; }
-        public int updated { get; set; }
+        public long? updated { get; set; }
         public Links _links { get; set; }
 
         // Methods
@@ -88,11 +90,12 @@ namespace CodereTvmaze.BLL
             string? imageOriginal = null;
             double? average = null;
             int? tvrage = null;
-        int? thetvdb = null;
+            int? thetvdb = null;
             string? imdb = null;
             int? networkId = null;
             int? webChannelId = null;
             string? dvdCountryCode = null;
+            string? href = null;
 
 
             if (_links != null)
@@ -141,10 +144,18 @@ namespace CodereTvmaze.BLL
                 networkId = network.id;
             }
 
+            if (_links != null)
+            {
+                if(_links.self != null)
+                {
+                    href = _links.self.href;
+                }
+            }
+
             CodereTvmaze.DAL.Connection connection = CodereTvmaze.DAL.MainInfo.AddToDatabase(id, url, name,
                 type, language, status, runtime, averageRuntime, premiered, ended, officialSite, weight, summary, updated,
                 previousEpisodeHref, previousEpisodeName, nextEpisodeHref, nextEpisodeName,
-                imageMedium, imageOriginal, average, tvrage, thetvdb, imdb, dvdCountryCode, networkId, webChannelId);
+                imageMedium, imageOriginal, average, tvrage, thetvdb, imdb, dvdCountryCode, networkId, webChannelId, href);
 
             if (genres != null)
             {
@@ -155,7 +166,7 @@ namespace CodereTvmaze.BLL
 
                     // Add genres.
                     int pos = 1;
-                    foreach(var genre in genres)
+                    foreach (var genre in genres)
                     {
                         CodereTvmaze.DAL.Genre.AddGenre(connection, id, genre, pos);
                         ++pos;
@@ -163,7 +174,7 @@ namespace CodereTvmaze.BLL
                 }
             }
 
-            if(dvdCountry != null)
+            if (dvdCountry != null)
             {
                 //Add Country if it doesn't exist.
                 dvdCountry.AddToDatabaseIfNotExists(connection);
@@ -186,7 +197,7 @@ namespace CodereTvmaze.BLL
                 CodereTvmaze.DAL.Schedule.DeleteMainInfoSchedule(connection, id);
 
                 // Add Schedule.
-            schedule.AddSchedule(connection, id);
+                schedule.AddSchedule(connection, id);
             }
 
             // Close connection.
@@ -194,6 +205,86 @@ namespace CodereTvmaze.BLL
             connection.Close();
         }
 
-    }
+        public static MainInfo GetById(int id)
+        {
+            DataTable dt = CodereTvmaze.DAL.MainInfo.GetById(id);
+
+            if (dt == null)
+                return null;
+            if (dt.Rows.Count < 1)
+                return null;
+
+            DataRow dr = dt.Rows[0];
+
+            MainInfo mainInfo = new MainInfo()
+            {
+                id = (long)dr["Id"],
+                url = dr["Url"] == DBNull.Value ? null : dr["Url"].ToString(),
+                name = dr["Name"] == DBNull.Value ? null : dr["Name"].ToString(),
+                type = dr["Type"] == DBNull.Value ? null : dr["Type"].ToString(),
+                language = dr["Language"] == DBNull.Value ? null : dr["Language"].ToString(),
+                status = dr["Status"] == DBNull.Value ? null : dr["Status"].ToString(),
+                runtime = dr["Runtime"] == DBNull.Value ? null : (long)(dr["Runtime"]),
+                averageRuntime = dr["AverageRuntime"] == DBNull.Value ? null : (long)(dr["AverageRuntime"]),
+                premiered = dr["Premiered"] == DBNull.Value ? null : dr["Premiered"].ToString(),
+                ended = dr["Ended"] == DBNull.Value ? null : dr["Ended"].ToString(),
+                officialSite = dr["OfficialSite"] == DBNull.Value ? null : dr["OfficialSite"].ToString(),
+                weight = dr["Weight"] == DBNull.Value ? null : (long)(dr["Weight"]),
+                summary = dr["Summary"] == DBNull.Value ? null : dr["Summary"].ToString(),
+                updated = dr["Updated"] == DBNull.Value ? null : (long)(dr["Updated"]),
+
+            };
+
+            // Genres.
+
+            DataTable dtGenres = CodereTvmaze.DAL.Genre.GetGenreByMainInfoId(mainInfo.id);
+            if (dtGenres != null)
+            {
+                if (dtGenres.Rows.Count > 0)
+                {
+                    mainInfo.genres = new List<string>();
+                    foreach (DataRow r in dtGenres.Rows)
+                    {
+                        mainInfo.genres.Add(r["Genre"].ToString());
+                    }
+                }
+            }
+
+            // Previous and next episodies.
+
+            if ((dr["PreviousEpisodeHref"] != DBNull.Value) || (dr["NextEpisodeHref"] != DBNull.Value) || (dr["Href"] != DBNull.Value))
+            {
+                mainInfo._links = new Links();
+
+                if (dr["Href"] != DBNull.Value)
+                {
+                    mainInfo._links.self = new Self();
+                    mainInfo._links.self.href = dr["Href"].ToString();
+                }
+
+                if (dr["PreviousEpisodeHref"] != DBNull.Value)
+                {
+                    mainInfo._links.previousepisode = new Episode()
+                    {
+                        href = dr["PreviousEpisodeHref"].ToString(),
+                        name = dr["PreviousEpisodeName"] == DBNull.Value ? null : dr["PreviousEpisodeName"].ToString()
+                    };
+                }
+
+                if (dr["NextEpisodeHref"] != DBNull.Value)
+                {
+                    mainInfo._links.nextepisode = new Episode()
+                    {
+                        href = dr["NextEpisodeHref"].ToString(),
+                        name = dr["NextEpisodeName"] == DBNull.Value ? null : dr["NextEpisodeName"].ToString()
+                    };
+                }
+            }
+
+
+            return mainInfo;
+        }
 
     }
+
+}

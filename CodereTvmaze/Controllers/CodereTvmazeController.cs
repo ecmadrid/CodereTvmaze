@@ -19,7 +19,12 @@ namespace CodereTvmaze.Controllers
         [Route("GetShow/{id}")]
         public MainInfo GetShow(int id)
         {
-            return MainInfo.GetMainInfo(id);
+            //return MainInfo.GetMainInfo(id);
+
+            MainInfo.GetMainInfo(id);
+
+            var obj = MainInfo.GetById(id);
+            return obj;
         }
 
         [HttpGet]
