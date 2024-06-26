@@ -39,8 +39,8 @@ namespace CodereTvmaze.Controllers
         }
 
         [HttpGet]
-        [Route("ImportAllShows")]
-        public IResult ImportAllShows()
+        [Route("Import")]
+        public IResult Import()
         {
 
             bool rs = MainInfo.ImportMainInfoAll();
@@ -60,25 +60,37 @@ namespace CodereTvmaze.Controllers
          */
 
         [HttpGet]
-        [Route("GetShow/{id}")]
-        public MainInfo GetShow(int id)
+        [Route("Shows/{id}")]
+        public IResult Shows(int id)
         {
             var obj = MainInfo.GetById(id);
-            return obj;
-        }
 
-        [HttpGet]
-        [Route("GetAllShows")]
-        public IEnumerable<MainInfo> GetAllShows()
-        {
-            return MainInfo.GetAll().ToArray();
+            if (obj == null)
+            {
+                return Results.NotFound();
+
+            }
+
+            return Results.Ok(obj);
         }
 
         [HttpPost]
         [Route("Shows")]
-        public IEnumerable<MainInfo> Shows(long page)
+        public IResult Shows(long page)
         {
-            return MainInfo.GetByPage(page).ToArray();
+            var objs= MainInfo.GetByPage(page).ToArray();
+
+            if (objs == null)
+            {
+                return Results.NotFound();
+            }
+
+            if (objs.Length < 1)
+            {
+                return Results.NotFound();
+            }
+
+            return Results.Ok(objs);
         }
     }
 }
