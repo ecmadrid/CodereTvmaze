@@ -18,7 +18,7 @@ namespace CodereTvmaze.Controllers
 
         /*
  * 
- * Job endpoints with web api key.
+ * Job endpoint with web api key.
  * 
  */
 
@@ -43,14 +43,14 @@ namespace CodereTvmaze.Controllers
         public IResult ImportAllShows()
         {
 
-            IEnumerable<MainInfo> mainInfos = MainInfo.ImportMainInfoAll().ToArray();
+            bool rs = MainInfo.ImportMainInfoAll();
 
-            if (mainInfos == null)
+            if (rs == null)
             {
-                return Results.BadRequest(null);
+                return Results.BadRequest();
             }
 
-            return Results.Ok(mainInfos);
+            return Results.Ok();
         }
 
         /*
@@ -72,6 +72,13 @@ namespace CodereTvmaze.Controllers
         public IEnumerable<MainInfo> GetAllShows()
         {
             return MainInfo.GetAll().ToArray();
+        }
+
+        [HttpPost]
+        [Route("Shows")]
+        public IEnumerable<MainInfo> Shows(long page)
+        {
+            return MainInfo.GetByPage(page).ToArray();
         }
     }
 }

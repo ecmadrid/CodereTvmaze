@@ -34,9 +34,9 @@ namespace CodereTvmaze.DAL
 
                 // Country doesn't exist in database. We add it.
                 sql = @"INSERT INTO Countries (Name, Code, Timezone) VALUES( @Name, @Code, @Timezone)";
-                sql = sql.Replace("@Name", name == null ? "NULL" : "'" + name + "'");
-                sql = sql.Replace("@Code","'" + code + "'");
-                sql = sql.Replace("@Timezone", timezone == null ? "NULL" : "'" + timezone + "'");
+                sql = sql.Replace("@Name", name == null ? "NULL" : "'" + name.Replace("'", "''") + "'");
+                sql = sql.Replace("@Code","'" + code.Replace("'", "''") + "'");
+                sql = sql.Replace("@Timezone", timezone == null ? "NULL" : "'" + timezone.Replace("'", "''") + "'");
                 connection.ExecuteNonQuery(sql);
 
             if (needCloseConnection)

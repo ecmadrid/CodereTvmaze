@@ -36,9 +36,9 @@ namespace CodereTvmaze.DAL
 
             sql = @"INSERT INTO WebChannels (Id, Name, CountryCode, OfficialSite) VALUES( @Id, @Name, @CountryCode, @OfficialSite)";
             sql = sql.Replace("@Id", id.ToString());
-            sql = sql.Replace("@Name", name == null ? "NULL" : "'" + name + "'");
+            sql = sql.Replace("@Name", name == null ? "NULL" : "'" + name.Replace("'", "''") + "'");
             sql = sql.Replace("@CountryCode", countryCode == null ? "NULL" : "'" + countryCode + "'");
-            sql = sql.Replace("@OfficialSite", officialSite == null ? "NULL" : "'" + officialSite + "'");
+            sql = sql.Replace("@OfficialSite", officialSite == null ? "NULL" : "'" + officialSite.Replace("'", "''") + "'");
             connection.ExecuteNonQuery(sql);
 
             if (needCloseConnection)

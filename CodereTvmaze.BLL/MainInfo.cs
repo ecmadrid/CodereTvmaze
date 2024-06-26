@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Net;
 using System.Net.Http.Headers;
 using System.Text;
@@ -52,32 +53,66 @@ namespace CodereTvmaze.BLL
                     var json = result.Content.ReadAsStringAsync().Result;
                     var obj = JsonSerializer.Deserialize<MainInfo>(json);
 
-                    obj.AddToDatabase();
+                    if (obj != null)
+                    {
+                        obj.AddToDatabase();
 
-                    return obj;
+                        return obj;
+                    }
                 }
 
                 return null;
             };
         }
 
-        public static List<MainInfo> ImportMainInfoAll()
+        public static bool ImportMainInfoAll()
         {
-            using (var http = new HttpClient())
+            bool rs = true;
+
+            try
             {
-                var endpoint = "https://api.tvmaze.com/shows";
-                var result = http.GetAsync(endpoint).Result;
-                var json = result.Content.ReadAsStringAsync().Result;
-                var objs = JsonSerializer.Deserialize<List<MainInfo>>(json);
-
-                foreach (var obj in objs)
+                using (var http = new HttpClient())
                 {
-                    obj.AddToDatabase();
-                }
+                    decimal page = 0;
 
-                return objs;
-            };
-        }
+                    // Get last inserted id.
+                    long lastId = CodereTvmaze.DAL.MainInfo.GetLastId();
+
+                    // Determinate start page number.
+                    page = Math.Floor(Convert.ToDecimal(lastId / 250));
+                     bool hasResult = true;
+
+                    do
+                    {
+                        var endpoint = "https://api.tvmaze.com/shows?page=" + page.ToString();
+                        var result = http.GetAsync(endpoint).Result;
+                        if (result.StatusCode == HttpStatusCode.NotFound)
+                        {
+                            hasResult = false;
+                        }
+
+                        if (hasResult)
+                        {
+
+                            var json = result.Content.ReadAsStringAsync().Result;
+                            var objs = JsonSerializer.Deserialize<List<MainInfo>>(json);
+
+                            foreach (var obj in objs)
+                            {
+                                obj.AddToDatabase();
+                            }
+
+                            page++;
+                        }
+                    } while (hasResult);
+                };
+            }
+            catch (Exception ex)
+            {
+                rs = false;
+            }
+                return rs;
+            }
 
         public void AddToDatabase()
         {
@@ -233,6 +268,30 @@ namespace CodereTvmaze.BLL
             List<MainInfo> mainInfos = new List<MainInfo>();
 
             foreach(DataRow mainInfoRow in dtMainInfo.Rows)
+            {
+                // Create a new MainInfo object and add it to list.
+                MainInfo mainInfo = CreateMainInfoFromDataRow(mainInfoRow);
+                mainInfos.Add(mainInfo);
+            }
+
+            return mainInfos;
+        }
+
+        public static List<MainInfo> GetByPage(long page)
+        {
+            DataTable dtMainInfo = CodereTvmaze.DAL.MainInfo.GetByPage(page);
+
+            if (dtMainInfo == null)
+                return null;
+
+            if (dtMainInfo.Rows.Count < 0)
+            {
+                return null;
+            }
+
+            List<MainInfo> mainInfos = new List<MainInfo>();
+
+            foreach (DataRow mainInfoRow in dtMainInfo.Rows)
             {
                 // Create a new MainInfo object and add it to list.
                 MainInfo mainInfo = CreateMainInfoFromDataRow(mainInfoRow);

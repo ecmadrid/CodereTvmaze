@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.Sqlite;
+using SQLitePCL;
 using System.Data;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;

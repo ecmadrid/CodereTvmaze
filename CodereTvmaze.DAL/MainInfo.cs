@@ -105,5 +105,39 @@ namespace CodereTvmaze.DAL
 
             return dt;
         }
+
+        public static DataTable GetByPage(long page)
+        {
+            // Determinate first and last page element ids.
+            long firstId = page * 250;
+            long lastId = ((page + 1) * 250) - 1;
+
+            Connection connection = new DAL.Connection();
+            connection.Open();
+
+            string sql = "SELECT * FROM MainInfo WHERE Id BETWEEN @FirstId AND @LastId ORDER BY Id";
+            sql = sql.Replace("@FirstId", firstId.ToString());
+            sql = sql.Replace("@LastId", lastId.ToString());
+
+            DataTable dt = connection.Execute(sql);
+
+            connection.Close();
+
+            return dt;
+        }
+
+        public static long GetLastId()
+        {
+            Connection connection = new DAL.Connection();
+            connection.Open();
+
+            string sql = "SELECT ifnull(MAX(Id), 0) AS Id FROM MainInfo ORDER BY Id";
+
+            long maxId = connection.ExecuteScalar(sql);
+
+            connection.Close();
+
+            return maxId;
+        }
     }
 }
