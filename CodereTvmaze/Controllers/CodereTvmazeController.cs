@@ -89,7 +89,7 @@ namespace CodereTvmaze.Controllers
             return Results.Ok(obj);
         }
 
-        [HttpPost]
+        [HttpGet]
         [Route("Shows")]
         public IResult Shows(long page)
         {
