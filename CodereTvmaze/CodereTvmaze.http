@@ -1,6 +1,6 @@
 @CodereTvmaze_HostAddress = http://localhost:5027
 
-GET {{CodereTvmaze_HostAddress}}/coderetvmaze/
+GET {{CodereTvmaze_HostAddress}}/api/coderetvmaze/Import
 Accept: application/json
-
+X-API-KEY: Hola
 ###

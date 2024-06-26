@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using CodereTvmaze.BLL;
 using System.Collections.Generic;
+using Microsoft.Extensions.Configuration;
+
 
 namespace CodereTvmaze.Controllers
 {
@@ -42,6 +44,19 @@ namespace CodereTvmaze.Controllers
         [Route("Import")]
         public IResult Import()
         {
+            // Check api key.
+
+            string validApiKey = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("AppSettings")["Apikey"];
+
+            string authHeader = HttpContext.Request.Headers["Authorization"];
+            if (authHeader != null && authHeader.StartsWith("ApiKey"))
+            {
+                string userApiKey = authHeader.Split(' ')[1];
+            }
+            else
+            {
+                return Results.Unauthorized();
+            }
 
             bool rs = MainInfo.ImportMainInfoAll();
 
@@ -78,7 +93,7 @@ namespace CodereTvmaze.Controllers
         [Route("Shows")]
         public IResult Shows(long page)
         {
-            var objs= MainInfo.GetByPage(page).ToArray();
+            var objs = MainInfo.GetByPage(page).ToArray();
 
             if (objs == null)
             {

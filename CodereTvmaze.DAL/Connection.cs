@@ -3,6 +3,8 @@ using SQLitePCL;
 using System.Data;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
+using Microsoft.Extensions.Configuration;
+
 
 namespace CodereTvmaze.DAL
 {
@@ -14,7 +16,8 @@ namespace CodereTvmaze.DAL
         private SqliteTransaction transaction;
         public void Open()
         {
-            connectionString = "DataSource=C:\\Codere\\Tvmaze.db";
+            connectionString = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["ProjectConnection"];
+
             conn = new SqliteConnection(connectionString);
             conn.Open();
         }

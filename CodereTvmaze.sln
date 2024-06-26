@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodereTvmaze", "CodereTvmaz
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodereTvmaze.BLL", "CodereTvmaze.BLL\CodereTvmaze.BLL.csproj", "{53B2C45E-5609-4740-AF32-D1F94D5483D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodereTvmaze.DAL", "CodereTvmaze.DAL\CodereTvmaze.DAL.csproj", "{5410FF31-750C-461F-AD5B-162A494EB365}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodereTvmaze.DAL", "CodereTvmaze.DAL\CodereTvmaze.DAL.csproj", "{5410FF31-750C-461F-AD5B-162A494EB365}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
