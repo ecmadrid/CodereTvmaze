@@ -10,11 +10,11 @@ namespace CodereTvmaze.DAL
     public class MainInfo
     {
         public static Connection AddToDatabase(long id, string url, string name, string type, string language,
-            string status, long? runtime, long? averageRuntime, string premiered, string ended,
+            string status, long? runtime, long? averageRuntime, DateOnly? premiered, DateOnly? ended,
             string officialSite, long? weight, string summary, long? updated,
             string previousEpisodeHref, string previousEpisodeName,
                 string nextEpisodeHref, string nextEpisodeName, string imageMedium, string imageOriginal,
-                double? average, int? tvrage, int? thetvdb, string imdb,
+                double? average, long? tvrage, long? thetvdb, string imdb,
                 string dvdCountryCode, int? networkId, int? webChannelId, string href)
         {
             Connection connection = new DAL.Connection();
@@ -68,7 +68,7 @@ namespace CodereTvmaze.DAL
             return connection;
         }
 
-        public static DataTable GetById(int id)
+        public static DataRow GetById(int id)
         {
             Connection connection = new DAL.Connection();
             connection.Open();
@@ -79,7 +79,17 @@ namespace CodereTvmaze.DAL
 
             connection.Close();
 
-            return dt;
+            if (dt == null)
+            {
+                return null;
+            }
+
+            if (dt.Rows.Count < 1)
+            {
+                return null;
+            }
+
+            return dt.Rows[0];
         }
     }
 }

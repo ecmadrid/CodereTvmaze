@@ -8,8 +8,8 @@ namespace CodereTvmaze.BLL
 {
     public class Externals
     {
-        public int? tvrage { get; set; }
-        public int? thetvdb { get; set; }
+        public long? tvrage { get; set; }
+        public long? thetvdb { get; set; }
         public string imdb { get; set; }
     }
 }

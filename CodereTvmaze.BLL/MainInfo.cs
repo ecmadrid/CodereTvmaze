@@ -23,8 +23,8 @@ namespace CodereTvmaze.BLL
         public string status { get; set; }
         public long? runtime { get; set; }
         public long? averageRuntime { get; set; }
-        public string premiered { get; set; }
-        public string ended { get; set; }
+        public DateOnly? premiered { get; set; }
+        public DateOnly? ended { get; set; }
         public string officialSite { get; set; }
         public Schedule schedule { get; set; }
         public Rating rating { get; set; }
@@ -89,8 +89,8 @@ namespace CodereTvmaze.BLL
             string? imageMedium = null;
             string? imageOriginal = null;
             double? average = null;
-            int? tvrage = null;
-            int? thetvdb = null;
+            long? tvrage = null;
+            long? thetvdb = null;
             string? imdb = null;
             int? networkId = null;
             int? webChannelId = null;
@@ -146,7 +146,7 @@ namespace CodereTvmaze.BLL
 
             if (_links != null)
             {
-                if(_links.self != null)
+                if (_links.self != null)
                 {
                     href = _links.self.href;
                 }
@@ -207,31 +207,27 @@ namespace CodereTvmaze.BLL
 
         public static MainInfo GetById(int id)
         {
-            DataTable dt = CodereTvmaze.DAL.MainInfo.GetById(id);
+            DataRow mainInfoRow = CodereTvmaze.DAL.MainInfo.GetById(id);
 
-            if (dt == null)
+            if (mainInfoRow == null)
                 return null;
-            if (dt.Rows.Count < 1)
-                return null;
-
-            DataRow dr = dt.Rows[0];
 
             MainInfo mainInfo = new MainInfo()
             {
-                id = (long)dr["Id"],
-                url = dr["Url"] == DBNull.Value ? null : dr["Url"].ToString(),
-                name = dr["Name"] == DBNull.Value ? null : dr["Name"].ToString(),
-                type = dr["Type"] == DBNull.Value ? null : dr["Type"].ToString(),
-                language = dr["Language"] == DBNull.Value ? null : dr["Language"].ToString(),
-                status = dr["Status"] == DBNull.Value ? null : dr["Status"].ToString(),
-                runtime = dr["Runtime"] == DBNull.Value ? null : (long)(dr["Runtime"]),
-                averageRuntime = dr["AverageRuntime"] == DBNull.Value ? null : (long)(dr["AverageRuntime"]),
-                premiered = dr["Premiered"] == DBNull.Value ? null : dr["Premiered"].ToString(),
-                ended = dr["Ended"] == DBNull.Value ? null : dr["Ended"].ToString(),
-                officialSite = dr["OfficialSite"] == DBNull.Value ? null : dr["OfficialSite"].ToString(),
-                weight = dr["Weight"] == DBNull.Value ? null : (long)(dr["Weight"]),
-                summary = dr["Summary"] == DBNull.Value ? null : dr["Summary"].ToString(),
-                updated = dr["Updated"] == DBNull.Value ? null : (long)(dr["Updated"]),
+                id = (long)mainInfoRow["Id"],
+                url = mainInfoRow["Url"] == DBNull.Value ? null : mainInfoRow["Url"].ToString(),
+                name = mainInfoRow["Name"] == DBNull.Value ? null : mainInfoRow["Name"].ToString(),
+                type = mainInfoRow["Type"] == DBNull.Value ? null : mainInfoRow["Type"].ToString(),
+                language = mainInfoRow["Language"] == DBNull.Value ? null : mainInfoRow["Language"].ToString(),
+                status = mainInfoRow["Status"] == DBNull.Value ? null : mainInfoRow["Status"].ToString(),
+                runtime = mainInfoRow["Runtime"] == DBNull.Value ? null : (long)(mainInfoRow["Runtime"]),
+                averageRuntime = mainInfoRow["AverageRuntime"] == DBNull.Value ? null : (long)(mainInfoRow["AverageRuntime"]),
+                premiered = mainInfoRow["Premiered"] == DBNull.Value ? null : DateOnly.Parse(mainInfoRow["Premiered"].ToString()),
+                ended = mainInfoRow["Ended"] == DBNull.Value ? null : DateOnly.Parse(mainInfoRow["Ended"].ToString()),
+                officialSite = mainInfoRow["OfficialSite"] == DBNull.Value ? null : mainInfoRow["OfficialSite"].ToString(),
+                weight = mainInfoRow["Weight"] == DBNull.Value ? null : (long)(mainInfoRow["Weight"]),
+                summary = mainInfoRow["Summary"] == DBNull.Value ? null : mainInfoRow["Summary"].ToString(),
+                updated = mainInfoRow["Updated"] == DBNull.Value ? null : (long)(mainInfoRow["Updated"]),
 
             };
 
@@ -243,40 +239,82 @@ namespace CodereTvmaze.BLL
                 if (dtGenres.Rows.Count > 0)
                 {
                     mainInfo.genres = new List<string>();
-                    foreach (DataRow r in dtGenres.Rows)
+                    foreach (DataRow genresRow in dtGenres.Rows)
                     {
-                        mainInfo.genres.Add(r["Genre"].ToString());
+                        mainInfo.genres.Add(genresRow["Genre"].ToString());
                     }
                 }
             }
 
+            // Schedule.
+
+            DataTable dtSchedule = CodereTvmaze.DAL.Schedule.GetScheduleByMainInfoId(mainInfo.id);
+            if (dtSchedule != null)
+            {
+                if (dtSchedule.Rows.Count > 0)
+                {
+                    mainInfo.schedule = new Schedule();
+                    mainInfo.schedule.days = new List<string>();
+                    mainInfo.schedule.time = dtSchedule.Rows[0]["Time"].ToString();
+                    foreach (DataRow scheduleRow in dtSchedule.Rows)
+                    {
+                        mainInfo.schedule.days.Add(scheduleRow["Day"].ToString());
+                    }
+                }
+            }
+
+            // Rating.
+
+            mainInfo.rating = new Rating()
+            {
+                average = mainInfoRow["Average"] == DBNull.Value ? null : Convert.ToDouble(mainInfoRow["Average"].ToString())
+            };
+
+            // Externals.
+
+            mainInfo.externals = new Externals()
+            {
+                tvrage = mainInfoRow["Tvrage"] == DBNull.Value ? null : Convert.ToInt64(mainInfoRow["Tvrage"].ToString()),
+                thetvdb = mainInfoRow["TheTvDb"] == DBNull.Value ? null : Convert.ToInt64(mainInfoRow["TheTvDb"].ToString()),
+                imdb = mainInfoRow["Imdb"] == DBNull.Value ? null : mainInfoRow["Imdb"].ToString()
+
+            };
+
+            // Image.
+
+            mainInfo.image = new Image()
+            {
+                medium = mainInfoRow["ImageMedium"] == DBNull.Value ? null : mainInfoRow["ImageMedium"].ToString(),
+                original = mainInfoRow["ImageOriginal"] == DBNull.Value ? null : mainInfoRow["ImageOriginal"].ToString()
+            };
+
             // Previous and next episodies.
 
-            if ((dr["PreviousEpisodeHref"] != DBNull.Value) || (dr["NextEpisodeHref"] != DBNull.Value) || (dr["Href"] != DBNull.Value))
+            if ((mainInfoRow["PreviousEpisodeHref"] != DBNull.Value) || (mainInfoRow["NextEpisodeHref"] != DBNull.Value) || (mainInfoRow["Href"] != DBNull.Value))
             {
                 mainInfo._links = new Links();
 
-                if (dr["Href"] != DBNull.Value)
+                if (mainInfoRow["Href"] != DBNull.Value)
                 {
                     mainInfo._links.self = new Self();
-                    mainInfo._links.self.href = dr["Href"].ToString();
+                    mainInfo._links.self.href = mainInfoRow["Href"].ToString();
                 }
 
-                if (dr["PreviousEpisodeHref"] != DBNull.Value)
+                if (mainInfoRow["PreviousEpisodeHref"] != DBNull.Value)
                 {
                     mainInfo._links.previousepisode = new Episode()
                     {
-                        href = dr["PreviousEpisodeHref"].ToString(),
-                        name = dr["PreviousEpisodeName"] == DBNull.Value ? null : dr["PreviousEpisodeName"].ToString()
+                        href = mainInfoRow["PreviousEpisodeHref"].ToString(),
+                        name = mainInfoRow["PreviousEpisodeName"] == DBNull.Value ? null : mainInfoRow["PreviousEpisodeName"].ToString()
                     };
                 }
 
-                if (dr["NextEpisodeHref"] != DBNull.Value)
+                if (mainInfoRow["NextEpisodeHref"] != DBNull.Value)
                 {
                     mainInfo._links.nextepisode = new Episode()
                     {
-                        href = dr["NextEpisodeHref"].ToString(),
-                        name = dr["NextEpisodeName"] == DBNull.Value ? null : dr["NextEpisodeName"].ToString()
+                        href = mainInfoRow["NextEpisodeHref"].ToString(),
+                        name = mainInfoRow["NextEpisodeName"] == DBNull.Value ? null : mainInfoRow["NextEpisodeName"].ToString()
                     };
                 }
             }

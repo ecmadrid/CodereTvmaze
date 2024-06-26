@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,6 +39,32 @@ namespace CodereTvmaze.DAL
             string sql = @"DELETE FROM Schedules Where MainInfoId = @MainInfoId";
             sql = sql.Replace("@MainInfoId", mainInfoId.ToString());
             connection.ExecuteNonQuery(sql);
+        }
+
+        public static DataTable GetScheduleByMainInfoId(long mainInfoId)
+        {
+
+            Connection connection = connection = new DAL.Connection();
+            connection.Open();
+            string sql = @"SELECT * FROM Schedules WHERE MainInfoId =" + mainInfoId.ToString() + " ORDER BY Pos";
+            DataTable dt = connection.Execute(sql);
+
+            connection.Close();
+
+            return dt;
+        }
+
+        public static DataTable GetAllSchedules()
+        {
+
+            Connection connection = connection = new DAL.Connection();
+            connection.Open();
+            string sql = @"SELECT * FROM Schedules ORDER BY MainInfoId, Pos";
+            DataTable dt = connection.Execute(sql);
+
+            connection.Close();
+
+            return dt;
         }
     }
 }
