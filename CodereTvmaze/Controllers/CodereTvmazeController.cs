@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using CodereTvmaze.BLL;
+using System.Collections.Generic;
 
 namespace CodereTvmaze.Controllers
 {
@@ -15,14 +16,53 @@ namespace CodereTvmaze.Controllers
             _logger = logger;
         }
 
+        /*
+ * 
+ * Job endpoints with web api key.
+ * 
+ */
+
+        [HttpGet]
+        [Route("Import/{id}")]
+        public IResult ImportShow(int id)
+        {
+            //return MainInfo.GetMainInfo(id);
+
+            MainInfo mainInfo = MainInfo.ImportMainInfo(id);
+
+            if (mainInfo == null)
+            {
+                return Results.BadRequest(null);
+            }
+
+            return Results.Ok(mainInfo);
+        }
+
+        [HttpGet]
+        [Route("ImportAllShows")]
+        public IResult ImportAllShows()
+        {
+
+            IEnumerable<MainInfo> mainInfos = MainInfo.ImportMainInfoAll().ToArray();
+
+            if (mainInfos == null)
+            {
+                return Results.BadRequest(null);
+            }
+
+            return Results.Ok(mainInfos);
+        }
+
+        /*
+         * 
+         * Public endpoints.
+         * 
+         */
+
         [HttpGet]
         [Route("GetShow/{id}")]
         public MainInfo GetShow(int id)
         {
-            //return MainInfo.GetMainInfo(id);
-
-            MainInfo.GetMainInfo(id);
-
             var obj = MainInfo.GetById(id);
             return obj;
         }
@@ -31,7 +71,7 @@ namespace CodereTvmaze.Controllers
         [Route("GetAllShows")]
         public IEnumerable<MainInfo> GetAllShows()
         {
-            return MainInfo.GetMainInfoAll().ToArray();
+            return MainInfo.GetAll().ToArray();
         }
     }
 }

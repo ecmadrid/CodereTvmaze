@@ -40,7 +40,7 @@ namespace CodereTvmaze.BLL
 
         // Methods
 
-        public static MainInfo GetMainInfo(int id)
+        public static MainInfo ImportMainInfo(int id)
         {
 
             using (var http = new HttpClient())
@@ -61,7 +61,7 @@ namespace CodereTvmaze.BLL
             };
         }
 
-        public static List<MainInfo> GetMainInfoAll()
+        public static List<MainInfo> ImportMainInfoAll()
         {
             using (var http = new HttpClient())
             {
@@ -92,8 +92,8 @@ namespace CodereTvmaze.BLL
             long? tvrage = null;
             long? thetvdb = null;
             string? imdb = null;
-            int? networkId = null;
-            int? webChannelId = null;
+            long? networkId = null;
+            long? webChannelId = null;
             string? dvdCountryCode = null;
             string? href = null;
 
@@ -212,6 +212,39 @@ namespace CodereTvmaze.BLL
             if (mainInfoRow == null)
                 return null;
 
+            MainInfo mainInfo = CreateMainInfoFromDataRow(mainInfoRow);
+
+
+            return mainInfo;
+        }
+
+        public static List<MainInfo> GetAll()
+        {
+            DataTable dtMainInfo = CodereTvmaze.DAL.MainInfo.GetAll();
+
+            if (dtMainInfo == null)
+                return null;
+
+            if(dtMainInfo.Rows.Count < 0)
+            {
+                return null;
+            }
+
+            List<MainInfo> mainInfos = new List<MainInfo>();
+
+            foreach(DataRow mainInfoRow in dtMainInfo.Rows)
+            {
+                // Create a new MainInfo object and add it to list.
+                MainInfo mainInfo = CreateMainInfoFromDataRow(mainInfoRow);
+                mainInfos.Add(mainInfo);
+            }
+
+            return mainInfos;
+        }
+
+
+        private static MainInfo CreateMainInfoFromDataRow(DataRow mainInfoRow)
+        {
             MainInfo mainInfo = new MainInfo()
             {
                 id = (long)mainInfoRow["Id"],
@@ -248,20 +281,7 @@ namespace CodereTvmaze.BLL
 
             // Schedule.
 
-            DataTable dtSchedule = CodereTvmaze.DAL.Schedule.GetScheduleByMainInfoId(mainInfo.id);
-            if (dtSchedule != null)
-            {
-                if (dtSchedule.Rows.Count > 0)
-                {
-                    mainInfo.schedule = new Schedule();
-                    mainInfo.schedule.days = new List<string>();
-                    mainInfo.schedule.time = dtSchedule.Rows[0]["Time"].ToString();
-                    foreach (DataRow scheduleRow in dtSchedule.Rows)
-                    {
-                        mainInfo.schedule.days.Add(scheduleRow["Day"].ToString());
-                    }
-                }
-            }
+            mainInfo.schedule = Schedule.GetScheduleByMainInfoId(mainInfo.id);
 
             // Rating.
 
@@ -287,6 +307,35 @@ namespace CodereTvmaze.BLL
                 medium = mainInfoRow["ImageMedium"] == DBNull.Value ? null : mainInfoRow["ImageMedium"].ToString(),
                 original = mainInfoRow["ImageOriginal"] == DBNull.Value ? null : mainInfoRow["ImageOriginal"].ToString()
             };
+
+            // Network.
+
+            if (mainInfoRow["NetworkId"] != DBNull.Value)
+            {
+                mainInfo.network = Network.GetNetworkById(Convert.ToInt64(mainInfoRow["NetworkId"].ToString()));
+            }
+            // Web channel.
+
+            if (mainInfoRow["WebChannelId"] != DBNull.Value)
+            {
+                mainInfo.webChannel = WebChannel.GetWebChannelkById(Convert.ToInt64(mainInfoRow["WebChannelId"].ToString()));
+            }
+
+            // Dvd country.
+
+            if (mainInfoRow["DvdCountryCode"] != DBNull.Value)
+            {
+                mainInfo.dvdCountry = Country.GetCountryByCode(mainInfoRow["DvdCountryCode"].ToString());
+            }
+
+            if (mainInfoRow["PreviousEpisodeHref"] != DBNull.Value)
+            {
+                DataRow countryRow = CodereTvmaze.DAL.Country.GetCountryByCode(mainInfoRow["PreviousEpisodeHref"].ToString());
+                if (countryRow != null)
+                {
+                    mainInfo.dvdCountry = new Country();
+                }
+            }
 
             // Previous and next episodies.
 
@@ -323,6 +372,6 @@ namespace CodereTvmaze.BLL
             return mainInfo;
         }
 
-    }
+        }
 
 }

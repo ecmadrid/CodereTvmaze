@@ -66,5 +66,23 @@ namespace CodereTvmaze.DAL
 
             return dt;
         }
+
+        public static DataTable GetAll()
+        {
+
+            Connection connection = connection = new DAL.Connection();
+            connection.Open();
+            string sql = @"SELECT * FROM Schedules";
+            DataTable dt = connection.Execute(sql);
+
+            connection.Close();
+
+            if (dt.Rows.Count < 1)
+            {
+                return null;
+            };
+
+            return dt;
+        }
     }
 }

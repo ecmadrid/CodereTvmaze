@@ -1,15 +1,16 @@
 ﻿using Microsoft.VisualBasic.FileIO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CodereTvmaze.DAL
 {
-    public class WebChannels
+    public class WebChannel
     {
-        public static void AddToDatabaseIfNotExists(Connection connection, int id, string name, string? countryCode, string officialSite)
+        public static void AddToDatabaseIfNotExists(Connection connection, long id, string name, string? countryCode, string officialSite)
         {
             bool needCloseConnection = false;
             if (connection == null)
@@ -45,6 +46,47 @@ namespace CodereTvmaze.DAL
                 connection.Commit();
                 connection.Close();
             }
+        }
+
+        public static DataRow GetWebChannelById(long id)
+        {
+
+            Connection connection = connection = new DAL.Connection();
+            connection.Open();
+            string sql = @"SELECT * FROM WebChannels WHERE Id =" + id.ToString();
+            DataTable dt = connection.Execute(sql);
+
+            connection.Close();
+
+            if (dt == null)
+            {
+                return null;
+            }
+
+            if (dt.Rows.Count < 1)
+            {
+                return null;
+            }
+
+            return dt.Rows[0];
+        }
+
+        public static DataTable GetAll()
+        {
+
+            Connection connection = connection = new DAL.Connection();
+            connection.Open();
+            string sql = @"SELECT * FROM WebChannels";
+            DataTable dt = connection.Execute(sql);
+
+            connection.Close();
+
+            if (dt.Rows.Count < 1)
+            {
+                return null;
+            };
+
+            return dt;
         }
     }
 }

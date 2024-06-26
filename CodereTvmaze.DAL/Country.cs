@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -46,5 +47,46 @@ namespace CodereTvmaze.DAL
 
 
         }
+
+        public static DataRow GetCountryByCode(string code)
+        {
+
+            Connection connection = connection = new DAL.Connection();
+            connection.Open();
+            string sql = @"SELECT * FROM Countries WHERE Code = '" +code + "'";
+            DataTable dt = connection.Execute(sql);
+
+            connection.Close();
+
+            if (dt == null)
+            {
+                return null;
+            }
+
+            if (dt.Rows.Count < 1)
+            {
+                return null;
+            };
+
+            return dt.Rows[0];
         }
+
+        public static DataTable GetAll()
+        {
+
+            Connection connection = connection = new DAL.Connection();
+            connection.Open();
+            string sql = @"SELECT * FROM Countries";
+            DataTable dt = connection.Execute(sql);
+
+            connection.Close();
+
+            if (dt.Rows.Count < 1)
+            {
+                return null;
+            };
+
+            return dt;
+        }
+    }
     }

@@ -15,7 +15,7 @@ namespace CodereTvmaze.DAL
             string previousEpisodeHref, string previousEpisodeName,
                 string nextEpisodeHref, string nextEpisodeName, string imageMedium, string imageOriginal,
                 double? average, long? tvrage, long? thetvdb, string imdb,
-                string dvdCountryCode, int? networkId, int? webChannelId, string href)
+                string dvdCountryCode, long? networkId, long? webChannelId, string href)
         {
             Connection connection = new DAL.Connection();
             connection.Open();
@@ -90,6 +90,20 @@ namespace CodereTvmaze.DAL
             }
 
             return dt.Rows[0];
+        }
+
+        public static DataTable GetAll()
+        {
+            Connection connection = new DAL.Connection();
+            connection.Open();
+
+            string sql = "SELECT * FROM MainInfo ORDER BY Id";
+
+            DataTable dt = connection.Execute(sql);
+
+            connection.Close();
+
+            return dt;
         }
     }
 }

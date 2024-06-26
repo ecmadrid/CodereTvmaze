@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,7 @@ namespace CodereTvmaze.DAL
 {
     public class Network
     {
-        public static void AddToDatabaseIfNotExists(Connection connection, int id, string name, string countryCode, string officialSite)
+        public static void AddToDatabaseIfNotExists(Connection connection, long id, string name, string countryCode, string officialSite)
         {
             bool needCloseConnection = false;
             if (connection == null)
@@ -46,6 +47,47 @@ namespace CodereTvmaze.DAL
                 connection.Close();
             }
 
+        }
+
+        public static DataRow GetNetworkById(long id)
+        {
+
+            Connection connection = connection = new DAL.Connection();
+            connection.Open();
+            string sql = @"SELECT * FROM Networks WHERE Id =" + id.ToString();
+            DataTable dt = connection.Execute(sql);
+
+            connection.Close();
+
+            if (dt == null)
+            {
+                return null;
+            }
+
+            if (dt.Rows.Count < 1)
+            {
+                return null;
+            }
+
+            return dt.Rows[0];
+        }
+
+        public static DataTable GetAll()
+        {
+
+            Connection connection = connection = new DAL.Connection();
+            connection.Open();
+            string sql = @"SELECT * FROM Networks";
+            DataTable dt = connection.Execute(sql);
+
+            connection.Close();
+
+            if (dt.Rows.Count < 1)
+            {
+                return null;
+            };
+
+            return dt;
         }
     }
 }
