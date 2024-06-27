@@ -1,0 +1,189 @@
+\doxysection{Codere\+Tvmaze.\+BLL.\+Main\+Info Class Reference}
+\hypertarget{class_codere_tvmaze_1_1_b_l_l_1_1_main_info}{}\label{class_codere_tvmaze_1_1_b_l_l_1_1_main_info}\index{CodereTvmaze.BLL.MainInfo@{CodereTvmaze.BLL.MainInfo}}
+
+
+Class {\ttfamily \doxylink{class_codere_tvmaze_1_1_b_l_l_1_1_main_info}{Main\+Info}} contains all information related to a \doxylink{class_codere_tvmaze_1_1_b_l_l_1_1_main_info}{Main\+Info} object (with its related object included).  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_ad69bf4fde3db6397c57bb5f84e46fb4c}\label{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_ad69bf4fde3db6397c57bb5f84e46fb4c} 
+void {\bfseries Add\+To\+Database} ()
+\begin{DoxyCompactList}\small\item\em Add a \doxylink{class_codere_tvmaze_1_1_b_l_l_1_1_main_info}{Main\+Info} object information to database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_codere_tvmaze_1_1_b_l_l_1_1_main_info}{Main\+Info}} \mbox{\hyperlink{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_ac338480d47a6dbc6c39b3474f697b787}{Import\+Main\+Info}} (int id)
+\begin{DoxyCompactList}\small\item\em This method imports data of a \doxylink{class_codere_tvmaze_1_1_b_l_l_1_1_main_info}{Main\+Info} object from Tvmaze and insert data into datatable. It calls a endpoint in Tvmaze web api to retrieve all information needed. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_a51b72b6bfbdd287a00ae24c52683920a}{Import\+Main\+Info\+All}} ()
+\begin{DoxyCompactList}\small\item\em This method imports data from Tvmaze and insert data into datatable. It calls a endpoint in Tvmaze web api to retrieve all information needed. Calls are done paginated calculating first page needed until return response is "{}not found"{}. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_codere_tvmaze_1_1_b_l_l_1_1_main_info}{Main\+Info}} \mbox{\hyperlink{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_a4d38fd82aefdacce82819d609dc52f3a}{Get\+By\+Id}} (int id)
+\begin{DoxyCompactList}\small\item\em Return a \doxylink{class_codere_tvmaze_1_1_b_l_l_1_1_main_info}{Main\+Info} object with its data from database based on an id. \end{DoxyCompactList}\item 
+static List$<$ \mbox{\hyperlink{class_codere_tvmaze_1_1_b_l_l_1_1_main_info}{Main\+Info}} $>$ \mbox{\hyperlink{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_ae1de91c6af7e27e0047304ff80978785}{Get\+All}} ()
+\begin{DoxyCompactList}\small\item\em Return a \doxylink{class_codere_tvmaze_1_1_b_l_l_1_1_main_info}{Main\+Info} object array with all data from database. \end{DoxyCompactList}\item 
+static List$<$ \mbox{\hyperlink{class_codere_tvmaze_1_1_b_l_l_1_1_main_info}{Main\+Info}} $>$ \mbox{\hyperlink{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_ac9c646a61657827784ca0897f3d063ff}{Get\+By\+Page}} (long page)
+\begin{DoxyCompactList}\small\item\em Return a \doxylink{class_codere_tvmaze_1_1_b_l_l_1_1_main_info}{Main\+Info} object with its data from database based on an id interval (represented by a page). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_a8b92b529d86b19dd8021487efd3204ee}\label{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_a8b92b529d86b19dd8021487efd3204ee} 
+long {\bfseries id}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_aafc3d4908a57d0bc018e9325169052fe}\label{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_aafc3d4908a57d0bc018e9325169052fe} 
+string? {\bfseries url}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_a0509c25a773fd31e6102969e928824fc}\label{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_a0509c25a773fd31e6102969e928824fc} 
+string? {\bfseries name}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_ae5ef7839df60235002fec31445e5e08a}\label{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_ae5ef7839df60235002fec31445e5e08a} 
+string? {\bfseries type}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_a7827ba7bc049c74b80987bc089a001b4}\label{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_a7827ba7bc049c74b80987bc089a001b4} 
+string? {\bfseries language}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_ade670bdce2e63495bae0a9a4d7d4b90a}\label{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_ade670bdce2e63495bae0a9a4d7d4b90a} 
+List$<$ string $>$? {\bfseries genres}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_a227526d7526ee21bb0e9ad85b5f35e91}\label{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_a227526d7526ee21bb0e9ad85b5f35e91} 
+string? {\bfseries status}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_a95de584b1bf30c83543ab4ccdae2a2c5}\label{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_a95de584b1bf30c83543ab4ccdae2a2c5} 
+long? {\bfseries runtime}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_a22b41d69f885cecdaa9049b5a9fd7e00}\label{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_a22b41d69f885cecdaa9049b5a9fd7e00} 
+long? {\bfseries average\+Runtime}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_a76a3ee769e05280512065c27fe3b4dde}\label{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_a76a3ee769e05280512065c27fe3b4dde} 
+Date\+Only? {\bfseries premiered}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_afca86731c66dee0d58f8288508425967}\label{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_afca86731c66dee0d58f8288508425967} 
+Date\+Only? {\bfseries ended}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_aea819efb5d1ba63a37023999500b12a2}\label{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_aea819efb5d1ba63a37023999500b12a2} 
+string? {\bfseries official\+Site}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_a36a1ae67c6eaffc522a25907d9ef8350}\label{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_a36a1ae67c6eaffc522a25907d9ef8350} 
+\mbox{\hyperlink{class_codere_tvmaze_1_1_b_l_l_1_1_schedule}{Schedule}}? {\bfseries schedule}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_a67674a120ea26fd5b723b952df4dee99}\label{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_a67674a120ea26fd5b723b952df4dee99} 
+\mbox{\hyperlink{class_codere_tvmaze_1_1_b_l_l_1_1_rating}{Rating}}? {\bfseries rating}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_af4c4b1c807d6c0a14e2fffaff84eca2d}\label{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_af4c4b1c807d6c0a14e2fffaff84eca2d} 
+long? {\bfseries weight}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_ae683aeb74e9d304cc4e608d5c8434fda}\label{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_ae683aeb74e9d304cc4e608d5c8434fda} 
+\mbox{\hyperlink{class_codere_tvmaze_1_1_b_l_l_1_1_network}{Network}}? {\bfseries network}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_a3884ef7909b1637e212a0d04f439a622}\label{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_a3884ef7909b1637e212a0d04f439a622} 
+\mbox{\hyperlink{class_codere_tvmaze_1_1_b_l_l_1_1_web_channel}{Web\+Channel}}? {\bfseries web\+Channel}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_ab4d15a8d96a9daa3a40b4815764a0457}\label{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_ab4d15a8d96a9daa3a40b4815764a0457} 
+\mbox{\hyperlink{class_codere_tvmaze_1_1_b_l_l_1_1_country}{Country}}? {\bfseries dvd\+Country}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_a13876fe4e986ff0aff653850ddffab8b}\label{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_a13876fe4e986ff0aff653850ddffab8b} 
+\mbox{\hyperlink{class_codere_tvmaze_1_1_b_l_l_1_1_externals}{Externals}}? {\bfseries externals}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_a2ac6110b49a055d9afe5858cbf73ac22}\label{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_a2ac6110b49a055d9afe5858cbf73ac22} 
+\mbox{\hyperlink{class_codere_tvmaze_1_1_b_l_l_1_1_image}{Image}}? {\bfseries image}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_a3838d151fd4f79c6508bffc4e6a97ae4}\label{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_a3838d151fd4f79c6508bffc4e6a97ae4} 
+string? {\bfseries summary}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_a78232aa60bef491dbbca9e0756024270}\label{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_a78232aa60bef491dbbca9e0756024270} 
+long? {\bfseries updated}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_a24d33423893dfbeafaa79a70f18d74c1}\label{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_a24d33423893dfbeafaa79a70f18d74c1} 
+\mbox{\hyperlink{class_codere_tvmaze_1_1_b_l_l_1_1_links}{Links}}? {\bfseries \+\_\+links}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class {\ttfamily \doxylink{class_codere_tvmaze_1_1_b_l_l_1_1_main_info}{Main\+Info}} contains all information related to a \doxylink{class_codere_tvmaze_1_1_b_l_l_1_1_main_info}{Main\+Info} object (with its related object included). 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_ae1de91c6af7e27e0047304ff80978785}\index{CodereTvmaze.BLL.MainInfo@{CodereTvmaze.BLL.MainInfo}!GetAll@{GetAll}}
+\index{GetAll@{GetAll}!CodereTvmaze.BLL.MainInfo@{CodereTvmaze.BLL.MainInfo}}
+\doxysubsubsection{\texorpdfstring{GetAll()}{GetAll()}}
+{\footnotesize\ttfamily \label{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_ae1de91c6af7e27e0047304ff80978785} 
+static List$<$ \mbox{\hyperlink{class_codere_tvmaze_1_1_b_l_l_1_1_main_info}{Main\+Info}} $>$ Codere\+Tvmaze.\+BLL.\+Main\+Info.\+Get\+All (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Return a \doxylink{class_codere_tvmaze_1_1_b_l_l_1_1_main_info}{Main\+Info} object array with all data from database. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_a4d38fd82aefdacce82819d609dc52f3a}\index{CodereTvmaze.BLL.MainInfo@{CodereTvmaze.BLL.MainInfo}!GetById@{GetById}}
+\index{GetById@{GetById}!CodereTvmaze.BLL.MainInfo@{CodereTvmaze.BLL.MainInfo}}
+\doxysubsubsection{\texorpdfstring{GetById()}{GetById()}}
+{\footnotesize\ttfamily \label{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_a4d38fd82aefdacce82819d609dc52f3a} 
+static \mbox{\hyperlink{class_codere_tvmaze_1_1_b_l_l_1_1_main_info}{Main\+Info}} Codere\+Tvmaze.\+BLL.\+Main\+Info.\+Get\+By\+Id (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Return a \doxylink{class_codere_tvmaze_1_1_b_l_l_1_1_main_info}{Main\+Info} object with its data from database based on an id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_ac9c646a61657827784ca0897f3d063ff}\index{CodereTvmaze.BLL.MainInfo@{CodereTvmaze.BLL.MainInfo}!GetByPage@{GetByPage}}
+\index{GetByPage@{GetByPage}!CodereTvmaze.BLL.MainInfo@{CodereTvmaze.BLL.MainInfo}}
+\doxysubsubsection{\texorpdfstring{GetByPage()}{GetByPage()}}
+{\footnotesize\ttfamily \label{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_ac9c646a61657827784ca0897f3d063ff} 
+static List$<$ \mbox{\hyperlink{class_codere_tvmaze_1_1_b_l_l_1_1_main_info}{Main\+Info}} $>$ Codere\+Tvmaze.\+BLL.\+Main\+Info.\+Get\+By\+Page (\begin{DoxyParamCaption}\item[{long}]{page}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Return a \doxylink{class_codere_tvmaze_1_1_b_l_l_1_1_main_info}{Main\+Info} object with its data from database based on an id interval (represented by a page). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em page} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_ac338480d47a6dbc6c39b3474f697b787}\index{CodereTvmaze.BLL.MainInfo@{CodereTvmaze.BLL.MainInfo}!ImportMainInfo@{ImportMainInfo}}
+\index{ImportMainInfo@{ImportMainInfo}!CodereTvmaze.BLL.MainInfo@{CodereTvmaze.BLL.MainInfo}}
+\doxysubsubsection{\texorpdfstring{ImportMainInfo()}{ImportMainInfo()}}
+{\footnotesize\ttfamily \label{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_ac338480d47a6dbc6c39b3474f697b787} 
+static \mbox{\hyperlink{class_codere_tvmaze_1_1_b_l_l_1_1_main_info}{Main\+Info}} Codere\+Tvmaze.\+BLL.\+Main\+Info.\+Import\+Main\+Info (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This method imports data of a \doxylink{class_codere_tvmaze_1_1_b_l_l_1_1_main_info}{Main\+Info} object from Tvmaze and insert data into datatable. It calls a endpoint in Tvmaze web api to retrieve all information needed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_a51b72b6bfbdd287a00ae24c52683920a}\index{CodereTvmaze.BLL.MainInfo@{CodereTvmaze.BLL.MainInfo}!ImportMainInfoAll@{ImportMainInfoAll}}
+\index{ImportMainInfoAll@{ImportMainInfoAll}!CodereTvmaze.BLL.MainInfo@{CodereTvmaze.BLL.MainInfo}}
+\doxysubsubsection{\texorpdfstring{ImportMainInfoAll()}{ImportMainInfoAll()}}
+{\footnotesize\ttfamily \label{class_codere_tvmaze_1_1_b_l_l_1_1_main_info_a51b72b6bfbdd287a00ae24c52683920a} 
+static bool Codere\+Tvmaze.\+BLL.\+Main\+Info.\+Import\+Main\+Info\+All (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This method imports data from Tvmaze and insert data into datatable. It calls a endpoint in Tvmaze web api to retrieve all information needed. Calls are done paginated calculating first page needed until return response is "{}not found"{}. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Codere\+Tvmaze.\+BLL/Main\+Info.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,81 @@
+\doxysection{Codere\+Tvmaze.\+DAL.\+Web\+Channel Class Reference}
+\hypertarget{class_codere_tvmaze_1_1_d_a_l_1_1_web_channel}{}\label{class_codere_tvmaze_1_1_d_a_l_1_1_web_channel}\index{CodereTvmaze.DAL.WebChannel@{CodereTvmaze.DAL.WebChannel}}
+
+
+Class {\ttfamily \doxylink{class_codere_tvmaze_1_1_d_a_l_1_1_web_channel}{Web\+Channel}} Manages records from Web\+Channes table in database.  
+
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_codere_tvmaze_1_1_d_a_l_1_1_web_channel_a6e10cb7c20ed2eb7e5917f41b69b863f}{Add\+To\+Database\+If\+Not\+Exists}} (\mbox{\hyperlink{class_codere_tvmaze_1_1_d_a_l_1_1_database_connection}{Database\+Connection}} connection, long id, string? name, string? country\+Code, string? official\+Site)
+\begin{DoxyCompactList}\small\item\em This method add a new record into Web\+Channels table based on id field if there isn\textquotesingle{}t a record yet with same id. \end{DoxyCompactList}\item 
+static Data\+Row \mbox{\hyperlink{class_codere_tvmaze_1_1_d_a_l_1_1_web_channel_a75d58b41a64a636e494610aac73c5094}{Get\+Web\+Channel\+By\+Id}} (long id)
+\begin{DoxyCompactList}\small\item\em Returns a record from Web\+Channels table with id passed as parameter. \end{DoxyCompactList}\item 
+static Data\+Table \mbox{\hyperlink{class_codere_tvmaze_1_1_d_a_l_1_1_web_channel_ad0b0ffc411229e3434ea65782ff5ca03}{Get\+All}} ()
+\begin{DoxyCompactList}\small\item\em This method returns a datatable with all records from Web\+Channels table. If there idn\textquotesingle{}t records it returns a null object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class {\ttfamily \doxylink{class_codere_tvmaze_1_1_d_a_l_1_1_web_channel}{Web\+Channel}} Manages records from Web\+Channes table in database. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_codere_tvmaze_1_1_d_a_l_1_1_web_channel_a6e10cb7c20ed2eb7e5917f41b69b863f}\index{CodereTvmaze.DAL.WebChannel@{CodereTvmaze.DAL.WebChannel}!AddToDatabaseIfNotExists@{AddToDatabaseIfNotExists}}
+\index{AddToDatabaseIfNotExists@{AddToDatabaseIfNotExists}!CodereTvmaze.DAL.WebChannel@{CodereTvmaze.DAL.WebChannel}}
+\doxysubsubsection{\texorpdfstring{AddToDatabaseIfNotExists()}{AddToDatabaseIfNotExists()}}
+{\footnotesize\ttfamily \label{class_codere_tvmaze_1_1_d_a_l_1_1_web_channel_a6e10cb7c20ed2eb7e5917f41b69b863f} 
+static void Codere\+Tvmaze.\+DAL.\+Web\+Channel.\+Add\+To\+Database\+If\+Not\+Exists (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_codere_tvmaze_1_1_d_a_l_1_1_database_connection}{Database\+Connection}}}]{connection}{, }\item[{long}]{id}{, }\item[{string?}]{name}{, }\item[{string?}]{country\+Code}{, }\item[{string?}]{official\+Site}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This method add a new record into Web\+Channels table based on id field if there isn\textquotesingle{}t a record yet with same id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em connection} & \\
+\hline
+{\em id} & \\
+\hline
+{\em name} & \\
+\hline
+{\em country\+Code} & \\
+\hline
+{\em official\+Site} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_codere_tvmaze_1_1_d_a_l_1_1_web_channel_ad0b0ffc411229e3434ea65782ff5ca03}\index{CodereTvmaze.DAL.WebChannel@{CodereTvmaze.DAL.WebChannel}!GetAll@{GetAll}}
+\index{GetAll@{GetAll}!CodereTvmaze.DAL.WebChannel@{CodereTvmaze.DAL.WebChannel}}
+\doxysubsubsection{\texorpdfstring{GetAll()}{GetAll()}}
+{\footnotesize\ttfamily \label{class_codere_tvmaze_1_1_d_a_l_1_1_web_channel_ad0b0ffc411229e3434ea65782ff5ca03} 
+static Data\+Table Codere\+Tvmaze.\+DAL.\+Web\+Channel.\+Get\+All (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This method returns a datatable with all records from Web\+Channels table. If there idn\textquotesingle{}t records it returns a null object. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_codere_tvmaze_1_1_d_a_l_1_1_web_channel_a75d58b41a64a636e494610aac73c5094}\index{CodereTvmaze.DAL.WebChannel@{CodereTvmaze.DAL.WebChannel}!GetWebChannelById@{GetWebChannelById}}
+\index{GetWebChannelById@{GetWebChannelById}!CodereTvmaze.DAL.WebChannel@{CodereTvmaze.DAL.WebChannel}}
+\doxysubsubsection{\texorpdfstring{GetWebChannelById()}{GetWebChannelById()}}
+{\footnotesize\ttfamily \label{class_codere_tvmaze_1_1_d_a_l_1_1_web_channel_a75d58b41a64a636e494610aac73c5094} 
+static Data\+Row Codere\+Tvmaze.\+DAL.\+Web\+Channel.\+Get\+Web\+Channel\+By\+Id (\begin{DoxyParamCaption}\item[{long}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns a record from Web\+Channels table with id passed as parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Codere\+Tvmaze.\+DAL/Web\+Channel.\+cs\end{DoxyCompactItemize}

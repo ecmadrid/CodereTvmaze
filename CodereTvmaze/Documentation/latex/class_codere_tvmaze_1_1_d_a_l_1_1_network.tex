@@ -1,0 +1,81 @@
+\doxysection{Codere\+Tvmaze.\+DAL.\+Network Class Reference}
+\hypertarget{class_codere_tvmaze_1_1_d_a_l_1_1_network}{}\label{class_codere_tvmaze_1_1_d_a_l_1_1_network}\index{CodereTvmaze.DAL.Network@{CodereTvmaze.DAL.Network}}
+
+
+Class {\ttfamily \doxylink{class_codere_tvmaze_1_1_d_a_l_1_1_network}{Network}} Manages records from Networks table in database.  
+
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_codere_tvmaze_1_1_d_a_l_1_1_network_a3a33dcb18b563d6263b173f62108ca67}{Add\+To\+Database\+If\+Not\+Exists}} (\mbox{\hyperlink{class_codere_tvmaze_1_1_d_a_l_1_1_database_connection}{Database\+Connection}} connection, long id, string? name, string? country\+Code, string? official\+Site)
+\begin{DoxyCompactList}\small\item\em This method add a new record into Networks table based on id field if there isn\textquotesingle{}t a record yet with same id. \end{DoxyCompactList}\item 
+static Data\+Row \mbox{\hyperlink{class_codere_tvmaze_1_1_d_a_l_1_1_network_a8bdec86a038e903e0759a90198e92c47}{Get\+Network\+By\+Id}} (long id)
+\begin{DoxyCompactList}\small\item\em Returns a record from Networks table with id passed as parameter. \end{DoxyCompactList}\item 
+static Data\+Table \mbox{\hyperlink{class_codere_tvmaze_1_1_d_a_l_1_1_network_a3a474256181129a03aff4af5f82e1a51}{Get\+All}} ()
+\begin{DoxyCompactList}\small\item\em This method returns a datatable with all records from Networks table. If there idn\textquotesingle{}t records it returns a null object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class {\ttfamily \doxylink{class_codere_tvmaze_1_1_d_a_l_1_1_network}{Network}} Manages records from Networks table in database. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_codere_tvmaze_1_1_d_a_l_1_1_network_a3a33dcb18b563d6263b173f62108ca67}\index{CodereTvmaze.DAL.Network@{CodereTvmaze.DAL.Network}!AddToDatabaseIfNotExists@{AddToDatabaseIfNotExists}}
+\index{AddToDatabaseIfNotExists@{AddToDatabaseIfNotExists}!CodereTvmaze.DAL.Network@{CodereTvmaze.DAL.Network}}
+\doxysubsubsection{\texorpdfstring{AddToDatabaseIfNotExists()}{AddToDatabaseIfNotExists()}}
+{\footnotesize\ttfamily \label{class_codere_tvmaze_1_1_d_a_l_1_1_network_a3a33dcb18b563d6263b173f62108ca67} 
+static void Codere\+Tvmaze.\+DAL.\+Network.\+Add\+To\+Database\+If\+Not\+Exists (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_codere_tvmaze_1_1_d_a_l_1_1_database_connection}{Database\+Connection}}}]{connection}{, }\item[{long}]{id}{, }\item[{string?}]{name}{, }\item[{string?}]{country\+Code}{, }\item[{string?}]{official\+Site}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This method add a new record into Networks table based on id field if there isn\textquotesingle{}t a record yet with same id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em connection} & \\
+\hline
+{\em id} & \\
+\hline
+{\em name} & \\
+\hline
+{\em country\+Code} & \\
+\hline
+{\em official\+Site} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_codere_tvmaze_1_1_d_a_l_1_1_network_a3a474256181129a03aff4af5f82e1a51}\index{CodereTvmaze.DAL.Network@{CodereTvmaze.DAL.Network}!GetAll@{GetAll}}
+\index{GetAll@{GetAll}!CodereTvmaze.DAL.Network@{CodereTvmaze.DAL.Network}}
+\doxysubsubsection{\texorpdfstring{GetAll()}{GetAll()}}
+{\footnotesize\ttfamily \label{class_codere_tvmaze_1_1_d_a_l_1_1_network_a3a474256181129a03aff4af5f82e1a51} 
+static Data\+Table Codere\+Tvmaze.\+DAL.\+Network.\+Get\+All (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This method returns a datatable with all records from Networks table. If there idn\textquotesingle{}t records it returns a null object. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_codere_tvmaze_1_1_d_a_l_1_1_network_a8bdec86a038e903e0759a90198e92c47}\index{CodereTvmaze.DAL.Network@{CodereTvmaze.DAL.Network}!GetNetworkById@{GetNetworkById}}
+\index{GetNetworkById@{GetNetworkById}!CodereTvmaze.DAL.Network@{CodereTvmaze.DAL.Network}}
+\doxysubsubsection{\texorpdfstring{GetNetworkById()}{GetNetworkById()}}
+{\footnotesize\ttfamily \label{class_codere_tvmaze_1_1_d_a_l_1_1_network_a8bdec86a038e903e0759a90198e92c47} 
+static Data\+Row Codere\+Tvmaze.\+DAL.\+Network.\+Get\+Network\+By\+Id (\begin{DoxyParamCaption}\item[{long}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns a record from Networks table with id passed as parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Codere\+Tvmaze.\+DAL/Network.\+cs\end{DoxyCompactItemize}

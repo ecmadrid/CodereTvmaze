@@ -1,0 +1,605 @@
+\chapter{Codere\+Tvmaze.\+DAL}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l}{}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l}\index{CodereTvmaze.DAL@{CodereTvmaze.DAL}}
+\label{md__codere_tvmaze_2obj_2_release_2net8_80_2_codere_tvmaze_assembly}%
+\Hypertarget{md__codere_tvmaze_2obj_2_release_2net8_80_2_codere_tvmaze_assembly}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md182}{}\doxysection{\texorpdfstring{Codere\+Tvmaze.\+DAL}{Codere\+Tvmaze.\+DAL}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md182}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md183}{}\doxysubsection{\texorpdfstring{Contents}{Contents}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md183}
+
+\begin{DoxyItemize}
+\item \doxylink{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_T-CodereTvmaze-DAL-Country}{Country}
+\begin{DoxyItemize}
+\item Add\+To\+Database\+If\+Not\+Exists(connection,name,code,timezone)
+\item \doxylink{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-Country-GetAll}{Get\+All()}
+\item \doxylink{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-Country-GetCountryByCode-System-String-}{Get\+Country\+By\+Code(code)}
+\end{DoxyItemize}
+\item \doxylink{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_T-CodereTvmaze-DAL-DatabaseConnection}{Database\+Connection}
+\begin{DoxyItemize}
+\item \doxylink{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_P-CodereTvmaze-DAL-DatabaseConnection-ConnectionString}{Connection\+String}
+\item \doxylink{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-DatabaseConnection-Begin}{Begin()}
+\item \doxylink{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-DatabaseConnection-Close}{Close()}
+\item \doxylink{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-DatabaseConnection-Commit}{Commit()}
+\item \doxylink{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-DatabaseConnection-Dispose}{Dispose()}
+\item \doxylink{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-DatabaseConnection-Execute-System-String-}{Execute(sql)}
+\item \doxylink{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-DatabaseConnection-ExecuteLongScalar-System-String-}{Execute\+Long\+Scalar(sql)}
+\item \doxylink{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-DatabaseConnection-ExecuteNonQuery-System-String-}{Execute\+Non\+Query(sql)}
+\item \doxylink{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-DatabaseConnection-Open}{Open()}
+\item \doxylink{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-DatabaseConnection-Rollback}{Rollback()}
+\end{DoxyItemize}
+\item \doxylink{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_T-CodereTvmaze-DAL-Genre}{Genre}
+\begin{DoxyItemize}
+\item Add\+Genre(connection,main\+Info\+Id,genre,pos)
+\item Delete\+Main\+Info\+Genres(connection,main\+Info\+Id)
+\item \doxylink{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-Genre-GetAll}{Get\+All()}
+\item \doxylink{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-Genre-GetGenreByMainInfoId-System-Int64-}{Get\+Genre\+By\+Main\+Info\+Id(main\+Info\+Id)}
+\end{DoxyItemize}
+\item \doxylink{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_T-CodereTvmaze-DAL-MainInfo}{Main\+Info}
+\begin{DoxyItemize}
+\item Add\+To\+Database(id,url,name,type,language,status,runtime,average\+Runtime,premiered,ended,official\+Site,weight,summary,updated,previous\+Episode\+Href,previous\+Episode\+Name,next\+Episode\+Href,next\+Episode\+Name,image\+Medium,image\+Original,average,tvrage,thetvdb,imdb,dvd\+Country\+Code,network\+Id,web\+Channel\+Id,href)
+\item \doxylink{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-MainInfo-GetAll}{Get\+All()}
+\item \doxylink{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-MainInfo-GetById-System-Int32-}{Get\+By\+Id(id)}
+\item Get\+By\+Interval(first\+Id,last\+Id)
+\item \doxylink{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-MainInfo-GetLastId}{Get\+Last\+Id()}
+\end{DoxyItemize}
+\item \doxylink{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_T-CodereTvmaze-DAL-Network}{Network}
+\begin{DoxyItemize}
+\item Add\+To\+Database\+If\+Not\+Exists(connection,id,name,country\+Code,official\+Site)
+\item \doxylink{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-Network-GetAll}{Get\+All()}
+\item \doxylink{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-Network-GetNetworkById-System-Int64-}{Get\+Network\+By\+Id(id)}
+\end{DoxyItemize}
+\item \doxylink{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_T-CodereTvmaze-DAL-Schedule}{Schedule}
+\begin{DoxyItemize}
+\item Add\+Schedule(connection,main\+Info\+Id,time,day,pos)
+\item Delete\+Main\+Info\+Schedule(connection,main\+Info\+Id)
+\item \doxylink{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-Schedule-GetAll}{Get\+All()}
+\item \doxylink{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-Schedule-GetScheduleByMainInfoId-System-Int64-}{Get\+Schedule\+By\+Main\+Info\+Id(main\+Info\+Id)}
+\end{DoxyItemize}
+\item \doxylink{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_T-CodereTvmaze-DAL-WebChannel}{Web\+Channel}
+\begin{DoxyItemize}
+\item Add\+To\+Database\+If\+Not\+Exists(connection,id,name,country\+Code,official\+Site)
+\item \doxylink{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-WebChannel-GetAll}{Get\+All()}
+\item \doxylink{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-WebChannel-GetWebChannelById-System-Int64-}{Get\+Web\+Channel\+By\+Id(id)}
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\label{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_T-CodereTvmaze-DAL-Country}%
+\Hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_T-CodereTvmaze-DAL-Country}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md184}{}\doxysubsection{\texorpdfstring{Country {\ttfamily type}}{Country {\ttfamily type}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md184}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md185}{}\doxysubsubsubsubsection{\texorpdfstring{Namespace}{Namespace}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md185}
+\doxylink{namespace_codere_tvmaze_1_1_d_a_l}{Codere\+Tvmaze.\+DAL}\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md186}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md186}
+Class {\ttfamily Country} Manages Countries table in database.
+
+\label{_M-CodereTvmaze-DAL-Country-AddToDatabaseIfNotExists-CodereTvmaze-DAL-DatabaseConnection,System-String,System-String,System-String-}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md187}{}\doxysubsubsection{\texorpdfstring{Add\+To\+Database\+If\+Not\+Exists(connection,name,code,timezone) {\ttfamily method}}{Add\+To\+Database\+If\+Not\+Exists(connection,name,code,timezone) {\ttfamily method}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md187}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md188}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md188}
+Add a new record into table if it doesn\textquotesingle{}t exist. Code is the record identifier.\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md189}{}\doxysubsubsubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md189}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+connection   &\doxylink{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_T-CodereTvmaze-DAL-DatabaseConnection}{Codere\+Tvmaze.DAL.Database\+Connection}   &\\\cline{1-3}
+name   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String}{\texttt{ System.\+String}}   &\\\cline{1-3}
+code   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String}{\texttt{ System.\+String}}   &\\\cline{1-3}
+timezone   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String}{\texttt{ System.\+String}}   &\\\cline{1-3}
+\end{longtabu}
+
+
+\label{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-Country-GetAll}%
+\Hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-Country-GetAll}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md190}{}\doxysubsubsection{\texorpdfstring{Get\+All() {\ttfamily method}}{Get\+All() {\ttfamily method}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md190}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md191}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md191}
+Retrieves all Countries table records. Null if table is empty.\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md192}{}\doxysubsubsubsubsection{\texorpdfstring{Returns}{Returns}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md192}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md193}{}\doxysubsubsubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md193}
+This method has no parameters.
+
+\label{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-Country-GetCountryByCode-System-String-}%
+\Hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-Country-GetCountryByCode-System-String-}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md194}{}\doxysubsubsection{\texorpdfstring{Get\+Country\+By\+Code(code) {\ttfamily method}}{Get\+Country\+By\+Code(code) {\ttfamily method}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md194}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md195}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md195}
+Returns a datarow object with a record fron Countries table with code indicated. Null if not found.\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md196}{}\doxysubsubsubsubsection{\texorpdfstring{Returns}{Returns}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md196}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md197}{}\doxysubsubsubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md197}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+code   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String}{\texttt{ System.\+String}}   &\\\cline{1-3}
+\end{longtabu}
+
+
+\label{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_T-CodereTvmaze-DAL-DatabaseConnection}%
+\Hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_T-CodereTvmaze-DAL-DatabaseConnection}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md198}{}\doxysubsection{\texorpdfstring{Database\+Connection {\ttfamily type}}{Database\+Connection {\ttfamily type}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md198}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md199}{}\doxysubsubsubsubsection{\texorpdfstring{Namespace}{Namespace}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md199}
+\doxylink{namespace_codere_tvmaze_1_1_d_a_l}{Codere\+Tvmaze.\+DAL}\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md200}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md200}
+Class {\ttfamily Database\+Connection} This class open and close connections to database and manages transactions and querys.
+
+\label{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_P-CodereTvmaze-DAL-DatabaseConnection-ConnectionString}%
+\Hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_P-CodereTvmaze-DAL-DatabaseConnection-ConnectionString}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md201}{}\doxysubsubsection{\texorpdfstring{Connection\+String {\ttfamily property}}{Connection\+String {\ttfamily property}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md201}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md202}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md202}
+Connection string value.
+
+\label{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-DatabaseConnection-Begin}%
+\Hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-DatabaseConnection-Begin}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md203}{}\doxysubsubsection{\texorpdfstring{Begin() {\ttfamily method}}{Begin() {\ttfamily method}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md203}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md204}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md204}
+Begin transaction.\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md205}{}\doxysubsubsubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md205}
+This method has no parameters.
+
+\label{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-DatabaseConnection-Close}%
+\Hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-DatabaseConnection-Close}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md206}{}\doxysubsubsection{\texorpdfstring{Close() {\ttfamily method}}{Close() {\ttfamily method}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md206}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md207}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md207}
+This method closes the database connection.\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md208}{}\doxysubsubsubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md208}
+This method has no parameters.
+
+\label{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-DatabaseConnection-Commit}%
+\Hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-DatabaseConnection-Commit}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md209}{}\doxysubsubsection{\texorpdfstring{Commit() {\ttfamily method}}{Commit() {\ttfamily method}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md209}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md210}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md210}
+Commit transaction.\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md211}{}\doxysubsubsubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md211}
+This method has no parameters.
+
+\label{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-DatabaseConnection-Dispose}%
+\Hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-DatabaseConnection-Dispose}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md212}{}\doxysubsubsection{\texorpdfstring{Dispose() {\ttfamily method}}{Dispose() {\ttfamily method}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md212}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md213}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md213}
+Disposes object.\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md214}{}\doxysubsubsubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md214}
+This method has no parameters.
+
+\label{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-DatabaseConnection-Execute-System-String-}%
+\Hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-DatabaseConnection-Execute-System-String-}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md215}{}\doxysubsubsection{\texorpdfstring{Execute(sql) {\ttfamily method}}{Execute(sql) {\ttfamily method}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md215}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md216}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md216}
+This method execute a query returning results in a datatable. If not results then return null object.\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md217}{}\doxysubsubsubsubsection{\texorpdfstring{Returns}{Returns}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md217}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md218}{}\doxysubsubsubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md218}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+sql   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String}{\texttt{ System.\+String}}   &\\\cline{1-3}
+\end{longtabu}
+
+
+\label{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-DatabaseConnection-ExecuteLongScalar-System-String-}%
+\Hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-DatabaseConnection-ExecuteLongScalar-System-String-}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md219}{}\doxysubsubsection{\texorpdfstring{Execute\+Long\+Scalar(sql) {\ttfamily method}}{Execute\+Long\+Scalar(sql) {\ttfamily method}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md219}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md220}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md220}
+This method execute a query returning results in a long value. It\textquotesingle{}s a simplified execute\+Scalar call thinking in count querys. This method is prepared only for long tipe returns.\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md221}{}\doxysubsubsubsubsection{\texorpdfstring{Returns}{Returns}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md221}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md222}{}\doxysubsubsubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md222}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+sql   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String}{\texttt{ System.\+String}}   &\\\cline{1-3}
+\end{longtabu}
+
+
+\label{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-DatabaseConnection-ExecuteNonQuery-System-String-}%
+\Hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-DatabaseConnection-ExecuteNonQuery-System-String-}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md223}{}\doxysubsubsection{\texorpdfstring{Execute\+Non\+Query(sql) {\ttfamily method}}{Execute\+Non\+Query(sql) {\ttfamily method}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md223}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md224}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md224}
+This method execute a sql statement with no return result.\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md225}{}\doxysubsubsubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md225}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+sql   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String}{\texttt{ System.\+String}}   &\\\cline{1-3}
+\end{longtabu}
+
+
+\label{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-DatabaseConnection-Open}%
+\Hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-DatabaseConnection-Open}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md226}{}\doxysubsubsection{\texorpdfstring{Open() {\ttfamily method}}{Open() {\ttfamily method}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md226}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md227}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md227}
+This method opens a database connection.\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md228}{}\doxysubsubsubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md228}
+This method has no parameters.
+
+\label{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-DatabaseConnection-Rollback}%
+\Hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-DatabaseConnection-Rollback}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md229}{}\doxysubsubsection{\texorpdfstring{Rollback() {\ttfamily method}}{Rollback() {\ttfamily method}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md229}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md230}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md230}
+Rollback transaction.\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md231}{}\doxysubsubsubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md231}
+This method has no parameters.
+
+\label{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_T-CodereTvmaze-DAL-Genre}%
+\Hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_T-CodereTvmaze-DAL-Genre}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md232}{}\doxysubsection{\texorpdfstring{Genre {\ttfamily type}}{Genre {\ttfamily type}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md232}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md233}{}\doxysubsubsubsubsection{\texorpdfstring{Namespace}{Namespace}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md233}
+\doxylink{namespace_codere_tvmaze_1_1_d_a_l}{Codere\+Tvmaze.\+DAL}\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md234}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md234}
+Class {\ttfamily Genre} Manages Genres table in database.
+
+\label{_M-CodereTvmaze-DAL-Genre-AddGenre-CodereTvmaze-DAL-DatabaseConnection,System-Int64,System-String,System-Int32-}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md235}{}\doxysubsubsection{\texorpdfstring{Add\+Genre(connection,main\+Info\+Id,genre,pos) {\ttfamily method}}{Add\+Genre(connection,main\+Info\+Id,genre,pos) {\ttfamily method}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md235}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md236}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md236}
+This method adds a new record associated to a Main\+Info id.\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md237}{}\doxysubsubsubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md237}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+connection   &\doxylink{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_T-CodereTvmaze-DAL-DatabaseConnection}{Codere\+Tvmaze.DAL.Database\+Connection}   &\\\cline{1-3}
+main\+Info\+Id   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int64}{\texttt{ System.\+Int64}}   &\\\cline{1-3}
+genre   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String}{\texttt{ System.\+String}}   &\\\cline{1-3}
+pos   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int32}{\texttt{ System.\+Int32}}   &\\\cline{1-3}
+\end{longtabu}
+
+
+\label{_M-CodereTvmaze-DAL-Genre-DeleteMainInfoGenres-CodereTvmaze-DAL-DatabaseConnection,System-Int64-}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md238}{}\doxysubsubsection{\texorpdfstring{Delete\+Main\+Info\+Genres(connection,main\+Info\+Id) {\ttfamily method}}{Delete\+Main\+Info\+Genres(connection,main\+Info\+Id) {\ttfamily method}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md238}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md239}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md239}
+Deletes records relationed with a Main\+Info id.\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md240}{}\doxysubsubsubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md240}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+connection   &\doxylink{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_T-CodereTvmaze-DAL-DatabaseConnection}{Codere\+Tvmaze.DAL.Database\+Connection}   &\\\cline{1-3}
+main\+Info\+Id   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int64}{\texttt{ System.\+Int64}}   &\\\cline{1-3}
+\end{longtabu}
+
+
+\label{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-Genre-GetAll}%
+\Hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-Genre-GetAll}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md241}{}\doxysubsubsection{\texorpdfstring{Get\+All() {\ttfamily method}}{Get\+All() {\ttfamily method}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md241}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md242}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md242}
+Retrieves all records from Genres table in a datatable object. Null if table is empty.\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md243}{}\doxysubsubsubsubsection{\texorpdfstring{Returns}{Returns}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md243}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md244}{}\doxysubsubsubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md244}
+This method has no parameters.
+
+\label{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-Genre-GetGenreByMainInfoId-System-Int64-}%
+\Hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-Genre-GetGenreByMainInfoId-System-Int64-}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md245}{}\doxysubsubsection{\texorpdfstring{Get\+Genre\+By\+Main\+Info\+Id(main\+Info\+Id) {\ttfamily method}}{Get\+Genre\+By\+Main\+Info\+Id(main\+Info\+Id) {\ttfamily method}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md245}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md246}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md246}
+This method returns a datatable with all genres associated to a Main\+Info id. Null if not registers found.\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md247}{}\doxysubsubsubsubsection{\texorpdfstring{Returns}{Returns}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md247}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md248}{}\doxysubsubsubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md248}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+main\+Info\+Id   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int64}{\texttt{ System.\+Int64}}   &\\\cline{1-3}
+\end{longtabu}
+
+
+\label{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_T-CodereTvmaze-DAL-MainInfo}%
+\Hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_T-CodereTvmaze-DAL-MainInfo}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md249}{}\doxysubsection{\texorpdfstring{Main\+Info {\ttfamily type}}{Main\+Info {\ttfamily type}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md249}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md250}{}\doxysubsubsubsubsection{\texorpdfstring{Namespace}{Namespace}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md250}
+\doxylink{namespace_codere_tvmaze_1_1_d_a_l}{Codere\+Tvmaze.\+DAL}\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md251}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md251}
+Class {\ttfamily Main\+Info} Main class containing main information.
+
+\label{_M-CodereTvmaze-DAL-MainInfo-AddToDatabase-System-Int64,System-String,System-String,System-String,System-String,System-String,System-Nullable{System-Int64},System-Nullable{System-Int64},System-Nullable{System-DateOnly},System-Nullable{System-DateOnly},System-String,System-Nullable{System-Int64},System-String,System-Nullable{System-Int64},System-String,System-String,System-String,System-String,System-String,System-String,System-Nullable{System-Double},System-Nullable{System-Int64},System-Nullable{System-Int64},System-String,System-String,System-Nullable{System-Int64},System-Nullable{System-Int64},System-String-}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md252}{}\doxysubsubsection{\texorpdfstring{Add\+To\+Database(id,url,name,type,language,status,runtime,average\+Runtime,premiered,ended,official\+Site,weight,summary,updated,previous\+Episode\+Href,previous\+Episode\+Name,next\+Episode\+Href,next\+Episode\+Name,image\+Medium,image\+Original,average,tvrage,thetvdb,imdb,dvd\+Country\+Code,network\+Id,web\+Channel\+Id,href) {\ttfamily method}}{Add\+To\+Database(id,url,name,type,language,status,runtime,average\+Runtime,premiered,ended,official\+Site,weight,summary,updated,previous\+Episode\+Href,previous\+Episode\+Name,next\+Episode\+Href,next\+Episode\+Name,image\+Medium,image\+Original,average,tvrage,thetvdb,imdb,dvd\+Country\+Code,network\+Id,web\+Channel\+Id,href) {\ttfamily method}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md252}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md253}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md253}
+Method to add a new main information register to database. If there is a register with same main info id yet it\textquotesingle{}s deleted. Returns a Database\+Connection object to be used by other objects to include them in same transaction.\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md254}{}\doxysubsubsubsubsection{\texorpdfstring{Returns}{Returns}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md254}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md255}{}\doxysubsubsubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md255}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+id   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int64}{\texttt{ System.\+Int64}}   &\\\cline{1-3}
+url   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String}{\texttt{ System.\+String}}   &\\\cline{1-3}
+name   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String}{\texttt{ System.\+String}}   &\\\cline{1-3}
+type   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String}{\texttt{ System.\+String}}   &\\\cline{1-3}
+language   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String}{\texttt{ System.\+String}}   &\\\cline{1-3}
+status   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String}{\texttt{ System.\+String}}   &\\\cline{1-3}
+runtime   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Nullable}{\texttt{ System.\+Nullable\{System.\+Int64\}}}   &\\\cline{1-3}
+average\+Runtime   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Nullable}{\texttt{ System.\+Nullable\{System.\+Int64\}}}   &\\\cline{1-3}
+premiered   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Nullable}{\texttt{ System.\+Nullable\{System.\+Date\+Only\}}}   &\\\cline{1-3}
+ended   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Nullable}{\texttt{ System.\+Nullable\{System.\+Date\+Only\}}}   &\\\cline{1-3}
+official\+Site   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String}{\texttt{ System.\+String}}   &\\\cline{1-3}
+weight   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Nullable}{\texttt{ System.\+Nullable\{System.\+Int64\}}}   &\\\cline{1-3}
+summary   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String}{\texttt{ System.\+String}}   &\\\cline{1-3}
+updated   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Nullable}{\texttt{ System.\+Nullable\{System.\+Int64\}}}   &\\\cline{1-3}
+previous\+Episode\+Href   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String}{\texttt{ System.\+String}}   &\\\cline{1-3}
+previous\+Episode\+Name   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String}{\texttt{ System.\+String}}   &\\\cline{1-3}
+next\+Episode\+Href   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String}{\texttt{ System.\+String}}   &\\\cline{1-3}
+next\+Episode\+Name   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String}{\texttt{ System.\+String}}   &\\\cline{1-3}
+image\+Medium   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String}{\texttt{ System.\+String}}   &\\\cline{1-3}
+image\+Original   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String}{\texttt{ System.\+String}}   &\\\cline{1-3}
+average   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Nullable}{\texttt{ System.\+Nullable\{System.\+Double\}}}   &\\\cline{1-3}
+tvrage   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Nullable}{\texttt{ System.\+Nullable\{System.\+Int64\}}}   &\\\cline{1-3}
+thetvdb   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Nullable}{\texttt{ System.\+Nullable\{System.\+Int64\}}}   &\\\cline{1-3}
+imdb   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String}{\texttt{ System.\+String}}   &\\\cline{1-3}
+dvd\+Country\+Code   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String}{\texttt{ System.\+String}}   &\\\cline{1-3}
+network\+Id   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Nullable}{\texttt{ System.\+Nullable\{System.\+Int64\}}}   &\\\cline{1-3}
+web\+Channel\+Id   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Nullable}{\texttt{ System.\+Nullable\{System.\+Int64\}}}   &\\\cline{1-3}
+href   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String}{\texttt{ System.\+String}}   &\\\cline{1-3}
+\end{longtabu}
+
+
+\label{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-MainInfo-GetAll}%
+\Hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-MainInfo-GetAll}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md256}{}\doxysubsubsection{\texorpdfstring{Get\+All() {\ttfamily method}}{Get\+All() {\ttfamily method}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md256}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md257}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md257}
+This method returns all records from Main\+Info table into a datatable object. If there isn\textquotesingle{}t any record it returns a null object.\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md258}{}\doxysubsubsubsubsection{\texorpdfstring{Returns}{Returns}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md258}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md259}{}\doxysubsubsubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md259}
+This method has no parameters.
+
+\label{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-MainInfo-GetById-System-Int32-}%
+\Hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-MainInfo-GetById-System-Int32-}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md260}{}\doxysubsubsection{\texorpdfstring{Get\+By\+Id(id) {\ttfamily method}}{Get\+By\+Id(id) {\ttfamily method}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md260}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md261}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md261}
+Return a datarow with record from ;ain\+Info table based on a id.\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md262}{}\doxysubsubsubsubsection{\texorpdfstring{Returns}{Returns}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md262}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md263}{}\doxysubsubsubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md263}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+id   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int32}{\texttt{ System.\+Int32}}   &\\\cline{1-3}
+\end{longtabu}
+
+
+\label{_M-CodereTvmaze-DAL-MainInfo-GetByInterval-System-Int64,System-Int64-}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md264}{}\doxysubsubsection{\texorpdfstring{Get\+By\+Interval(first\+Id,last\+Id) {\ttfamily method}}{Get\+By\+Interval(first\+Id,last\+Id) {\ttfamily method}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md264}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md265}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md265}
+returns records from Main\+Info table into a datatable object whose ids are between aninterval. If there isn\textquotesingle{}t records in criteria it returns a null object.\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md266}{}\doxysubsubsubsubsection{\texorpdfstring{Returns}{Returns}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md266}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md267}{}\doxysubsubsubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md267}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+first\+Id   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int64}{\texttt{ System.\+Int64}}   &\\\cline{1-3}
+last\+Id   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int64}{\texttt{ System.\+Int64}}   &\\\cline{1-3}
+\end{longtabu}
+
+
+\label{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-MainInfo-GetLastId}%
+\Hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-MainInfo-GetLastId}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md268}{}\doxysubsubsection{\texorpdfstring{Get\+Last\+Id() {\ttfamily method}}{Get\+Last\+Id() {\ttfamily method}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md268}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md269}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md269}
+This method returns id field from last inserted Main\+Info table.\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md270}{}\doxysubsubsubsubsection{\texorpdfstring{Returns}{Returns}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md270}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md271}{}\doxysubsubsubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md271}
+This method has no parameters.
+
+\label{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_T-CodereTvmaze-DAL-Network}%
+\Hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_T-CodereTvmaze-DAL-Network}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md272}{}\doxysubsection{\texorpdfstring{Network {\ttfamily type}}{Network {\ttfamily type}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md272}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md273}{}\doxysubsubsubsubsection{\texorpdfstring{Namespace}{Namespace}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md273}
+\doxylink{namespace_codere_tvmaze_1_1_d_a_l}{Codere\+Tvmaze.\+DAL}\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md274}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md274}
+Class {\ttfamily Network} Manages records from Networks table in database.
+
+\label{_M-CodereTvmaze-DAL-Network-AddToDatabaseIfNotExists-CodereTvmaze-DAL-DatabaseConnection,System-Int64,System-String,System-String,System-String-}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md275}{}\doxysubsubsection{\texorpdfstring{Add\+To\+Database\+If\+Not\+Exists(connection,id,name,country\+Code,official\+Site) {\ttfamily method}}{Add\+To\+Database\+If\+Not\+Exists(connection,id,name,country\+Code,official\+Site) {\ttfamily method}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md275}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md276}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md276}
+This method add a new record into Networks table based on id field if there isn\textquotesingle{}t a record yet with same id.\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md277}{}\doxysubsubsubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md277}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+connection   &\doxylink{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_T-CodereTvmaze-DAL-DatabaseConnection}{Codere\+Tvmaze.DAL.Database\+Connection}   &\\\cline{1-3}
+id   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int64}{\texttt{ System.\+Int64}}   &\\\cline{1-3}
+name   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String}{\texttt{ System.\+String}}   &\\\cline{1-3}
+country\+Code   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String}{\texttt{ System.\+String}}   &\\\cline{1-3}
+official\+Site   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String}{\texttt{ System.\+String}}   &\\\cline{1-3}
+\end{longtabu}
+
+
+\label{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-Network-GetAll}%
+\Hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-Network-GetAll}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md278}{}\doxysubsubsection{\texorpdfstring{Get\+All() {\ttfamily method}}{Get\+All() {\ttfamily method}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md278}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md279}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md279}
+This method returns a datatable with all records from Networks table. If there idn\textquotesingle{}t records it returns a null object.\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md280}{}\doxysubsubsubsubsection{\texorpdfstring{Returns}{Returns}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md280}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md281}{}\doxysubsubsubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md281}
+This method has no parameters.
+
+\label{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-Network-GetNetworkById-System-Int64-}%
+\Hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-Network-GetNetworkById-System-Int64-}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md282}{}\doxysubsubsection{\texorpdfstring{Get\+Network\+By\+Id(id) {\ttfamily method}}{Get\+Network\+By\+Id(id) {\ttfamily method}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md282}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md283}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md283}
+Returns a record from Networks table with id passed as parameter.\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md284}{}\doxysubsubsubsubsection{\texorpdfstring{Returns}{Returns}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md284}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md285}{}\doxysubsubsubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md285}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+id   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int64}{\texttt{ System.\+Int64}}   &\\\cline{1-3}
+\end{longtabu}
+
+
+\label{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_T-CodereTvmaze-DAL-Schedule}%
+\Hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_T-CodereTvmaze-DAL-Schedule}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md286}{}\doxysubsection{\texorpdfstring{Schedule {\ttfamily type}}{Schedule {\ttfamily type}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md286}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md287}{}\doxysubsubsubsubsection{\texorpdfstring{Namespace}{Namespace}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md287}
+\doxylink{namespace_codere_tvmaze_1_1_d_a_l}{Codere\+Tvmaze.\+DAL}\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md288}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md288}
+Class {\ttfamily Schedule} Manages record in Schedules table in database.
+
+\label{_M-CodereTvmaze-DAL-Schedule-AddSchedule-CodereTvmaze-DAL-DatabaseConnection,System-Int64,System-String,System-String,System-Int32-}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md289}{}\doxysubsubsection{\texorpdfstring{Add\+Schedule(connection,main\+Info\+Id,time,day,pos) {\ttfamily method}}{Add\+Schedule(connection,main\+Info\+Id,time,day,pos) {\ttfamily method}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md289}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md290}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md290}
+Method to add a new record into Schedules table if it doesn\textquotesingle{}t exist based on its associated main info id field.\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md291}{}\doxysubsubsubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md291}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+connection   &\doxylink{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_T-CodereTvmaze-DAL-DatabaseConnection}{Codere\+Tvmaze.DAL.Database\+Connection}   &\\\cline{1-3}
+main\+Info\+Id   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int64}{\texttt{ System.\+Int64}}   &\\\cline{1-3}
+time   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String}{\texttt{ System.\+String}}   &\\\cline{1-3}
+day   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String}{\texttt{ System.\+String}}   &\\\cline{1-3}
+pos   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int32}{\texttt{ System.\+Int32}}   &\\\cline{1-3}
+\end{longtabu}
+
+
+\label{_M-CodereTvmaze-DAL-Schedule-DeleteMainInfoSchedule-CodereTvmaze-DAL-DatabaseConnection,System-Int64-}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md292}{}\doxysubsubsection{\texorpdfstring{Delete\+Main\+Info\+Schedule(connection,main\+Info\+Id) {\ttfamily method}}{Delete\+Main\+Info\+Schedule(connection,main\+Info\+Id) {\ttfamily method}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md292}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md293}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md293}
+Delete a record in table Schedules based on its associated main info id. Null object is returned if there aren\textquotesingle{}t records with criteria.\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md294}{}\doxysubsubsubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md294}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+connection   &\doxylink{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_T-CodereTvmaze-DAL-DatabaseConnection}{Codere\+Tvmaze.DAL.Database\+Connection}   &\\\cline{1-3}
+main\+Info\+Id   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int64}{\texttt{ System.\+Int64}}   &\\\cline{1-3}
+\end{longtabu}
+
+
+\label{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-Schedule-GetAll}%
+\Hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-Schedule-GetAll}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md295}{}\doxysubsubsection{\texorpdfstring{Get\+All() {\ttfamily method}}{Get\+All() {\ttfamily method}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md295}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md296}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md296}
+Returns all records in table Schedules. Null object is returned if there aren\textquotesingle{}t records in table.\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md297}{}\doxysubsubsubsubsection{\texorpdfstring{Returns}{Returns}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md297}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md298}{}\doxysubsubsubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md298}
+This method has no parameters.
+
+\label{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-Schedule-GetScheduleByMainInfoId-System-Int64-}%
+\Hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-Schedule-GetScheduleByMainInfoId-System-Int64-}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md299}{}\doxysubsubsection{\texorpdfstring{Get\+Schedule\+By\+Main\+Info\+Id(main\+Info\+Id) {\ttfamily method}}{Get\+Schedule\+By\+Main\+Info\+Id(main\+Info\+Id) {\ttfamily method}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md299}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md300}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md300}
+This method returns a datatable with records from table Schedules based on theirs associated main info id. Null object is returned if there aren\textquotesingle{}t records with criteria.\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md301}{}\doxysubsubsubsubsection{\texorpdfstring{Returns}{Returns}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md301}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md302}{}\doxysubsubsubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md302}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+main\+Info\+Id   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int64}{\texttt{ System.\+Int64}}   &\\\cline{1-3}
+\end{longtabu}
+
+
+\label{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_T-CodereTvmaze-DAL-WebChannel}%
+\Hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_T-CodereTvmaze-DAL-WebChannel}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md303}{}\doxysubsection{\texorpdfstring{Web\+Channel {\ttfamily type}}{Web\+Channel {\ttfamily type}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md303}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md304}{}\doxysubsubsubsubsection{\texorpdfstring{Namespace}{Namespace}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md304}
+\doxylink{namespace_codere_tvmaze_1_1_d_a_l}{Codere\+Tvmaze.\+DAL}\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md305}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md305}
+Class {\ttfamily Web\+Channel} Manages records from Web\+Channes table in database.
+
+\label{_M-CodereTvmaze-DAL-WebChannel-AddToDatabaseIfNotExists-CodereTvmaze-DAL-DatabaseConnection,System-Int64,System-String,System-String,System-String-}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md306}{}\doxysubsubsection{\texorpdfstring{Add\+To\+Database\+If\+Not\+Exists(connection,id,name,country\+Code,official\+Site) {\ttfamily method}}{Add\+To\+Database\+If\+Not\+Exists(connection,id,name,country\+Code,official\+Site) {\ttfamily method}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md306}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md307}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md307}
+This method add a new record into Web\+Channels table based on id field if there isn\textquotesingle{}t a record yet with same id.\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md308}{}\doxysubsubsubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md308}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+connection   &\doxylink{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_T-CodereTvmaze-DAL-DatabaseConnection}{Codere\+Tvmaze.DAL.Database\+Connection}   &\\\cline{1-3}
+id   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int64}{\texttt{ System.\+Int64}}   &\\\cline{1-3}
+name   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String}{\texttt{ System.\+String}}   &\\\cline{1-3}
+country\+Code   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String}{\texttt{ System.\+String}}   &\\\cline{1-3}
+official\+Site   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String}{\texttt{ System.\+String}}   &\\\cline{1-3}
+\end{longtabu}
+
+
+\label{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-WebChannel-GetAll}%
+\Hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-WebChannel-GetAll}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md309}{}\doxysubsubsection{\texorpdfstring{Get\+All() {\ttfamily method}}{Get\+All() {\ttfamily method}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md309}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md310}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md310}
+This method returns a datatable with all records from Web\+Channels table. If there idn\textquotesingle{}t records it returns a null object.\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md311}{}\doxysubsubsubsubsection{\texorpdfstring{Returns}{Returns}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md311}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md312}{}\doxysubsubsubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md312}
+This method has no parameters.
+
+\label{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-WebChannel-GetWebChannelById-System-Int64-}%
+\Hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l_M-CodereTvmaze-DAL-WebChannel-GetWebChannelById-System-Int64-}%
+ \hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md313}{}\doxysubsubsection{\texorpdfstring{Get\+Web\+Channel\+By\+Id(id) {\ttfamily method}}{Get\+Web\+Channel\+By\+Id(id) {\ttfamily method}}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md313}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md314}{}\doxysubsubsubsubsection{\texorpdfstring{Summary}{Summary}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md314}
+Returns a record from Web\+Channels table with id passed as parameter.\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md315}{}\doxysubsubsubsubsection{\texorpdfstring{Returns}{Returns}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md315}
+\hypertarget{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md316}{}\doxysubsubsubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l_autotoc_md316}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+id   &\href{http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int64}{\texttt{ System.\+Int64}}   &\\\cline{1-3}
+\end{longtabu}

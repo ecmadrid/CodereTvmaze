@@ -1,0 +1,100 @@
+\doxysection{Codere\+Tvmaze.\+DAL.\+Schedule Class Reference}
+\hypertarget{class_codere_tvmaze_1_1_d_a_l_1_1_schedule}{}\label{class_codere_tvmaze_1_1_d_a_l_1_1_schedule}\index{CodereTvmaze.DAL.Schedule@{CodereTvmaze.DAL.Schedule}}
+
+
+Class {\ttfamily \doxylink{class_codere_tvmaze_1_1_d_a_l_1_1_schedule}{Schedule}} Manages record in Schedules table in database.  
+
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_codere_tvmaze_1_1_d_a_l_1_1_schedule_ab0f2f447fbc29809b5914320a5a629ee}{Add\+Schedule}} (\mbox{\hyperlink{class_codere_tvmaze_1_1_d_a_l_1_1_database_connection}{Database\+Connection}} connection, long main\+Info\+Id, string? time, string? day, int pos)
+\begin{DoxyCompactList}\small\item\em Method to add a new record into Schedules table if it doesn\textquotesingle{}t exist based on its associated main info id field. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_codere_tvmaze_1_1_d_a_l_1_1_schedule_a7be8b263b6e47be76ef64703ebcb0bad}{Delete\+Main\+Info\+Schedule}} (\mbox{\hyperlink{class_codere_tvmaze_1_1_d_a_l_1_1_database_connection}{Database\+Connection}} connection, long main\+Info\+Id)
+\begin{DoxyCompactList}\small\item\em Delete a record in table Schedules based on its associated main info id. Null object is returned if there aren\textquotesingle{}t records with criteria. \end{DoxyCompactList}\item 
+static Data\+Table \mbox{\hyperlink{class_codere_tvmaze_1_1_d_a_l_1_1_schedule_a54dd04bdb0acef9eae9e04d6a0a5973d}{Get\+Schedule\+By\+Main\+Info\+Id}} (long main\+Info\+Id)
+\begin{DoxyCompactList}\small\item\em This method returns a datatable with records from table Schedules based on theirs associated main info id. Null object is returned if there aren\textquotesingle{}t records with criteria. \end{DoxyCompactList}\item 
+static Data\+Table \mbox{\hyperlink{class_codere_tvmaze_1_1_d_a_l_1_1_schedule_aaacdf8742debfcbdad9cef08c702e199}{Get\+All}} ()
+\begin{DoxyCompactList}\small\item\em Returns all records in table Schedules. Null object is returned if there aren\textquotesingle{}t records in table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class {\ttfamily \doxylink{class_codere_tvmaze_1_1_d_a_l_1_1_schedule}{Schedule}} Manages record in Schedules table in database. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_codere_tvmaze_1_1_d_a_l_1_1_schedule_ab0f2f447fbc29809b5914320a5a629ee}\index{CodereTvmaze.DAL.Schedule@{CodereTvmaze.DAL.Schedule}!AddSchedule@{AddSchedule}}
+\index{AddSchedule@{AddSchedule}!CodereTvmaze.DAL.Schedule@{CodereTvmaze.DAL.Schedule}}
+\doxysubsubsection{\texorpdfstring{AddSchedule()}{AddSchedule()}}
+{\footnotesize\ttfamily \label{class_codere_tvmaze_1_1_d_a_l_1_1_schedule_ab0f2f447fbc29809b5914320a5a629ee} 
+static void Codere\+Tvmaze.\+DAL.\+Schedule.\+Add\+Schedule (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_codere_tvmaze_1_1_d_a_l_1_1_database_connection}{Database\+Connection}}}]{connection}{, }\item[{long}]{main\+Info\+Id}{, }\item[{string?}]{time}{, }\item[{string?}]{day}{, }\item[{int}]{pos}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Method to add a new record into Schedules table if it doesn\textquotesingle{}t exist based on its associated main info id field. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em connection} & \\
+\hline
+{\em main\+Info\+Id} & \\
+\hline
+{\em time} & \\
+\hline
+{\em day} & \\
+\hline
+{\em pos} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_codere_tvmaze_1_1_d_a_l_1_1_schedule_a7be8b263b6e47be76ef64703ebcb0bad}\index{CodereTvmaze.DAL.Schedule@{CodereTvmaze.DAL.Schedule}!DeleteMainInfoSchedule@{DeleteMainInfoSchedule}}
+\index{DeleteMainInfoSchedule@{DeleteMainInfoSchedule}!CodereTvmaze.DAL.Schedule@{CodereTvmaze.DAL.Schedule}}
+\doxysubsubsection{\texorpdfstring{DeleteMainInfoSchedule()}{DeleteMainInfoSchedule()}}
+{\footnotesize\ttfamily \label{class_codere_tvmaze_1_1_d_a_l_1_1_schedule_a7be8b263b6e47be76ef64703ebcb0bad} 
+static void Codere\+Tvmaze.\+DAL.\+Schedule.\+Delete\+Main\+Info\+Schedule (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_codere_tvmaze_1_1_d_a_l_1_1_database_connection}{Database\+Connection}}}]{connection}{, }\item[{long}]{main\+Info\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Delete a record in table Schedules based on its associated main info id. Null object is returned if there aren\textquotesingle{}t records with criteria. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em connection} & \\
+\hline
+{\em main\+Info\+Id} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_codere_tvmaze_1_1_d_a_l_1_1_schedule_aaacdf8742debfcbdad9cef08c702e199}\index{CodereTvmaze.DAL.Schedule@{CodereTvmaze.DAL.Schedule}!GetAll@{GetAll}}
+\index{GetAll@{GetAll}!CodereTvmaze.DAL.Schedule@{CodereTvmaze.DAL.Schedule}}
+\doxysubsubsection{\texorpdfstring{GetAll()}{GetAll()}}
+{\footnotesize\ttfamily \label{class_codere_tvmaze_1_1_d_a_l_1_1_schedule_aaacdf8742debfcbdad9cef08c702e199} 
+static Data\+Table Codere\+Tvmaze.\+DAL.\+Schedule.\+Get\+All (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns all records in table Schedules. Null object is returned if there aren\textquotesingle{}t records in table. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_codere_tvmaze_1_1_d_a_l_1_1_schedule_a54dd04bdb0acef9eae9e04d6a0a5973d}\index{CodereTvmaze.DAL.Schedule@{CodereTvmaze.DAL.Schedule}!GetScheduleByMainInfoId@{GetScheduleByMainInfoId}}
+\index{GetScheduleByMainInfoId@{GetScheduleByMainInfoId}!CodereTvmaze.DAL.Schedule@{CodereTvmaze.DAL.Schedule}}
+\doxysubsubsection{\texorpdfstring{GetScheduleByMainInfoId()}{GetScheduleByMainInfoId()}}
+{\footnotesize\ttfamily \label{class_codere_tvmaze_1_1_d_a_l_1_1_schedule_a54dd04bdb0acef9eae9e04d6a0a5973d} 
+static Data\+Table Codere\+Tvmaze.\+DAL.\+Schedule.\+Get\+Schedule\+By\+Main\+Info\+Id (\begin{DoxyParamCaption}\item[{long}]{main\+Info\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This method returns a datatable with records from table Schedules based on theirs associated main info id. Null object is returned if there aren\textquotesingle{}t records with criteria. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em main\+Info\+Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Codere\+Tvmaze.\+DAL/Schedule.\+cs\end{DoxyCompactItemize}

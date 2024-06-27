@@ -1,0 +1,73 @@
+\doxysection{Codere\+Tvmaze.\+BLL.\+Country Class Reference}
+\hypertarget{class_codere_tvmaze_1_1_b_l_l_1_1_country}{}\label{class_codere_tvmaze_1_1_b_l_l_1_1_country}\index{CodereTvmaze.BLL.Country@{CodereTvmaze.BLL.Country}}
+
+
+Claass {\ttfamily \doxylink{class_codere_tvmaze_1_1_b_l_l_1_1_country}{Country}}  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_codere_tvmaze_1_1_b_l_l_1_1_country_a2f80269b52659fa8370f371af2380e61}{Add\+To\+Database\+If\+Not\+Exists}} (\mbox{\hyperlink{class_codere_tvmaze_1_1_d_a_l_1_1_database_connection}{Database\+Connection}} connection)
+\begin{DoxyCompactList}\small\item\em Add a new record to Countries database table from object if there\textquotesingle{}s not yet a record whith same code. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_codere_tvmaze_1_1_b_l_l_1_1_country}{Country}} \mbox{\hyperlink{class_codere_tvmaze_1_1_b_l_l_1_1_country_a174fd2e1c47c1c898094e45665e0f269}{Get\+Country\+By\+Code}} (string? code)
+\begin{DoxyCompactList}\small\item\em Creates a \doxylink{class_codere_tvmaze_1_1_b_l_l_1_1_country}{Country} object with data stored in table based on its code. Null if code is not found. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_codere_tvmaze_1_1_b_l_l_1_1_country_ab6abc419f49871531582d5b4cfc19db6}\label{class_codere_tvmaze_1_1_b_l_l_1_1_country_ab6abc419f49871531582d5b4cfc19db6} 
+string? {\bfseries name}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_codere_tvmaze_1_1_b_l_l_1_1_country_a239602830ce3f63e8eb3e8f664b751e9}\label{class_codere_tvmaze_1_1_b_l_l_1_1_country_a239602830ce3f63e8eb3e8f664b751e9} 
+string? {\bfseries code}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_codere_tvmaze_1_1_b_l_l_1_1_country_a0e22a599bf5f16eb809a89c396a1c306}\label{class_codere_tvmaze_1_1_b_l_l_1_1_country_a0e22a599bf5f16eb809a89c396a1c306} 
+string? {\bfseries timezone}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Claass {\ttfamily \doxylink{class_codere_tvmaze_1_1_b_l_l_1_1_country}{Country}} 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_codere_tvmaze_1_1_b_l_l_1_1_country_a2f80269b52659fa8370f371af2380e61}\index{CodereTvmaze.BLL.Country@{CodereTvmaze.BLL.Country}!AddToDatabaseIfNotExists@{AddToDatabaseIfNotExists}}
+\index{AddToDatabaseIfNotExists@{AddToDatabaseIfNotExists}!CodereTvmaze.BLL.Country@{CodereTvmaze.BLL.Country}}
+\doxysubsubsection{\texorpdfstring{AddToDatabaseIfNotExists()}{AddToDatabaseIfNotExists()}}
+{\footnotesize\ttfamily \label{class_codere_tvmaze_1_1_b_l_l_1_1_country_a2f80269b52659fa8370f371af2380e61} 
+void Codere\+Tvmaze.\+BLL.\+Country.\+Add\+To\+Database\+If\+Not\+Exists (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_codere_tvmaze_1_1_d_a_l_1_1_database_connection}{Database\+Connection}}}]{connection}{}\end{DoxyParamCaption})}
+
+
+
+Add a new record to Countries database table from object if there\textquotesingle{}s not yet a record whith same code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em connection} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_codere_tvmaze_1_1_b_l_l_1_1_country_a174fd2e1c47c1c898094e45665e0f269}\index{CodereTvmaze.BLL.Country@{CodereTvmaze.BLL.Country}!GetCountryByCode@{GetCountryByCode}}
+\index{GetCountryByCode@{GetCountryByCode}!CodereTvmaze.BLL.Country@{CodereTvmaze.BLL.Country}}
+\doxysubsubsection{\texorpdfstring{GetCountryByCode()}{GetCountryByCode()}}
+{\footnotesize\ttfamily \label{class_codere_tvmaze_1_1_b_l_l_1_1_country_a174fd2e1c47c1c898094e45665e0f269} 
+static \mbox{\hyperlink{class_codere_tvmaze_1_1_b_l_l_1_1_country}{Country}} Codere\+Tvmaze.\+BLL.\+Country.\+Get\+Country\+By\+Code (\begin{DoxyParamCaption}\item[{string?}]{code}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates a \doxylink{class_codere_tvmaze_1_1_b_l_l_1_1_country}{Country} object with data stored in table based on its code. Null if code is not found. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Codere\+Tvmaze.\+BLL/Country.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['href_20tt_20method_20tt_0',['href tt method tt',['../md__codere_tvmaze_8_d_a_l_2obj_2_debug_2net8_80_2_codere_tvmaze_8_d_a_l.html#autotoc_md252',1,'AddToDatabase(id,url,name,type,language,status,runtime,averageRuntime,premiered,ended,officialSite,weight,summary,updated,previousEpisodeHref,previousEpisodeName,nextEpisodeHref,nextEpisodeName,imageMedium,imageOriginal,average,tvrage,thetvdb,imdb,dvdCountryCode,networkId,webChannelId,href) &lt;tt&gt;method&lt;/tt&gt;'],['../md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l.html#autotoc_md387',1,'AddToDatabase(id,url,name,type,language,status,runtime,averageRuntime,premiered,ended,officialSite,weight,summary,updated,previousEpisodeHref,previousEpisodeName,nextEpisodeHref,nextEpisodeName,imageMedium,imageOriginal,average,tvrage,thetvdb,imdb,dvdCountryCode,networkId,webChannelId,href) &lt;tt&gt;method&lt;/tt&gt;']]]
+];
