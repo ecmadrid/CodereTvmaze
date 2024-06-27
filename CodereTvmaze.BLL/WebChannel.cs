@@ -8,14 +8,21 @@ using System.Threading.Tasks;
 
 namespace CodereTvmaze.BLL
 {
+    /// <summary>
+    /// Class <c>WebChannel</c> contains data from WebChannels database table related to a MainInfo object.
+    /// </summary>
     public class WebChannel
     {
         public long id { get; set; }
-        public string name { get; set; }
-        public Country country { get; set; }
-        public string officialSite { get; set; }
+        public string? name { get; set; }
+        public Country? country { get; set; }
+        public string? officialSite { get; set; }
 
-        public void AddToDatabaseIfNotExists(Connection connection)
+        /// <summary>
+        /// Adds a new record into database WebChannels table if it's no exists yet based on its id.
+        /// </summary>
+        /// <param name="connection"></param>
+        public void AddToDatabaseIfNotExists(DatabaseConnection connection)
         {
 
             // Add Web channel country if it doesn't exist.

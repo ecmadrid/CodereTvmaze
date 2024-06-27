@@ -6,6 +6,9 @@ using Microsoft.Extensions.Configuration;
 
 namespace CodereTvmaze.Controllers
 {
+    /// <summary>
+    /// ApiControler: <c>ControllerBase</c> contains web api calls. 
+    /// </summary>
     [ApiController]
     [Route("api/[controller]")]
     public class CodereTvmazeController : ControllerBase
@@ -23,7 +26,11 @@ namespace CodereTvmaze.Controllers
  * Job endpoint with web api key.
  * 
  */
-
+        /// <summary>
+        /// Endpoint: <c>Import/id</c> imports from Tvmaze a show into database by its id.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet]
         [Route("Import/{id}")]
         public IResult ImportShow(int id)
@@ -40,15 +47,21 @@ namespace CodereTvmaze.Controllers
             return Results.Ok(mainInfo);
         }
 
+        /// <summary>
+        /// Endpoint: <c>Import</c> imports show from Tvmazeinto database from last inserted id.
+        /// It needs that "Authotization" header contains api key ("Authotization": "ApiKey xxxxxx").
+        /// Correct api key is stored in json project config file.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         [Route("Import")]
         public IResult Import()
         {
             // Check api key.
 
-            string validApiKey = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("AppSettings")["Apikey"];
+            string? validApiKey = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("AppSettings")["Apikey"];
 
-            string authHeader = HttpContext.Request.Headers["Authorization"];
+            string? authHeader = HttpContext.Request.Headers["Authorization"];
             if (authHeader != null && authHeader.StartsWith("ApiKey"))
             {
                 string userApiKey = authHeader.Split(' ')[1];
@@ -60,7 +73,7 @@ namespace CodereTvmaze.Controllers
 
             bool rs = MainInfo.ImportMainInfoAll();
 
-            if (rs == null)
+            if (rs == false)
             {
                 return Results.BadRequest();
             }
@@ -74,6 +87,11 @@ namespace CodereTvmaze.Controllers
          * 
          */
 
+        /// <summary>
+        /// EndPoint: <c>Shows/id</c> returns a MainInfo object based on its id as parameter.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet]
         [Route("Shows/{id}")]
         public IResult Shows(int id)
@@ -89,6 +107,11 @@ namespace CodereTvmaze.Controllers
             return Results.Ok(obj);
         }
 
+        /// <summary>
+        /// EndPoint: <c>Shows</c> returns MainInfo object array based on a page as parameter.
+        /// </summary>
+        /// <param name="page"></param>
+        /// <returns></returns>
         [HttpGet]
         [Route("Shows")]
         public IResult Shows(long page)

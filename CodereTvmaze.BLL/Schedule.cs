@@ -10,35 +10,50 @@ namespace CodereTvmaze.BLL
 {
     public class Schedule
     {
-        public string time { get; set; }
-        public List<string> days { get; set; }
+        public string? time { get; set; }
+        public List<string>? days { get; set; }
 
-        public void AddSchedule(Connection connection, long MainInfoId)
+        /// <summary>
+        /// Add schedule data related a MainInfo object.
+        /// </summary>
+        /// <param name="connection"></param>
+        /// <param name="MainInfoId"></param>
+        public void AddSchedule(DatabaseConnection connection, long MainInfoId)
         {
-            int pos = 1;
-            foreach (string day in days)
+            if (days != null)
             {
-                CodereTvmaze.DAL.Schedule.AddSchedule(connection, MainInfoId, time, day, pos);
+                int pos = 1;
+                foreach (string day in days)
+                {
+                    CodereTvmaze.DAL.Schedule.AddSchedule(connection, MainInfoId, time, day, pos);
+                }
             }
         }
 
+        /// <summary>
+        /// This method return a Schedule object related to a MainInfo object or Null object if it's not exist.
+        /// </summary>
+        /// <param name="mainInfoId"></param>
+        /// <returns></returns>
         public static Schedule GetScheduleByMainInfoId(long mainInfoId)
         {
-            DataTable dtSchedule = CodereTvmaze.DAL.Schedule.GetScheduleByMainInfoId(mainInfoId);
-            if (dtSchedule == null)
+            DataTable scheduleTable = CodereTvmaze.DAL.Schedule.GetScheduleByMainInfoId(mainInfoId);
+            if (scheduleTable == null)
             {
                 return null;
             }
-            if (dtSchedule.Rows.Count < 1)
+            if (scheduleTable.Rows.Count < 1)
             {
                 return null;
             }
             Schedule schedule = new Schedule();
             schedule.days = new List<string>();
-            schedule.time = dtSchedule.Rows[0]["Time"].ToString();
-            foreach (DataRow scheduleRow in dtSchedule.Rows)
+            schedule.time = scheduleTable.Rows[0]["Time"].ToString();
+            foreach (DataRow scheduleRow in scheduleTable.Rows)
             {
-                schedule.days.Add(scheduleRow["Day"].ToString());
+                if (scheduleRow["Day"] != DBNull.Value){
+                    schedule.days.Add(scheduleRow["Day"].ToString());
+                }
             }
 
             return schedule;

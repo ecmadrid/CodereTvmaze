@@ -7,23 +7,34 @@ using System.Threading.Tasks;
 
 namespace CodereTvmaze.DAL
 {
+    /// <summary>
+    /// Class <c>Network</c> Manages records from Networks table in database.
+    /// </summary>
     public class Network
     {
-        public static void AddToDatabaseIfNotExists(Connection connection, long id, string name, string countryCode, string officialSite)
+        /// <summary>
+        /// This method add a new record into Networks table based on id field if there isn't a record yet with same id.
+        /// </summary>
+        /// <param name="connection"></param>
+        /// <param name="id"></param>
+        /// <param name="name"></param>
+        /// <param name="countryCode"></param>
+        /// <param name="officialSite"></param>
+        public static void AddToDatabaseIfNotExists(DatabaseConnection connection, long id, string? name, string? countryCode, string? officialSite)
         {
             bool needCloseConnection = false;
             if (connection == null)
             {
-                connection = new DAL.Connection();
+                connection = new DAL.DatabaseConnection();
                 connection.Open();
                 connection.Begin();
                 needCloseConnection = true;
             }
 
                 string sql = @"SELECT COUNT(*) FROM Networks WHERE id = " + id.ToString();
-                long count = connection.ExecuteScalar(sql);
-                if (count > 0)
-                {
+                long? count = connection.ExecuteLongScalar(sql);
+            if ((count != null) && (count > 0))
+            {
                 // Network exists in database.
                 if (needCloseConnection)
                 {
@@ -49,10 +60,15 @@ namespace CodereTvmaze.DAL
 
         }
 
+        /// <summary>
+        /// Returns a record from Networks table with id passed as parameter.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public static DataRow GetNetworkById(long id)
         {
 
-            Connection connection = connection = new DAL.Connection();
+            DatabaseConnection connection = connection = new DAL.DatabaseConnection();
             connection.Open();
             string sql = @"SELECT * FROM Networks WHERE Id =" + id.ToString();
             DataTable dt = connection.Execute(sql);
@@ -72,10 +88,14 @@ namespace CodereTvmaze.DAL
             return dt.Rows[0];
         }
 
+        /// <summary>
+        /// This method returns a datatable with all records from Networks table. If there idn't records it returns a null object.
+        /// </summary>
+        /// <returns></returns>
         public static DataTable GetAll()
         {
 
-            Connection connection = connection = new DAL.Connection();
+            DatabaseConnection connection = connection = new DAL.DatabaseConnection();
             connection.Open();
             string sql = @"SELECT * FROM Networks";
             DataTable dt = connection.Execute(sql);

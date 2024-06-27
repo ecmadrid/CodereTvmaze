@@ -13,34 +13,43 @@ using static System.Net.WebRequestMethods;
 
 namespace CodereTvmaze.BLL
 {
+ /// <summary>
+ /// Class <c>MainInfo</c> contains all information related to a MainInfo object (with its related object included).
+ /// </summary>
     public class MainInfo
     {
         public long id { get; set; }
-        public string url { get; set; }
-        public string name { get; set; }
-        public string type { get; set; }
-        public string language { get; set; }
-        public List<string> genres { get; set; }
-        public string status { get; set; }
+        public string? url { get; set; }
+        public string? name { get; set; }
+        public string? type { get; set; }
+        public string? language { get; set; }
+        public List<string>? genres { get; set; }
+        public string? status { get; set; }
         public long? runtime { get; set; }
         public long? averageRuntime { get; set; }
         public DateOnly? premiered { get; set; }
         public DateOnly? ended { get; set; }
-        public string officialSite { get; set; }
-        public Schedule schedule { get; set; }
-        public Rating rating { get; set; }
+        public string? officialSite { get; set; }
+        public Schedule? schedule { get; set; }
+        public Rating? rating { get; set; }
         public long? weight { get; set; }
-        public Network network { get; set; }
-        public WebChannel webChannel { get; set; }
-        public Country dvdCountry { get; set; }
-        public Externals externals { get; set; }
-        public Image image { get; set; }
-        public string summary { get; set; }
+        public Network? network { get; set; }
+        public WebChannel? webChannel { get; set; }
+        public Country? dvdCountry { get; set; }
+        public Externals? externals { get; set; }
+        public Image? image { get; set; }
+        public string? summary { get; set; }
         public long? updated { get; set; }
-        public Links _links { get; set; }
+        public Links? _links { get; set; }
 
         // Methods
 
+        /// <summary>
+        /// This method imports data of a MainInfo object from Tvmaze and insert data into datatable.
+        /// It calls a endpoint in Tvmaze web api to retrieve all information needed.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public static MainInfo ImportMainInfo(int id)
         {
 
@@ -65,6 +74,12 @@ namespace CodereTvmaze.BLL
             };
         }
 
+        /// <summary>
+        /// This method imports data  from Tvmaze and insert data into datatable.
+        /// It calls a endpoint in Tvmaze web api to retrieve all information needed.
+        /// Calls are done paginated calculating first page needed until return response is "not found".
+        /// </summary>
+        /// <returns></returns>
         public static bool ImportMainInfoAll()
         {
             bool rs = true;
@@ -80,7 +95,7 @@ namespace CodereTvmaze.BLL
 
                     // Determinate start page number.
                     page = Math.Floor(Convert.ToDecimal(lastId / 250));
-                     bool hasResult = true;
+                    bool hasResult = true;
 
                     do
                     {
@@ -109,11 +124,15 @@ namespace CodereTvmaze.BLL
             }
             catch (Exception ex)
             {
+                // Here we can treat exception.
                 rs = false;
             }
-                return rs;
-            }
+            return rs;
+        }
 
+        /// <summary>
+        /// Add a MainInfo object information to database.
+        /// </summary>
         public void AddToDatabase()
         {
             // Add MainInfo.
@@ -187,7 +206,7 @@ namespace CodereTvmaze.BLL
                 }
             }
 
-            CodereTvmaze.DAL.Connection connection = CodereTvmaze.DAL.MainInfo.AddToDatabase(id, url, name,
+            CodereTvmaze.DAL.DatabaseConnection connection = CodereTvmaze.DAL.MainInfo.AddToDatabase(id, url, name,
                 type, language, status, runtime, averageRuntime, premiered, ended, officialSite, weight, summary, updated,
                 previousEpisodeHref, previousEpisodeName, nextEpisodeHref, nextEpisodeName,
                 imageMedium, imageOriginal, average, tvrage, thetvdb, imdb, dvdCountryCode, networkId, webChannelId, href);
@@ -240,6 +259,11 @@ namespace CodereTvmaze.BLL
             connection.Close();
         }
 
+        /// <summary>
+        /// Return a MainInfo object with its data from database based on an id.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public static MainInfo GetById(int id)
         {
             DataRow mainInfoRow = CodereTvmaze.DAL.MainInfo.GetById(id);
@@ -253,33 +277,13 @@ namespace CodereTvmaze.BLL
             return mainInfo;
         }
 
+        /// <summary>
+        /// Return a MainInfo object array with all data from database.
+        /// </summary>
+        /// <returns></returns>
         public static List<MainInfo> GetAll()
         {
             DataTable dtMainInfo = CodereTvmaze.DAL.MainInfo.GetAll();
-
-            if (dtMainInfo == null)
-                return null;
-
-            if(dtMainInfo.Rows.Count < 0)
-            {
-                return null;
-            }
-
-            List<MainInfo> mainInfos = new List<MainInfo>();
-
-            foreach(DataRow mainInfoRow in dtMainInfo.Rows)
-            {
-                // Create a new MainInfo object and add it to list.
-                MainInfo mainInfo = CreateMainInfoFromDataRow(mainInfoRow);
-                mainInfos.Add(mainInfo);
-            }
-
-            return mainInfos;
-        }
-
-        public static List<MainInfo> GetByPage(long page)
-        {
-            DataTable dtMainInfo = CodereTvmaze.DAL.MainInfo.GetByPage(page);
 
             if (dtMainInfo == null)
                 return null;
@@ -301,7 +305,47 @@ namespace CodereTvmaze.BLL
             return mainInfos;
         }
 
+        /// <summary>
+        /// Return a MainInfo object with its data from database based on an id interval (represented by a page).
+        /// </summary>
+        /// <param name="page"></param>
+        /// <returns></returns>
+        public static List<MainInfo> GetByPage(long page)
+        {
+            // Determinate first and last page element ids.
+            long firstId = page * 250;
+            long lastId = ((page + 1) * 250) - 1;
 
+            DataTable mainInfoTable = CodereTvmaze.DAL.MainInfo.GetByInterval(firstId, lastId);
+
+            if (mainInfoTable == null)
+                return null;
+
+            if (mainInfoTable.Rows.Count < 0)
+            {
+                return null;
+            }
+
+            List<MainInfo> mainInfos = new List<MainInfo>();
+
+            foreach (DataRow mainInfoRow in mainInfoTable.Rows)
+            {
+                // Create a new MainInfo object and add it to list.
+                MainInfo mainInfo = CreateMainInfoFromDataRow(mainInfoRow);
+                mainInfos.Add(mainInfo);
+            }
+
+            return mainInfos;
+        }
+
+
+        /// <summary>
+        /// This method create a MainInfo object from a datarow. It is a method created to be
+        /// used for all methods that return MainInfo object or MainInfo object array so we can
+        /// recycle code.
+        /// </summary>
+        /// <param name="mainInfoRow"></param>
+        /// <returns></returns>
         private static MainInfo CreateMainInfoFromDataRow(DataRow mainInfoRow)
         {
             MainInfo mainInfo = new MainInfo()
@@ -431,6 +475,6 @@ namespace CodereTvmaze.BLL
             return mainInfo;
         }
 
-        }
+    }
 
 }

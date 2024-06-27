@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace CodereTvmaze.BLL
 {
+    /// <summary>
+    /// Class <c>Image</c> contains data included in MainInfo object.
+    /// </summary>
     public class Image
     {
-        public string medium { get; set; }
-        public string original { get; set; }
+        public string? medium { get; set; }
+        public string? original { get; set; }
     }
 }

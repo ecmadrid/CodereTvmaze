@@ -8,18 +8,30 @@ using System.Threading.Tasks;
 
 namespace CodereTvmaze.BLL
 {
+    /// <summary>
+    /// Claass <c>Country</c>
+    /// </summary>
     public class Country
     {
-        public string name { get; set; }
-        public string code { get; set; }
-        public string timezone { get; set; }
+        public string? name { get; set; }
+        public string? code { get; set; }
+        public string? timezone { get; set; }
 
-        public void AddToDatabaseIfNotExists(Connection connection)
+        /// <summary>
+        /// Add a new record to Countries database table from object if there's not yet a record whith same code.
+        /// </summary>
+        /// <param name="connection"></param>
+        public void AddToDatabaseIfNotExists(DatabaseConnection connection)
         {
             CodereTvmaze.DAL.Country.AddToDatabaseIfNotExists(connection, name, code, timezone);
         }
 
-        public static Country GetCountryByCode(string code)
+        /// <summary>
+        /// Creates a Country object with data stored in table based on its code. Null if code is not found.
+        /// </summary>
+        /// <param name="code"></param>
+        /// <returns></returns>
+        public static Country GetCountryByCode(string? code)
         {
             DataRow countryRow = CodereTvmaze.DAL.Country.GetCountryByCode(code);
 

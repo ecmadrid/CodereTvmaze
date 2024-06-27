@@ -7,17 +7,54 @@ using System.Threading.Tasks;
 
 namespace CodereTvmaze.DAL
 {
+    /// <summary>
+    /// Class <c>MainInfo</c> Main class containing main information.
+    /// </summary>
     public class MainInfo
     {
-        public static Connection AddToDatabase(long id, string url, string name, string type, string language,
-            string status, long? runtime, long? averageRuntime, DateOnly? premiered, DateOnly? ended,
-            string officialSite, long? weight, string summary, long? updated,
-            string previousEpisodeHref, string previousEpisodeName,
-                string nextEpisodeHref, string nextEpisodeName, string imageMedium, string imageOriginal,
-                double? average, long? tvrage, long? thetvdb, string imdb,
-                string dvdCountryCode, long? networkId, long? webChannelId, string href)
+     /// <summary>
+     /// Method to add a new main information register to database. If there is a register with
+     /// same main info id yet it's deleted. Returns a DatabaseConnection object to be used by
+     /// other objects to include them in same transaction.
+     /// </summary>
+     /// <param name="id"></param>
+     /// <param name="url"></param>
+     /// <param name="name"></param>
+     /// <param name="type"></param>
+     /// <param name="language"></param>
+     /// <param name="status"></param>
+     /// <param name="runtime"></param>
+     /// <param name="averageRuntime"></param>
+     /// <param name="premiered"></param>
+     /// <param name="ended"></param>
+     /// <param name="officialSite"></param>
+     /// <param name="weight"></param>
+     /// <param name="summary"></param>
+     /// <param name="updated"></param>
+     /// <param name="previousEpisodeHref"></param>
+     /// <param name="previousEpisodeName"></param>
+     /// <param name="nextEpisodeHref"></param>
+     /// <param name="nextEpisodeName"></param>
+     /// <param name="imageMedium"></param>
+     /// <param name="imageOriginal"></param>
+     /// <param name="average"></param>
+     /// <param name="tvrage"></param>
+     /// <param name="thetvdb"></param>
+     /// <param name="imdb"></param>
+     /// <param name="dvdCountryCode"></param>
+     /// <param name="networkId"></param>
+     /// <param name="webChannelId"></param>
+     /// <param name="href"></param>
+     /// <returns></returns>
+        public static DatabaseConnection AddToDatabase(long id, string? url, string? name, string? type, string? language,
+            string? status, long? runtime, long? averageRuntime, DateOnly? premiered, DateOnly? ended,
+            string? officialSite, long? weight, string? summary, long? updated,
+            string? previousEpisodeHref, string? previousEpisodeName,
+                string? nextEpisodeHref, string? nextEpisodeName, string? imageMedium, string? imageOriginal,
+                double? average, long? tvrage, long? thetvdb, string? imdb,
+                string? dvdCountryCode, long? networkId, long? webChannelId, string? href)
         {
-            Connection connection = new DAL.Connection();
+            DatabaseConnection connection = new DAL.DatabaseConnection();
             connection.Open();
             connection.Begin();
 
@@ -68,9 +105,14 @@ namespace CodereTvmaze.DAL
             return connection;
         }
 
+        /// <summary>
+        /// Return a datarow with record from ;ainInfo table based on a id.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public static DataRow GetById(int id)
         {
-            Connection connection = new DAL.Connection();
+            DatabaseConnection connection = new DAL.DatabaseConnection();
             connection.Open();
 
             string sql = "SELECT * FROM MainInfo WHERE Id = " + id.ToString();
@@ -92,9 +134,14 @@ namespace CodereTvmaze.DAL
             return dt.Rows[0];
         }
 
+        /// <summary>
+        /// This method returns all records from MainInfo table into a datatable object. If there isn't
+        /// any record it returns a null object.
+        /// </summary>
+        /// <returns></returns>
         public static DataTable GetAll()
         {
-            Connection connection = new DAL.Connection();
+            DatabaseConnection connection = new DAL.DatabaseConnection();
             connection.Open();
 
             string sql = "SELECT * FROM MainInfo ORDER BY Id";
@@ -106,13 +153,16 @@ namespace CodereTvmaze.DAL
             return dt;
         }
 
-        public static DataTable GetByPage(long page)
+        /// <summary>
+        /// returns records from MainInfo table into a datatable object whose ids are between aninterval. If there isn't
+        /// records in criteria it returns a null object.
+        /// </summary>
+        /// <param name="firstId"></param>
+        /// <param name="lastId"></param>
+        /// <returns></returns>
+        public static DataTable GetByInterval(long firstId, long lastId)
         {
-            // Determinate first and last page element ids.
-            long firstId = page * 250;
-            long lastId = ((page + 1) * 250) - 1;
-
-            Connection connection = new DAL.Connection();
+            DatabaseConnection connection = new DAL.DatabaseConnection();
             connection.Open();
 
             string sql = "SELECT * FROM MainInfo WHERE Id BETWEEN @FirstId AND @LastId ORDER BY Id";
@@ -126,18 +176,27 @@ namespace CodereTvmaze.DAL
             return dt;
         }
 
+        /// <summary>
+        /// This method returns id field from last inserted MainInfo table.
+        /// </summary>
+        /// <returns></returns>
         public static long GetLastId()
         {
-            Connection connection = new DAL.Connection();
+            DatabaseConnection connection = new DAL.DatabaseConnection();
             connection.Open();
 
             string sql = "SELECT ifnull(MAX(Id), 0) AS Id FROM MainInfo ORDER BY Id";
 
-            long maxId = connection.ExecuteScalar(sql);
+            long? maxId = connection.ExecuteLongScalar(sql);
+
+            if (maxId == null)
+            {
+                maxId = 0;
+            }
 
             connection.Close();
 
-            return maxId;
+            return maxId.Value;
         }
     }
 }

@@ -8,14 +8,21 @@ using System.Threading.Tasks;
 
 namespace CodereTvmaze.BLL
 {
+    /// <summary>
+    /// Class <c></c> contains data from Networks database table related to a MainInfo object.
+    /// </summary>
     public class Network
     {
         public long id { get; set; }
-        public string name { get; set; }
-        public Country country { get; set; }
-        public string officialSite { get; set; }
+        public string? name { get; set; }
+        public Country? country { get; set; }
+        public string? officialSite { get; set; }
 
-        public void AddToDatabaseIfNotExists(Connection connection)
+        /// <summary>
+        /// Add a new record into database Networks table if it's no exists yet based on its id.
+        /// </summary>
+        /// <param name="connection"></param>
+        public void AddToDatabaseIfNotExists(DatabaseConnection connection)
         {
             string? countryCode = null;
 
@@ -29,6 +36,11 @@ namespace CodereTvmaze.BLL
             CodereTvmaze.DAL.Network.AddToDatabaseIfNotExists(connection, id, name, countryCode, officialSite);
         }
 
+        /// <summary>
+        /// This method retun a Network object from data in database based on a id.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public static Network GetNetworkById(long id)
         {
             DataRow netwotkRow = CodereTvmaze.DAL.Network.GetNetworkById(id);
