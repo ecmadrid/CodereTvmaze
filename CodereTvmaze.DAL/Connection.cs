@@ -26,7 +26,6 @@ namespace CodereTvmaze.DAL
         public void Open()
         {
             ConnectionString = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["ProjectConnection"];
-
             Connection = new SqliteConnection(ConnectionString);
             Connection.Open();
         }
