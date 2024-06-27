@@ -10,7 +10,7 @@ Class {\ttfamily \doxylink{class_codere_tvmaze_1_1_d_a_l_1_1_main_info}{Main\+In
 \item 
 static \mbox{\hyperlink{class_codere_tvmaze_1_1_d_a_l_1_1_database_connection}{Database\+Connection}} \mbox{\hyperlink{class_codere_tvmaze_1_1_d_a_l_1_1_main_info_a0ed463391271b69cfc1bab2bd5de8200}{Add\+To\+Database}} (long id, string? url, string? name, string? type, string? language, string? status, long? runtime, long? average\+Runtime, Date\+Only? premiered, Date\+Only? ended, string? official\+Site, long? weight, string? summary, long? updated, string? previous\+Episode\+Href, string? previous\+Episode\+Name, string? next\+Episode\+Href, string? next\+Episode\+Name, string? image\+Medium, string? image\+Original, double? average, long? tvrage, long? thetvdb, string? imdb, string? dvd\+Country\+Code, long? network\+Id, long? web\+Channel\+Id, string? href)
 \begin{DoxyCompactList}\small\item\em Method to add a new main information register to database. If there is a register with same main info id yet it\textquotesingle{}s deleted. Returns a \doxylink{class_codere_tvmaze_1_1_d_a_l_1_1_database_connection}{Database\+Connection} object to be used by other objects to include them in same transaction. \end{DoxyCompactList}\item 
-static Data\+Row \mbox{\hyperlink{class_codere_tvmaze_1_1_d_a_l_1_1_main_info_a70978247787ef977ab8b589e554a579b}{Get\+By\+Id}} (int id)
+static Data\+Row \mbox{\hyperlink{class_codere_tvmaze_1_1_d_a_l_1_1_main_info_a9a24c348f1d58256b6aa24c516088b5d}{Get\+By\+Id}} (long id)
 \begin{DoxyCompactList}\small\item\em Return a datarow with record from ;ain\+Info table based on a id. \end{DoxyCompactList}\item 
 static Data\+Table \mbox{\hyperlink{class_codere_tvmaze_1_1_d_a_l_1_1_main_info_a24c290c86d6a01b25163aa25daf30573}{Get\+All}} ()
 \begin{DoxyCompactList}\small\item\em This method returns all records from \doxylink{class_codere_tvmaze_1_1_d_a_l_1_1_main_info}{Main\+Info} table into a datatable object. If there isn\textquotesingle{}t any record it returns a null object. \end{DoxyCompactList}\item 
@@ -109,11 +109,11 @@ This method returns all records from \doxylink{class_codere_tvmaze_1_1_d_a_l_1_1
 \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
-\Hypertarget{class_codere_tvmaze_1_1_d_a_l_1_1_main_info_a70978247787ef977ab8b589e554a579b}\index{CodereTvmaze.DAL.MainInfo@{CodereTvmaze.DAL.MainInfo}!GetById@{GetById}}
+\Hypertarget{class_codere_tvmaze_1_1_d_a_l_1_1_main_info_a9a24c348f1d58256b6aa24c516088b5d}\index{CodereTvmaze.DAL.MainInfo@{CodereTvmaze.DAL.MainInfo}!GetById@{GetById}}
 \index{GetById@{GetById}!CodereTvmaze.DAL.MainInfo@{CodereTvmaze.DAL.MainInfo}}
 \doxysubsubsection{\texorpdfstring{GetById()}{GetById()}}
-{\footnotesize\ttfamily \label{class_codere_tvmaze_1_1_d_a_l_1_1_main_info_a70978247787ef977ab8b589e554a579b} 
-static Data\+Row Codere\+Tvmaze.\+DAL.\+Main\+Info.\+Get\+By\+Id (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \label{class_codere_tvmaze_1_1_d_a_l_1_1_main_info_a9a24c348f1d58256b6aa24c516088b5d} 
+static Data\+Row Codere\+Tvmaze.\+DAL.\+Main\+Info.\+Get\+By\+Id (\begin{DoxyParamCaption}\item[{long}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 

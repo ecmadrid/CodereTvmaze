@@ -103,7 +103,7 @@ $(function(){initNavTree('class_codere_tvmaze_1_1_controllers_1_1_codere_tvmaze_
 </div><!--header-->
 <div class="contents">
 
-<p>ApiControler: <code>ControllerBase</code> contains web api calls.  
+<p>ApiControler <code>ControllerBase</code> contains web api calls.  
  <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for CodereTvmaze.Controllers.CodereTvmazeController:</div>
@@ -118,11 +118,14 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>CodereTvmazeController</b> (ILogger&lt; <a class="el" href="class_codere_tvmaze_1_1_controllers_1_1_codere_tvmaze_controller.html">CodereTvmazeController</a> &gt; logger)</td></tr>
 <tr class="separator:a7481e60004d498d4ae4ec144a293a0fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf33d9dbe9d548e98317e1fc97a555a4" id="r_acf33d9dbe9d548e98317e1fc97a555a4"><td class="memItemLeft" align="right" valign="top">IResult&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf33d9dbe9d548e98317e1fc97a555a4">ImportShow</a> (int id)</td></tr>
-<tr class="memdesc:acf33d9dbe9d548e98317e1fc97a555a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Endpoint: <code>Import/id</code> imports from Tvmaze a show into database by its id.  <br /></td></tr>
+<tr class="memdesc:acf33d9dbe9d548e98317e1fc97a555a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Endpoint <code>Import/id</code> imports from Tvmaze a show into database by its id.  <br /></td></tr>
 <tr class="separator:acf33d9dbe9d548e98317e1fc97a555a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbc0acd47f084d1dc1f9965097f82ac4" id="r_adbc0acd47f084d1dc1f9965097f82ac4"><td class="memItemLeft" align="right" valign="top">IResult&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbc0acd47f084d1dc1f9965097f82ac4">Import</a> ()</td></tr>
-<tr class="memdesc:adbc0acd47f084d1dc1f9965097f82ac4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Endpoint: <code>Import</code> imports show from Tvmazeinto database from last inserted id. It needs that "Authotization" header contains api key ("Authotization": "ApiKey xxxxxx"). Correct api key is stored in json project config file.  <br /></td></tr>
+<tr class="memdesc:adbc0acd47f084d1dc1f9965097f82ac4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Endpoint <code>Import</code> imports show from Tvmazeinto database from last inserted id. It needs that "Authotization" header contains api key ("Authotization": "ApiKey xxxxxx"). Correct api key is stored in json project config file.  <br /></td></tr>
 <tr class="separator:adbc0acd47f084d1dc1f9965097f82ac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2ead78f2a0dd538c0c828540b0db6ba" id="r_ac2ead78f2a0dd538c0c828540b0db6ba"><td class="memItemLeft" align="right" valign="top">IResult&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2ead78f2a0dd538c0c828540b0db6ba">ValidateApi</a> (string value)</td></tr>
+<tr class="memdesc:ac2ead78f2a0dd538c0c828540b0db6ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Endpoint <code>ValidateApi</code> validates api in Authorization header. Mainly for testing purposes.  <br /></td></tr>
+<tr class="separator:ac2ead78f2a0dd538c0c828540b0db6ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b9e9dc4afca793e0a4b283131dd4cea" id="r_a8b9e9dc4afca793e0a4b283131dd4cea"><td class="memItemLeft" align="right" valign="top">IResult&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b9e9dc4afca793e0a4b283131dd4cea">Shows</a> (int id)</td></tr>
 <tr class="memdesc:a8b9e9dc4afca793e0a4b283131dd4cea"><td class="mdescLeft">&#160;</td><td class="mdescRight">EndPoint: <code>Shows/id</code> returns a MainInfo object based on its id as parameter.  <br /></td></tr>
 <tr class="separator:a8b9e9dc4afca793e0a4b283131dd4cea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,7 +134,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a41f8a02cb281af52e85a8d6494cf9f80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>ApiControler: <code>ControllerBase</code> contains web api calls. </p>
+<div class="textblock"><p>ApiControler <code>ControllerBase</code> contains web api calls. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="adbc0acd47f084d1dc1f9965097f82ac4" name="adbc0acd47f084d1dc1f9965097f82ac4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adbc0acd47f084d1dc1f9965097f82ac4">&#9670;&#160;</a></span>Import()</h2>
@@ -148,7 +151,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Endpoint: <code>Import</code> imports show from Tvmazeinto database from last inserted id. It needs that "Authotization" header contains api key ("Authotization": "ApiKey xxxxxx"). Correct api key is stored in json project config file. </p>
+<p>Endpoint <code>Import</code> imports show from Tvmazeinto database from last inserted id. It needs that "Authotization" header contains api key ("Authotization": "ApiKey xxxxxx"). Correct api key is stored in json project config file. </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
@@ -168,7 +171,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Endpoint: <code>Import/id</code> imports from Tvmaze a show into database by its id. </p>
+<p>Endpoint <code>Import/id</code> imports from Tvmaze a show into database by its id. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td></td></tr>
@@ -224,6 +227,32 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">page</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="ac2ead78f2a0dd538c0c828540b0db6ba" name="ac2ead78f2a0dd538c0c828540b0db6ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2ead78f2a0dd538c0c828540b0db6ba">&#9670;&#160;</a></span>ValidateApi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IResult CodereTvmaze.Controllers.CodereTvmazeController.ValidateApi </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Endpoint <code>ValidateApi</code> validates api in Authorization header. Mainly for testing purposes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td></td></tr>
   </table>
   </dd>
 </dl>

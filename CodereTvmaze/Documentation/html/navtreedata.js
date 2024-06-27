@@ -214,18 +214,19 @@ var NAVTREE =
           [ "Import() method", "md__codere_tvmaze_2obj_2_debug_2net8_80_2_codere_tvmaze.html#autotoc_md457", null ],
           [ "ImportShow(id) method", "md__codere_tvmaze_2obj_2_debug_2net8_80_2_codere_tvmaze.html#autotoc_md461", null ],
           [ "Shows(id) method", "md__codere_tvmaze_2obj_2_debug_2net8_80_2_codere_tvmaze.html#autotoc_md465", null ],
-          [ "Shows(page) method", "md__codere_tvmaze_2obj_2_debug_2net8_80_2_codere_tvmaze.html#autotoc_md469", null ]
+          [ "Shows(page) method", "md__codere_tvmaze_2obj_2_debug_2net8_80_2_codere_tvmaze.html#autotoc_md469", null ],
+          [ "ValidateApi(value) method", "md__codere_tvmaze_2obj_2_debug_2net8_80_2_codere_tvmaze.html#autotoc_md473", null ]
         ] ]
       ] ]
     ] ],
     [ "CodereTvmaze", "md__codere_tvmaze_2obj_2_release_2net8_80_2_codere_tvmaze.html", [
-      [ "CodereTvmaze", "md__codere_tvmaze_2obj_2_release_2net8_80_2_codere_tvmaze.html#autotoc_md473", [
-        [ "Contents", "md__codere_tvmaze_2obj_2_release_2net8_80_2_codere_tvmaze.html#autotoc_md474", null ],
-        [ "CodereTvmazeController type", "md__codere_tvmaze_2obj_2_release_2net8_80_2_codere_tvmaze.html#autotoc_md475", [
-          [ "Import() method", "md__codere_tvmaze_2obj_2_release_2net8_80_2_codere_tvmaze.html#autotoc_md478", null ],
-          [ "ImportShow(id) method", "md__codere_tvmaze_2obj_2_release_2net8_80_2_codere_tvmaze.html#autotoc_md482", null ],
-          [ "Shows(id) method", "md__codere_tvmaze_2obj_2_release_2net8_80_2_codere_tvmaze.html#autotoc_md486", null ],
-          [ "Shows(page) method", "md__codere_tvmaze_2obj_2_release_2net8_80_2_codere_tvmaze.html#autotoc_md490", null ]
+      [ "CodereTvmaze", "md__codere_tvmaze_2obj_2_release_2net8_80_2_codere_tvmaze.html#autotoc_md477", [
+        [ "Contents", "md__codere_tvmaze_2obj_2_release_2net8_80_2_codere_tvmaze.html#autotoc_md478", null ],
+        [ "CodereTvmazeController type", "md__codere_tvmaze_2obj_2_release_2net8_80_2_codere_tvmaze.html#autotoc_md479", [
+          [ "Import() method", "md__codere_tvmaze_2obj_2_release_2net8_80_2_codere_tvmaze.html#autotoc_md482", null ],
+          [ "ImportShow(id) method", "md__codere_tvmaze_2obj_2_release_2net8_80_2_codere_tvmaze.html#autotoc_md486", null ],
+          [ "Shows(id) method", "md__codere_tvmaze_2obj_2_release_2net8_80_2_codere_tvmaze.html#autotoc_md490", null ],
+          [ "Shows(page) method", "md__codere_tvmaze_2obj_2_release_2net8_80_2_codere_tvmaze.html#autotoc_md494", null ]
         ] ]
       ] ]
     ] ],
@@ -248,7 +249,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"namespace_codere_tvmaze_1_1_b_l_l.html"
+"md__codere_tvmaze_8_d_a_l_2obj_2_release_2net8_80_2_codere_tvmaze_8_d_a_l.html#autotoc_md424"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

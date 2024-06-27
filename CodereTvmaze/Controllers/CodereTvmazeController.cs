@@ -2,12 +2,15 @@ using Microsoft.AspNetCore.Mvc;
 using CodereTvmaze.BLL;
 using System.Collections.Generic;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Identity;
+//using System.Web.Http;
+using Microsoft.Extensions.Primitives;
 
 
 namespace CodereTvmaze.Controllers
 {
     /// <summary>
-    /// ApiControler: <c>ControllerBase</c> contains web api calls. 
+    /// ApiControler <c>ControllerBase</c> contains web api calls. 
     /// </summary>
     [ApiController]
     [Route("api/[controller]")]
@@ -27,7 +30,7 @@ namespace CodereTvmaze.Controllers
  * 
  */
         /// <summary>
-        /// Endpoint: <c>Import/id</c> imports from Tvmaze a show into database by its id.
+        /// Endpoint <c>Import/id</c> imports from Tvmaze a show into database by its id.
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -48,7 +51,7 @@ namespace CodereTvmaze.Controllers
         }
 
         /// <summary>
-        /// Endpoint: <c>Import</c> imports show from Tvmazeinto database from last inserted id.
+        /// Endpoint <c>Import</c> imports show from Tvmazeinto database from last inserted id.
         /// It needs that "Authotization" header contains api key ("Authotization": "ApiKey xxxxxx").
         /// Correct api key is stored in json project config file.
         /// </summary>
@@ -61,10 +64,15 @@ namespace CodereTvmaze.Controllers
 
             string? validApiKey = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("AppSettings")["Apikey"];
 
-            string? authHeader = HttpContext.Request.Headers["Authorization"];
-            if (authHeader != null && authHeader.StartsWith("ApiKey"))
+          Request.Headers.TryGetValue("Authorization", out var authHeader);
+            if (authHeader.Count > 0 && authHeader.First().ToString().StartsWith("ApiKey"))
             {
-                string userApiKey = authHeader.Split(' ')[1];
+                string userApiKey = authHeader.First().ToString().Split(' ')[1];
+
+                if (userApiKey != validApiKey)
+                {
+                    return Results.Unauthorized();
+                }
             }
             else
             {
@@ -81,9 +89,40 @@ namespace CodereTvmaze.Controllers
             return Results.Ok();
         }
 
+        /// <summary>
+        /// Endpoint <c>ValidateApi</c> validates api in Authorization header. Mainly for testing purposes.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("VslidateApi")]
+        public IResult ValidateApi(string value)
+        {
+            // Check api key.
+
+            string? validApiKey = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("AppSettings")["Apikey"];
+
+            Request.Headers.TryGetValue("Authorization", out var authHeader);
+            if (authHeader.Count > 0 && authHeader.First().ToString().StartsWith("ApiKey"))
+            {
+                string userApiKey = authHeader.First().ToString().Split(' ')[1];
+
+                if (userApiKey != validApiKey)
+                {
+                    return Results.Unauthorized();
+                }
+            }
+            else
+            {
+                return Results.Unauthorized();
+            }
+
+            return Results.Ok();
+        }
+
         /*
          * 
-         * Public endpoints.
+         * Public (not api key needed) endpoints.
          * 
          */
 

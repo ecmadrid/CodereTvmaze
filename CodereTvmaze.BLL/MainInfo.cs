@@ -264,7 +264,7 @@ namespace CodereTvmaze.BLL
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public static MainInfo GetById(int id)
+        public static MainInfo GetById(long id)
         {
             MainInfo mainInfo = null;
             DataRow mainInfoRow = CodereTvmaze.DAL.MainInfo.GetById(id);

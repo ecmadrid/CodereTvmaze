@@ -26,5 +26,10 @@ var annotated_dup =
         [ "Schedule", "class_codere_tvmaze_1_1_d_a_l_1_1_schedule.html", null ],
         [ "WebChannel", "class_codere_tvmaze_1_1_d_a_l_1_1_web_channel.html", null ]
       ] ]
+    ] ],
+    [ "TestBLLAndWebApi", "namespace_test_b_l_l_and_web_api.html", [
+      [ "TestsBLLShowsById", "class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_id.html", null ],
+      [ "TestsBLLShowsByPage", "class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_page.html", null ],
+      [ "TestsWebApi", "class_test_b_l_l_and_web_api_1_1_tests_web_api.html", null ]
     ] ]
 ];

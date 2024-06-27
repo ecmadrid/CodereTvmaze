@@ -111,9 +111,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a0ed463391271b69cfc1bab2bd5de8200" id="r_a0ed463391271b69cfc1bab2bd5de8200"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_codere_tvmaze_1_1_d_a_l_1_1_database_connection.html">DatabaseConnection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ed463391271b69cfc1bab2bd5de8200">AddToDatabase</a> (long id, string? url, string? name, string? type, string? language, string? status, long? runtime, long? averageRuntime, DateOnly? premiered, DateOnly? ended, string? officialSite, long? weight, string? summary, long? updated, string? previousEpisodeHref, string? previousEpisodeName, string? nextEpisodeHref, string? nextEpisodeName, string? imageMedium, string? imageOriginal, double? average, long? tvrage, long? thetvdb, string? imdb, string? dvdCountryCode, long? networkId, long? webChannelId, string? href)</td></tr>
 <tr class="memdesc:a0ed463391271b69cfc1bab2bd5de8200"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to add a new main information register to database. If there is a register with same main info id yet it's deleted. Returns a <a class="el" href="class_codere_tvmaze_1_1_d_a_l_1_1_database_connection.html" title="Class DatabaseConnection This class open and close connections to database and manages transactions a...">DatabaseConnection</a> object to be used by other objects to include them in same transaction.  <br /></td></tr>
 <tr class="separator:a0ed463391271b69cfc1bab2bd5de8200"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70978247787ef977ab8b589e554a579b" id="r_a70978247787ef977ab8b589e554a579b"><td class="memItemLeft" align="right" valign="top">static DataRow&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70978247787ef977ab8b589e554a579b">GetById</a> (int id)</td></tr>
-<tr class="memdesc:a70978247787ef977ab8b589e554a579b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a datarow with record from ;ainInfo table based on a id.  <br /></td></tr>
-<tr class="separator:a70978247787ef977ab8b589e554a579b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a24c348f1d58256b6aa24c516088b5d" id="r_a9a24c348f1d58256b6aa24c516088b5d"><td class="memItemLeft" align="right" valign="top">static DataRow&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a24c348f1d58256b6aa24c516088b5d">GetById</a> (long id)</td></tr>
+<tr class="memdesc:a9a24c348f1d58256b6aa24c516088b5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a datarow with record from ;ainInfo table based on a id.  <br /></td></tr>
+<tr class="separator:a9a24c348f1d58256b6aa24c516088b5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24c290c86d6a01b25163aa25daf30573" id="r_a24c290c86d6a01b25163aa25daf30573"><td class="memItemLeft" align="right" valign="top">static DataTable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24c290c86d6a01b25163aa25daf30573">GetAll</a> ()</td></tr>
 <tr class="memdesc:a24c290c86d6a01b25163aa25daf30573"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns all records from <a class="el" href="class_codere_tvmaze_1_1_d_a_l_1_1_main_info.html" title="Class MainInfo Main class containing main information.">MainInfo</a> table into a datatable object. If there isn't any record it returns a null object.  <br /></td></tr>
 <tr class="separator:a24c290c86d6a01b25163aa25daf30573"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -350,8 +350,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a70978247787ef977ab8b589e554a579b" name="a70978247787ef977ab8b589e554a579b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a70978247787ef977ab8b589e554a579b">&#9670;&#160;</a></span>GetById()</h2>
+<a id="a9a24c348f1d58256b6aa24c516088b5d" name="a9a24c348f1d58256b6aa24c516088b5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a24c348f1d58256b6aa24c516088b5d">&#9670;&#160;</a></span>GetById()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -362,7 +362,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">static DataRow CodereTvmaze.DAL.MainInfo.GetById </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>

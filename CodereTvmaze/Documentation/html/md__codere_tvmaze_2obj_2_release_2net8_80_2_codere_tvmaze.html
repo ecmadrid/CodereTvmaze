@@ -100,9 +100,9 @@ $(function(){initNavTree('md__codere_tvmaze_2obj_2_release_2net8_80_2_codere_tvm
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="assembly"></a> </p>
-<h1><a class="anchor" id="autotoc_md473"></a>
+<h1><a class="anchor" id="autotoc_md477"></a>
 CodereTvmaze</h1>
-<h2><a class="anchor" id="autotoc_md474"></a>
+<h2><a class="anchor" id="autotoc_md478"></a>
 Contents</h2>
 <ul>
 <li><a class="el" href="#T-CodereTvmaze-Controllers-CodereTvmazeController">CodereTvmazeController</a><ul>
@@ -114,47 +114,31 @@ Contents</h2>
 </li>
 </ul>
 <p><a class="anchor" id="T-CodereTvmaze-Controllers-CodereTvmazeController"></a> </p>
-<h2><a class="anchor" id="autotoc_md475"></a>
+<h2><a class="anchor" id="autotoc_md479"></a>
 CodereTvmazeController <code>type</code></h2>
-<h5><a class="anchor" id="autotoc_md476"></a>
+<h5><a class="anchor" id="autotoc_md480"></a>
 Namespace</h5>
 <p><a class="el" href="namespace_codere_tvmaze_1_1_controllers.html">CodereTvmaze.Controllers</a></p>
-<h5><a class="anchor" id="autotoc_md477"></a>
+<h5><a class="anchor" id="autotoc_md481"></a>
 Summary</h5>
 <p>ApiControler: <code>ControllerBase</code> contains web api calls.</p>
 <p><a class="anchor" id="M-CodereTvmaze-Controllers-CodereTvmazeController-Import"></a> </p>
-<h3><a class="anchor" id="autotoc_md478"></a>
-Import() <code>method</code></h3>
-<h5><a class="anchor" id="autotoc_md479"></a>
-Summary</h5>
-<p>Endpoint: <code>Import</code> imports show from Tvmazeinto database from last inserted id. It needs that "Authotization" header contains api key ("Authotization": "ApiKey xxxxxx"). Correct api key is stored in json project config file.</p>
-<h5><a class="anchor" id="autotoc_md480"></a>
-Returns</h5>
-<h5><a class="anchor" id="autotoc_md481"></a>
-Parameters</h5>
-<p>This method has no parameters.</p>
-<p><a class="anchor" id="M-CodereTvmaze-Controllers-CodereTvmazeController-ImportShow-System-Int32-"></a> </p>
 <h3><a class="anchor" id="autotoc_md482"></a>
-ImportShow(id) <code>method</code></h3>
+Import() <code>method</code></h3>
 <h5><a class="anchor" id="autotoc_md483"></a>
 Summary</h5>
-<p>Endpoint: <code>Import/id</code> imports from Tvmaze a show into database by its id.</p>
+<p>Endpoint: <code>Import</code> imports show from Tvmazeinto database from last inserted id. It needs that "Authotization" header contains api key ("Authotization": "ApiKey xxxxxx"). Correct api key is stored in json project config file.</p>
 <h5><a class="anchor" id="autotoc_md484"></a>
 Returns</h5>
 <h5><a class="anchor" id="autotoc_md485"></a>
 Parameters</h5>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Name   </th><th class="markdownTableHeadNone">Type   </th><th class="markdownTableHeadNone">Description    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">id   </td><td class="markdownTableBodyNone"><a href="http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&amp;l=EN-US&amp;k=k:System.Int32" title="System.Int32">System.Int32</a>   </td><td class="markdownTableBodyNone"></td></tr>
-</table>
-<p><a class="anchor" id="M-CodereTvmaze-Controllers-CodereTvmazeController-Shows-System-Int32-"></a> </p>
+<p>This method has no parameters.</p>
+<p><a class="anchor" id="M-CodereTvmaze-Controllers-CodereTvmazeController-ImportShow-System-Int32-"></a> </p>
 <h3><a class="anchor" id="autotoc_md486"></a>
-Shows(id) <code>method</code></h3>
+ImportShow(id) <code>method</code></h3>
 <h5><a class="anchor" id="autotoc_md487"></a>
 Summary</h5>
-<p>EndPoint: <code>Shows/id</code> returns a MainInfo object based on its id as parameter.</p>
+<p>Endpoint: <code>Import/id</code> imports from Tvmaze a show into database by its id.</p>
 <h5><a class="anchor" id="autotoc_md488"></a>
 Returns</h5>
 <h5><a class="anchor" id="autotoc_md489"></a>
@@ -165,15 +149,31 @@ Parameters</h5>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">id   </td><td class="markdownTableBodyNone"><a href="http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&amp;l=EN-US&amp;k=k:System.Int32" title="System.Int32">System.Int32</a>   </td><td class="markdownTableBodyNone"></td></tr>
 </table>
-<p><a class="anchor" id="M-CodereTvmaze-Controllers-CodereTvmazeController-Shows-System-Int64-"></a> </p>
+<p><a class="anchor" id="M-CodereTvmaze-Controllers-CodereTvmazeController-Shows-System-Int32-"></a> </p>
 <h3><a class="anchor" id="autotoc_md490"></a>
-Shows(page) <code>method</code></h3>
+Shows(id) <code>method</code></h3>
 <h5><a class="anchor" id="autotoc_md491"></a>
 Summary</h5>
-<p>EndPoint: <code>Shows</code> returns MainInfo object array based on a page as parameter.</p>
+<p>EndPoint: <code>Shows/id</code> returns a MainInfo object based on its id as parameter.</p>
 <h5><a class="anchor" id="autotoc_md492"></a>
 Returns</h5>
 <h5><a class="anchor" id="autotoc_md493"></a>
+Parameters</h5>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Name   </th><th class="markdownTableHeadNone">Type   </th><th class="markdownTableHeadNone">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">id   </td><td class="markdownTableBodyNone"><a href="http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&amp;l=EN-US&amp;k=k:System.Int32" title="System.Int32">System.Int32</a>   </td><td class="markdownTableBodyNone"></td></tr>
+</table>
+<p><a class="anchor" id="M-CodereTvmaze-Controllers-CodereTvmazeController-Shows-System-Int64-"></a> </p>
+<h3><a class="anchor" id="autotoc_md494"></a>
+Shows(page) <code>method</code></h3>
+<h5><a class="anchor" id="autotoc_md495"></a>
+Summary</h5>
+<p>EndPoint: <code>Shows</code> returns MainInfo object array based on a page as parameter.</p>
+<h5><a class="anchor" id="autotoc_md496"></a>
+Returns</h5>
+<h5><a class="anchor" id="autotoc_md497"></a>
 Parameters</h5>
 <table class="markdownTable">
 <tr class="markdownTableHead">

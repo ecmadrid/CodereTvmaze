@@ -110,7 +110,7 @@ namespace CodereTvmaze.DAL
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public static DataRow GetById(int id)
+        public static DataRow GetById(long id)
         {
             DatabaseConnection connection = new DAL.DatabaseConnection();
             connection.Open();

@@ -21,6 +21,9 @@ var hierarchy =
     [ "CodereTvmaze.BLL.Schedule", "class_codere_tvmaze_1_1_b_l_l_1_1_schedule.html", null ],
     [ "CodereTvmaze.DAL.Schedule", "class_codere_tvmaze_1_1_d_a_l_1_1_schedule.html", null ],
     [ "CodereTvmaze.BLL.Self", "class_codere_tvmaze_1_1_b_l_l_1_1_self.html", null ],
+    [ "TestBLLAndWebApi.TestsBLLShowsById", "class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_id.html", null ],
+    [ "TestBLLAndWebApi.TestsBLLShowsByPage", "class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_page.html", null ],
+    [ "TestBLLAndWebApi.TestsWebApi", "class_test_b_l_l_and_web_api_1_1_tests_web_api.html", null ],
     [ "CodereTvmaze.BLL.WebChannel", "class_codere_tvmaze_1_1_b_l_l_1_1_web_channel.html", null ],
     [ "CodereTvmaze.DAL.WebChannel", "class_codere_tvmaze_1_1_d_a_l_1_1_web_channel.html", null ]
 ];

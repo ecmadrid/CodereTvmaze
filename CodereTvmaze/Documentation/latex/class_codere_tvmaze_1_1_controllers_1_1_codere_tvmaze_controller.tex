@@ -2,7 +2,7 @@
 \hypertarget{class_codere_tvmaze_1_1_controllers_1_1_codere_tvmaze_controller}{}\label{class_codere_tvmaze_1_1_controllers_1_1_codere_tvmaze_controller}\index{CodereTvmaze.Controllers.CodereTvmazeController@{CodereTvmaze.Controllers.CodereTvmazeController}}
 
 
-Api\+Controler\+: {\ttfamily Controller\+Base} contains web api calls.  
+Api\+Controler {\ttfamily Controller\+Base} contains web api calls.  
 
 
 Inheritance diagram for Codere\+Tvmaze.\+Controllers.\+Codere\+Tvmaze\+Controller\+:\begin{figure}[H]
@@ -18,9 +18,11 @@ Inheritance diagram for Codere\+Tvmaze.\+Controllers.\+Codere\+Tvmaze\+Controlle
 {\bfseries Codere\+Tvmaze\+Controller} (ILogger$<$ \mbox{\hyperlink{class_codere_tvmaze_1_1_controllers_1_1_codere_tvmaze_controller}{Codere\+Tvmaze\+Controller}} $>$ logger)
 \item 
 IResult \mbox{\hyperlink{class_codere_tvmaze_1_1_controllers_1_1_codere_tvmaze_controller_acf33d9dbe9d548e98317e1fc97a555a4}{Import\+Show}} (int id)
-\begin{DoxyCompactList}\small\item\em Endpoint\+: {\ttfamily Import/id} imports from Tvmaze a show into database by its id. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Endpoint {\ttfamily Import/id} imports from Tvmaze a show into database by its id. \end{DoxyCompactList}\item 
 IResult \mbox{\hyperlink{class_codere_tvmaze_1_1_controllers_1_1_codere_tvmaze_controller_adbc0acd47f084d1dc1f9965097f82ac4}{Import}} ()
-\begin{DoxyCompactList}\small\item\em Endpoint\+: {\ttfamily Import} imports show from Tvmazeinto database from last inserted id. It needs that "{}\+Authotization"{} header contains api key ("{}\+Authotization"{}\+: "{}\+Api\+Key xxxxxx"{}). Correct api key is stored in json project config file. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Endpoint {\ttfamily Import} imports show from Tvmazeinto database from last inserted id. It needs that "{}\+Authotization"{} header contains api key ("{}\+Authotization"{}\+: "{}\+Api\+Key xxxxxx"{}). Correct api key is stored in json project config file. \end{DoxyCompactList}\item 
+IResult \mbox{\hyperlink{class_codere_tvmaze_1_1_controllers_1_1_codere_tvmaze_controller_ac2ead78f2a0dd538c0c828540b0db6ba}{Validate\+Api}} (string value)
+\begin{DoxyCompactList}\small\item\em Endpoint {\ttfamily Validate\+Api} validates api in Authorization header. Mainly for testing purposes. \end{DoxyCompactList}\item 
 IResult \mbox{\hyperlink{class_codere_tvmaze_1_1_controllers_1_1_codere_tvmaze_controller_a8b9e9dc4afca793e0a4b283131dd4cea}{Shows}} (int id)
 \begin{DoxyCompactList}\small\item\em End\+Point\+: {\ttfamily Shows/id} returns a Main\+Info object based on its id as parameter. \end{DoxyCompactList}\item 
 IResult \mbox{\hyperlink{class_codere_tvmaze_1_1_controllers_1_1_codere_tvmaze_controller_a41f8a02cb281af52e85a8d6494cf9f80}{Shows}} (long page)
@@ -28,7 +30,7 @@ IResult \mbox{\hyperlink{class_codere_tvmaze_1_1_controllers_1_1_codere_tvmaze_c
 
 
 \doxysubsection{Detailed Description}
-Api\+Controler\+: {\ttfamily Controller\+Base} contains web api calls. 
+Api\+Controler {\ttfamily Controller\+Base} contains web api calls. 
 
 \doxysubsection{Member Function Documentation}
 \Hypertarget{class_codere_tvmaze_1_1_controllers_1_1_codere_tvmaze_controller_adbc0acd47f084d1dc1f9965097f82ac4}\index{CodereTvmaze.Controllers.CodereTvmazeController@{CodereTvmaze.Controllers.CodereTvmazeController}!Import@{Import}}
@@ -39,7 +41,7 @@ IResult Codere\+Tvmaze.\+Controllers.\+Codere\+Tvmaze\+Controller.\+Import (\beg
 
 
 
-Endpoint\+: {\ttfamily Import} imports show from Tvmazeinto database from last inserted id. It needs that "{}\+Authotization"{} header contains api key ("{}\+Authotization"{}\+: "{}\+Api\+Key xxxxxx"{}). Correct api key is stored in json project config file. 
+Endpoint {\ttfamily Import} imports show from Tvmazeinto database from last inserted id. It needs that "{}\+Authotization"{} header contains api key ("{}\+Authotization"{}\+: "{}\+Api\+Key xxxxxx"{}). Correct api key is stored in json project config file. 
 
 \begin{DoxyReturn}{Returns}
 
@@ -52,7 +54,7 @@ IResult Codere\+Tvmaze.\+Controllers.\+Codere\+Tvmaze\+Controller.\+Import\+Show
 
 
 
-Endpoint\+: {\ttfamily Import/id} imports from Tvmaze a show into database by its id. 
+Endpoint {\ttfamily Import/id} imports from Tvmaze a show into database by its id. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -93,6 +95,24 @@ End\+Point\+: {\ttfamily Shows} returns Main\+Info object array based on a page 
 
 \begin{DoxyParams}{Parameters}
 {\em page} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_codere_tvmaze_1_1_controllers_1_1_codere_tvmaze_controller_ac2ead78f2a0dd538c0c828540b0db6ba}\index{CodereTvmaze.Controllers.CodereTvmazeController@{CodereTvmaze.Controllers.CodereTvmazeController}!ValidateApi@{ValidateApi}}
+\index{ValidateApi@{ValidateApi}!CodereTvmaze.Controllers.CodereTvmazeController@{CodereTvmaze.Controllers.CodereTvmazeController}}
+\doxysubsubsection{\texorpdfstring{ValidateApi()}{ValidateApi()}}
+{\footnotesize\ttfamily \label{class_codere_tvmaze_1_1_controllers_1_1_codere_tvmaze_controller_ac2ead78f2a0dd538c0c828540b0db6ba} 
+IResult Codere\+Tvmaze.\+Controllers.\+Codere\+Tvmaze\+Controller.\+Validate\+Api (\begin{DoxyParamCaption}\item[{string}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Endpoint {\ttfamily Validate\+Api} validates api in Authorization header. Mainly for testing purposes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
