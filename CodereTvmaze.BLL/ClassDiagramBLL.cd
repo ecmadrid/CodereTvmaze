@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CodereTvmaze.BLL.Country">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAIAAIAAEAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Country.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CodereTvmaze.BLL.Episode">
+    <Position X="0.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Episode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CodereTvmaze.BLL.Externals">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Externals.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CodereTvmaze.BLL.Image">
+    <Position X="9.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Image.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CodereTvmaze.BLL.Links">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAEAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Links.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CodereTvmaze.BLL.MainInfo">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAACAQAqAAgABAAAAECCEQANAAJgDgAIAEAAgoA=</HashCode>
+      <FileName>MainInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CodereTvmaze.BLL.Network">
+    <Position X="6.5" Y="3" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAACCAAgAAAAAgA=</HashCode>
+      <FileName>Network.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CodereTvmaze.BLL.Rating">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Rating.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CodereTvmaze.BLL.Schedule">
+    <Position X="2.5" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAEAACAA=</HashCode>
+      <FileName>Schedule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CodereTvmaze.BLL.Self">
+    <Position X="0.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Self.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CodereTvmaze.BLL.WebChannel">
+    <Position X="8.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAEAAACCAAAAAAAAgA=</HashCode>
+      <FileName>WebChannel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CodereTvmaze.DAL.DatabaseConnection" BaseTypeListCollapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AACAAEAAACAAIAUCAAAAAEAAAAAAEAAAACAAAACAAAA=</HashCode>
+      <FileName>Connection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CodereTvmaze.DAL.Country">
+    <Position X="1" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACgAAAAAAAAA=</HashCode>
+      <FileName>Country.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CodereTvmaze.DAL.Genre">
+    <Position X="8.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAgQAAAAAAAI=</HashCode>
+      <FileName>Genre.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CodereTvmaze.DAL.MainInfo">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAgAgAAAAAAAMA=</HashCode>
+      <FileName>MainInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CodereTvmaze.DAL.Network">
+    <Position X="3.75" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgAgAAAAAAA=</HashCode>
+      <FileName>Network.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CodereTvmaze.DAL.Schedule">
+    <Position X="8.75" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAgAAAgAAAAAACAA=</HashCode>
+      <FileName>Schedule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CodereTvmaze.DAL.WebChannel">
+    <Position X="1" Y="2.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAACgAAAAAAAAA=</HashCode>
+      <FileName>WebChannel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
