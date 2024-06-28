@@ -33,7 +33,7 @@ namespace TestBLLAndWebApi
         /// <param name="value"></param>
         [TestCase(0)]
         [TestCase(5)]
-        public void TestGetMainInfoByPage_EqualToOrGresterThanZero(long value)
+        public void TestGetMainInfoByPage_EqualToOrGreaterThanZero(long value)
         {
             var result = MainInfo.GetByPage(value);
             Assert.That(result, Is.Not.Null, "Value equal to o greater than 0 is allowed.");

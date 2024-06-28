@@ -38,7 +38,24 @@ namespace CodereTvmaze.Controllers
         [Route("Import/{id}")]
         public IResult ImportShow(int id)
         {
-            //return MainInfo.GetMainInfo(id);
+            // Check api key.
+
+            string? validApiKey = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("AppSettings")["Apikey"];
+
+            Request.Headers.TryGetValue("Authorization", out var authHeader);
+            if (authHeader.Count > 0 && authHeader.First().ToString().StartsWith("ApiKey"))
+            {
+                string userApiKey = authHeader.First().ToString().Split(' ')[1];
+
+                if (userApiKey != validApiKey)
+                {
+                    return Results.Unauthorized();
+                }
+            }
+            else
+            {
+                return Results.Unauthorized();
+            }
 
             MainInfo mainInfo = MainInfo.ImportMainInfo(id);
 
@@ -95,7 +112,7 @@ namespace CodereTvmaze.Controllers
         /// <param name="value"></param>
         /// <returns></returns>
         [HttpGet]
-        [Route("VslidateApi")]
+        [Route("ValidateApi")]
         public IResult ValidateApi(string value)
         {
             // Check api key.

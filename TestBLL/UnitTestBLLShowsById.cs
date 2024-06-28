@@ -33,7 +33,7 @@ namespace TestBLLAndWebApi
         /// <param name="value"></param>
         [TestCase(1)]
         [TestCase(72)]
-        public void TestGetMainInfoById_GresterThanZero(long value)
+        public void TestGetMainInfoById_GreaterThanZero(long value)
         {
             var result = MainInfo.GetById(value);
             Assert.That(result, Is.Not.Null, "Value greater than 0 is allowed.");
