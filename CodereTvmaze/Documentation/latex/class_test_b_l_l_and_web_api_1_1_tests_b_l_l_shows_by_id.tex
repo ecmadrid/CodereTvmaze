@@ -1,20 +1,73 @@
 \doxysection{Test\+BLLAnd\+Web\+Api.\+Tests\+BLLShows\+By\+Id Class Reference}
 \hypertarget{class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_id}{}\label{class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_id}\index{TestBLLAndWebApi.TestsBLLShowsById@{TestBLLAndWebApi.TestsBLLShowsById}}
+
+
+Class {\ttfamily \doxylink{class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_id}{Tests\+BLLShows\+By\+Id}} tests BLL methods for get main info by id.  
+
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_id_a9461e911023b2d251bb8584966db9f00}\label{class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_id_a9461e911023b2d251bb8584966db9f00} 
 void {\bfseries Setup} ()
-\item 
-\Hypertarget{class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_id_ae425366c2ba7bf79223cd5ae04ace93b}\label{class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_id_ae425366c2ba7bf79223cd5ae04ace93b} 
-void {\bfseries Test\+Get\+Main\+Info\+By\+Id\+\_\+\+Lower\+Than\+One} (long value)
-\item 
-\Hypertarget{class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_id_af9b49d2814d40a76c977821c69f3c80f}\label{class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_id_af9b49d2814d40a76c977821c69f3c80f} 
-void {\bfseries Test\+Get\+Main\+Info\+By\+Id\+\_\+\+Grester\+Than\+Zero} (long value)
-\item 
-\Hypertarget{class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_id_a8a20f06ed1396ad31b23fbe179181bb4}\label{class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_id_a8a20f06ed1396ad31b23fbe179181bb4} 
-void {\bfseries Test\+Get\+Main\+Info\+By\+Id\+\_\+\+Excessivelylarge} (long value)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Setup. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_id_ae425366c2ba7bf79223cd5ae04ace93b}{Test\+Get\+Main\+Info\+By\+Id\+\_\+\+Lower\+Than\+One}} (long value)
+\begin{DoxyCompactList}\small\item\em Method to test bad values for getting main info (lower than 1). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_id_af9b49d2814d40a76c977821c69f3c80f}{Test\+Get\+Main\+Info\+By\+Id\+\_\+\+Grester\+Than\+Zero}} (long value)
+\begin{DoxyCompactList}\small\item\em Method to test correct values for getting main info (greater than 0). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_id_a65465f8e1458e5bfc21a6cd0012a0d30}{Test\+Get\+Main\+Info\+By\+Id\+\_\+\+Excessively\+Great}} (long value)
+\begin{DoxyCompactList}\small\item\em Method to test bad values for getting main info (excessively great. More than max id). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class {\ttfamily \doxylink{class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_id}{Tests\+BLLShows\+By\+Id}} tests BLL methods for get main info by id. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_id_a65465f8e1458e5bfc21a6cd0012a0d30}\index{TestBLLAndWebApi.TestsBLLShowsById@{TestBLLAndWebApi.TestsBLLShowsById}!TestGetMainInfoById\_ExcessivelyGreat@{TestGetMainInfoById\_ExcessivelyGreat}}
+\index{TestGetMainInfoById\_ExcessivelyGreat@{TestGetMainInfoById\_ExcessivelyGreat}!TestBLLAndWebApi.TestsBLLShowsById@{TestBLLAndWebApi.TestsBLLShowsById}}
+\doxysubsubsection{\texorpdfstring{TestGetMainInfoById\_ExcessivelyGreat()}{TestGetMainInfoById\_ExcessivelyGreat()}}
+{\footnotesize\ttfamily \label{class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_id_a65465f8e1458e5bfc21a6cd0012a0d30} 
+void Test\+BLLAnd\+Web\+Api.\+Tests\+BLLShows\+By\+Id.\+Test\+Get\+Main\+Info\+By\+Id\+\_\+\+Excessively\+Great (\begin{DoxyParamCaption}\item[{long}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to test bad values for getting main info (excessively great. More than max id). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_id_af9b49d2814d40a76c977821c69f3c80f}\index{TestBLLAndWebApi.TestsBLLShowsById@{TestBLLAndWebApi.TestsBLLShowsById}!TestGetMainInfoById\_GresterThanZero@{TestGetMainInfoById\_GresterThanZero}}
+\index{TestGetMainInfoById\_GresterThanZero@{TestGetMainInfoById\_GresterThanZero}!TestBLLAndWebApi.TestsBLLShowsById@{TestBLLAndWebApi.TestsBLLShowsById}}
+\doxysubsubsection{\texorpdfstring{TestGetMainInfoById\_GresterThanZero()}{TestGetMainInfoById\_GresterThanZero()}}
+{\footnotesize\ttfamily \label{class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_id_af9b49d2814d40a76c977821c69f3c80f} 
+void Test\+BLLAnd\+Web\+Api.\+Tests\+BLLShows\+By\+Id.\+Test\+Get\+Main\+Info\+By\+Id\+\_\+\+Grester\+Than\+Zero (\begin{DoxyParamCaption}\item[{long}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to test correct values for getting main info (greater than 0). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_id_ae425366c2ba7bf79223cd5ae04ace93b}\index{TestBLLAndWebApi.TestsBLLShowsById@{TestBLLAndWebApi.TestsBLLShowsById}!TestGetMainInfoById\_LowerThanOne@{TestGetMainInfoById\_LowerThanOne}}
+\index{TestGetMainInfoById\_LowerThanOne@{TestGetMainInfoById\_LowerThanOne}!TestBLLAndWebApi.TestsBLLShowsById@{TestBLLAndWebApi.TestsBLLShowsById}}
+\doxysubsubsection{\texorpdfstring{TestGetMainInfoById\_LowerThanOne()}{TestGetMainInfoById\_LowerThanOne()}}
+{\footnotesize\ttfamily \label{class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_id_ae425366c2ba7bf79223cd5ae04ace93b} 
+void Test\+BLLAnd\+Web\+Api.\+Tests\+BLLShows\+By\+Id.\+Test\+Get\+Main\+Info\+By\+Id\+\_\+\+Lower\+Than\+One (\begin{DoxyParamCaption}\item[{long}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to test bad values for getting main info (lower than 1). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

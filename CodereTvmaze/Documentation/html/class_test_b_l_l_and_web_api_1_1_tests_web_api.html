@@ -11,8 +11,6 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -27,8 +25,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">CodereTvmaze
+   <div id="projectname">CodereTvmaze<span id="projectnumber">&#160;1.0</span>
    </div>
+   <div id="projectbrief">Test project for importing web api endpoint from Tvmaze</div>
   </td>
  </tr>
  </tbody>
@@ -51,29 +50,17 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',true);
+  initMenu('',true,false,'search.php','Search',false);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('class_test_b_l_l_and_web_api_1_1_tests_web_api.html',''); initResizable(true); });
+$(function(){ initResizable(false); });
 /* @license-end */
 </script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -95,6 +82,12 @@ $(function(){initNavTree('class_test_b_l_l_and_web_api_1_1_tests_web_api.html','
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_test_b_l_l_and_web_api.html">TestBLLAndWebApi</a></li><li class="navelem"><a class="el" href="class_test_b_l_l_and_web_api_1_1_tests_web_api.html">TestsWebApi</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -102,30 +95,100 @@ $(function(){initNavTree('class_test_b_l_l_and_web_api_1_1_tests_web_api.html','
   <div class="headertitle"><div class="title">TestBLLAndWebApi.TestsWebApi Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Class <code><a class="el" href="class_test_b_l_l_and_web_api_1_1_tests_web_api.html" title="Class TestsWebApi">TestsWebApi</a></code>  
+ <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3756451773512be116be09f4c70f3e19" id="r_a3756451773512be116be09f4c70f3e19"><td class="memItemLeft" align="right" valign="top"><a id="a3756451773512be116be09f4c70f3e19" name="a3756451773512be116be09f4c70f3e19"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Setup</b> ()</td></tr>
+<tr class="memdesc:a3756451773512be116be09f4c70f3e19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup. <br /></td></tr>
 <tr class="separator:a3756451773512be116be09f4c70f3e19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d176ff3cce77123db6e4a6191f3f2f6" id="r_a2d176ff3cce77123db6e4a6191f3f2f6"><td class="memItemLeft" align="right" valign="top"><a id="a2d176ff3cce77123db6e4a6191f3f2f6" name="a2d176ff3cce77123db6e4a6191f3f2f6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ValidateApi_BadApi</b> (string value)</td></tr>
-<tr class="separator:a2d176ff3cce77123db6e4a6191f3f2f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acda97defdfae6a2d6ccb118280c1cf4c" id="r_acda97defdfae6a2d6ccb118280c1cf4c"><td class="memItemLeft" align="right" valign="top"><a id="acda97defdfae6a2d6ccb118280c1cf4c" name="acda97defdfae6a2d6ccb118280c1cf4c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ValidateApi_GoodApi</b> (string value)</td></tr>
-<tr class="separator:acda97defdfae6a2d6ccb118280c1cf4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c47b1073d04ac0583fc00618c49a6fb" id="r_a1c47b1073d04ac0583fc00618c49a6fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c47b1073d04ac0583fc00618c49a6fb">ValidateApi_BadApiKey</a> (string value)</td></tr>
+<tr class="memdesc:a1c47b1073d04ac0583fc00618c49a6fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to test endpoint for validating api key with incorrect value.  <br /></td></tr>
+<tr class="separator:a1c47b1073d04ac0583fc00618c49a6fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfbd50d1701c2ce467316e7f7ea3a5e5" id="r_acfbd50d1701c2ce467316e7f7ea3a5e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acfbd50d1701c2ce467316e7f7ea3a5e5">ValidateApi_GoodApiKey</a> (string value)</td></tr>
+<tr class="memdesc:acfbd50d1701c2ce467316e7f7ea3a5e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to test endpoint for validating api key with correct value.  <br /></td></tr>
+<tr class="separator:acfbd50d1701c2ce467316e7f7ea3a5e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class <code><a class="el" href="class_test_b_l_l_and_web_api_1_1_tests_web_api.html" title="Class TestsWebApi">TestsWebApi</a></code> </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1c47b1073d04ac0583fc00618c49a6fb" name="a1c47b1073d04ac0583fc00618c49a6fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c47b1073d04ac0583fc00618c49a6fb">&#9670;&#160;</a></span>ValidateApi_BadApiKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TestBLLAndWebApi.TestsWebApi.ValidateApi_BadApiKey </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Method to test endpoint for validating api key with incorrect value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acfbd50d1701c2ce467316e7f7ea3a5e5" name="acfbd50d1701c2ce467316e7f7ea3a5e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfbd50d1701c2ce467316e7f7ea3a5e5">&#9670;&#160;</a></span>ValidateApi_GoodApiKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TestBLLAndWebApi.TestsWebApi.ValidateApi_GoodApiKey </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Method to test endpoint for validating api key with correct value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>TestBLL/<b>UnitTestWebApi.cs</b></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="namespace_test_b_l_l_and_web_api.html">TestBLLAndWebApi</a></li><li class="navelem"><a class="el" href="class_test_b_l_l_and_web_api_1_1_tests_web_api.html">TestsWebApi</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

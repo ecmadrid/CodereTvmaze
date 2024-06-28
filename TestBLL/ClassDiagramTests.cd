@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TestBLLAndWebApi.TestsBLLShowsById">
+    <Position X="1.5" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACEAAAAAAAAAAAAAAAAAAAAAAEAAAACAAAAA=</HashCode>
+      <FileName>UnitTestBLLShowsById.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestBLLAndWebApi.TestsBLLShowsByPage">
+    <Position X="3.5" Y="2.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAEAAAAAAAAAAAAAAAAAAAACAAAAAAACA=</HashCode>
+      <FileName>UnitTestBLLShowsByPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestBLLAndWebApi.TestsWebApi">
+    <Position X="5" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAABAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>UnitTestWebApi.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

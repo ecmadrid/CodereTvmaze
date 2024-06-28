@@ -11,8 +11,6 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -27,8 +25,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">CodereTvmaze
+   <div id="projectname">CodereTvmaze<span id="projectnumber">&#160;1.0</span>
    </div>
+   <div id="projectbrief">Test project for importing web api endpoint from Tvmaze</div>
   </td>
  </tr>
  </tbody>
@@ -51,29 +50,17 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',true);
+  initMenu('',true,false,'search.php','Search',false);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_page.html',''); initResizable(true); });
+$(function(){ initResizable(false); });
 /* @license-end */
 </script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -95,6 +82,12 @@ $(function(){initNavTree('class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_test_b_l_l_and_web_api.html">TestBLLAndWebApi</a></li><li class="navelem"><a class="el" href="class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_page.html">TestsBLLShowsByPage</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -102,33 +95,136 @@ $(function(){initNavTree('class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_
   <div class="headertitle"><div class="title">TestBLLAndWebApi.TestsBLLShowsByPage Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Class <code><a class="el" href="class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_page.html" title="Class TestsBLLShowsByPage tests BLL methods for get main info by page.">TestsBLLShowsByPage</a></code> tests BLL methods for get main info by page.  
+ <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aeaeadb5d80d38183bce108240e96ccf4" id="r_aeaeadb5d80d38183bce108240e96ccf4"><td class="memItemLeft" align="right" valign="top"><a id="aeaeadb5d80d38183bce108240e96ccf4" name="aeaeadb5d80d38183bce108240e96ccf4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Setup</b> ()</td></tr>
+<tr class="memdesc:aeaeadb5d80d38183bce108240e96ccf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup. <br /></td></tr>
 <tr class="separator:aeaeadb5d80d38183bce108240e96ccf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e688b8539f7de25268813b74013e084" id="r_a5e688b8539f7de25268813b74013e084"><td class="memItemLeft" align="right" valign="top"><a id="a5e688b8539f7de25268813b74013e084" name="a5e688b8539f7de25268813b74013e084"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>TestGetMainInfoByPage_LowerThanZero</b> (long value)</td></tr>
+<tr class="memitem:a5e688b8539f7de25268813b74013e084" id="r_a5e688b8539f7de25268813b74013e084"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e688b8539f7de25268813b74013e084">TestGetMainInfoByPage_LowerThanZero</a> (long value)</td></tr>
+<tr class="memdesc:a5e688b8539f7de25268813b74013e084"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to test bad values for getting main infos page (lower than 0).  <br /></td></tr>
 <tr class="separator:a5e688b8539f7de25268813b74013e084"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51bf39cafc7bf0a15d0526636ee0cc2d" id="r_a51bf39cafc7bf0a15d0526636ee0cc2d"><td class="memItemLeft" align="right" valign="top"><a id="a51bf39cafc7bf0a15d0526636ee0cc2d" name="a51bf39cafc7bf0a15d0526636ee0cc2d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>TestGetMainInfoByPage_EqualToOrGresterThanZero</b> (long value)</td></tr>
+<tr class="memitem:a51bf39cafc7bf0a15d0526636ee0cc2d" id="r_a51bf39cafc7bf0a15d0526636ee0cc2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51bf39cafc7bf0a15d0526636ee0cc2d">TestGetMainInfoByPage_EqualToOrGresterThanZero</a> (long value)</td></tr>
+<tr class="memdesc:a51bf39cafc7bf0a15d0526636ee0cc2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to test correct values for getting main infos page (equal to or greater than 0).  <br /></td></tr>
 <tr class="separator:a51bf39cafc7bf0a15d0526636ee0cc2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a290475e96c6ced000edddb4795348799" id="r_a290475e96c6ced000edddb4795348799"><td class="memItemLeft" align="right" valign="top"><a id="a290475e96c6ced000edddb4795348799" name="a290475e96c6ced000edddb4795348799"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>TestGetMainInfoByPage_Excessivelylarge</b> (long value)</td></tr>
-<tr class="separator:a290475e96c6ced000edddb4795348799"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace18d862eee08a3346f00190787058bc" id="r_ace18d862eee08a3346f00190787058bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace18d862eee08a3346f00190787058bc">TestGetMainInfoByPage_ExcessivelyGreat</a> (long value)</td></tr>
+<tr class="memdesc:ace18d862eee08a3346f00190787058bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to test bad values for getting main info (excessively great. More than max number of pages).  <br /></td></tr>
+<tr class="separator:ace18d862eee08a3346f00190787058bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class <code><a class="el" href="class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_page.html" title="Class TestsBLLShowsByPage tests BLL methods for get main info by page.">TestsBLLShowsByPage</a></code> tests BLL methods for get main info by page. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a51bf39cafc7bf0a15d0526636ee0cc2d" name="a51bf39cafc7bf0a15d0526636ee0cc2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51bf39cafc7bf0a15d0526636ee0cc2d">&#9670;&#160;</a></span>TestGetMainInfoByPage_EqualToOrGresterThanZero()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TestBLLAndWebApi.TestsBLLShowsByPage.TestGetMainInfoByPage_EqualToOrGresterThanZero </td>
+          <td>(</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Method to test correct values for getting main infos page (equal to or greater than 0). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ace18d862eee08a3346f00190787058bc" name="ace18d862eee08a3346f00190787058bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace18d862eee08a3346f00190787058bc">&#9670;&#160;</a></span>TestGetMainInfoByPage_ExcessivelyGreat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TestBLLAndWebApi.TestsBLLShowsByPage.TestGetMainInfoByPage_ExcessivelyGreat </td>
+          <td>(</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Method to test bad values for getting main info (excessively great. More than max number of pages). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5e688b8539f7de25268813b74013e084" name="a5e688b8539f7de25268813b74013e084"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e688b8539f7de25268813b74013e084">&#9670;&#160;</a></span>TestGetMainInfoByPage_LowerThanZero()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TestBLLAndWebApi.TestsBLLShowsByPage.TestGetMainInfoByPage_LowerThanZero </td>
+          <td>(</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Method to test bad values for getting main infos page (lower than 0). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>TestBLL/<b>UnitTestBLLShowsByPage.cs</b></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="namespace_test_b_l_l_and_web_api.html">TestBLLAndWebApi</a></li><li class="navelem"><a class="el" href="class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_page.html">TestsBLLShowsByPage</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

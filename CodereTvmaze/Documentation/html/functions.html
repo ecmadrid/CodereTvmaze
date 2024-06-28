@@ -11,8 +11,6 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -27,8 +25,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">CodereTvmaze
+   <div id="projectname">CodereTvmaze<span id="projectnumber">&#160;1.0</span>
    </div>
+   <div id="projectbrief">Test project for importing web api endpoint from Tvmaze</div>
   </td>
  </tr>
  </tbody>
@@ -51,29 +50,19 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',true);
+  initMenu('',true,false,'search.php','Search',false);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
+<div id="doc-content">
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('functions.html',''); initResizable(true); });
+$(function(){ initResizable(false); });
 /* @license-end */
 </script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -167,20 +156,31 @@ $(function(){initNavTree('functions.html',''); initResizable(true); });
 
 <h3><a id="index_s" name="index_s"></a>- s -</h3><ul>
 <li>self&#160;:&#160;<a class="el" href="class_codere_tvmaze_1_1_b_l_l_1_1_links.html#ab711a9bf91fa5d5402d1d21d7930b4f5">CodereTvmaze.BLL.Links</a></li>
+<li>Setup()&#160;:&#160;<a class="el" href="class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_id.html#a9461e911023b2d251bb8584966db9f00">TestBLLAndWebApi.TestsBLLShowsById</a>, <a class="el" href="class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_page.html#aeaeadb5d80d38183bce108240e96ccf4">TestBLLAndWebApi.TestsBLLShowsByPage</a>, <a class="el" href="class_test_b_l_l_and_web_api_1_1_tests_web_api.html#a3756451773512be116be09f4c70f3e19">TestBLLAndWebApi.TestsWebApi</a></li>
 <li>Shows()&#160;:&#160;<a class="el" href="class_codere_tvmaze_1_1_controllers_1_1_codere_tvmaze_controller.html#a8b9e9dc4afca793e0a4b283131dd4cea">CodereTvmaze.Controllers.CodereTvmazeController</a></li>
+</ul>
+
+
+<h3><a id="index_t" name="index_t"></a>- t -</h3><ul>
+<li>TestGetMainInfoById_ExcessivelyGreat()&#160;:&#160;<a class="el" href="class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_id.html#a65465f8e1458e5bfc21a6cd0012a0d30">TestBLLAndWebApi.TestsBLLShowsById</a></li>
+<li>TestGetMainInfoById_GresterThanZero()&#160;:&#160;<a class="el" href="class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_id.html#af9b49d2814d40a76c977821c69f3c80f">TestBLLAndWebApi.TestsBLLShowsById</a></li>
+<li>TestGetMainInfoById_LowerThanOne()&#160;:&#160;<a class="el" href="class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_id.html#ae425366c2ba7bf79223cd5ae04ace93b">TestBLLAndWebApi.TestsBLLShowsById</a></li>
+<li>TestGetMainInfoByPage_EqualToOrGresterThanZero()&#160;:&#160;<a class="el" href="class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_page.html#a51bf39cafc7bf0a15d0526636ee0cc2d">TestBLLAndWebApi.TestsBLLShowsByPage</a></li>
+<li>TestGetMainInfoByPage_ExcessivelyGreat()&#160;:&#160;<a class="el" href="class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_page.html#ace18d862eee08a3346f00190787058bc">TestBLLAndWebApi.TestsBLLShowsByPage</a></li>
+<li>TestGetMainInfoByPage_LowerThanZero()&#160;:&#160;<a class="el" href="class_test_b_l_l_and_web_api_1_1_tests_b_l_l_shows_by_page.html#a5e688b8539f7de25268813b74013e084">TestBLLAndWebApi.TestsBLLShowsByPage</a></li>
 </ul>
 
 
 <h3><a id="index_v" name="index_v"></a>- v -</h3><ul>
 <li>ValidateApi()&#160;:&#160;<a class="el" href="class_codere_tvmaze_1_1_controllers_1_1_codere_tvmaze_controller.html#ac2ead78f2a0dd538c0c828540b0db6ba">CodereTvmaze.Controllers.CodereTvmazeController</a></li>
+<li>ValidateApi_BadApiKey()&#160;:&#160;<a class="el" href="class_test_b_l_l_and_web_api_1_1_tests_web_api.html#a1c47b1073d04ac0583fc00618c49a6fb">TestBLLAndWebApi.TestsWebApi</a></li>
+<li>ValidateApi_GoodApiKey()&#160;:&#160;<a class="el" href="class_test_b_l_l_and_web_api_1_1_tests_web_api.html#acfbd50d1701c2ce467316e7f7ea3a5e5">TestBLLAndWebApi.TestsWebApi</a></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>
