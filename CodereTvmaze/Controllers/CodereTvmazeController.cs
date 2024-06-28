@@ -38,7 +38,7 @@ namespace CodereTvmaze.Controllers
         [Route("Import/{id}")]
         public IResult ImportShow(int id)
         {
-            // Check valid api key.
+            // Check api key.
 
             string? validApiKey = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("AppSettings")["Apikey"];
 
